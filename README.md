@@ -102,7 +102,7 @@ Follow these instructions to get the project running on your local machine.
 Execute the following command in your terminal:
 
 ```bash
-git clone https://github.com/devanshkp/mushroom-classification
+git clone https://github.com/devanshkp/ai-mushroom-classifier
 ```
 
 ### 2. Backend Setup (Flask & AI Model)
