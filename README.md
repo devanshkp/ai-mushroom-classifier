@@ -240,4 +240,6 @@ mushroom-classifier/
 
 ## Contact
 
-Devansh Kapoor - [LinkedIn](https://linkedin.com/in/devansh-kapoor) - devansh.kp@outlook.com
+**Devansh Kapoor**
+-   Connect on [LinkedIn](https://linkedin.com/in/devansh-kapoor)
+-   Reach out via Email: `devansh.kp@outlook.com`
