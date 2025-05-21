@@ -20,7 +20,7 @@ An intelligent web application that identifies mushroom species from uploaded im
     -   [4. Running the Application](#4-running-the-application)
 -   [Project Structure](#-project-structure)
 -   [Future Enhancements](#-future-enhancements)
--   [Contact](#-contact)
+-   [Contact](#contact)
 
 ## Overview
 
