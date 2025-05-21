@@ -203,7 +203,7 @@ A high-level overview of the project directory structure:
 
 
 ```text
-mushroom-classifier/
+ai-mushroom-classifier/
 ├── backend/
 │   ├── app.py                            # Main Flask application
 │   ├── requirements.txt                  # Python dependencies
