@@ -1,0 +1,1002 @@
+[
+    {
+        "scientific_name": "Amanita citrina",
+        "common_name": "False Death Cap",
+        "type": "Fungus",
+        "description": "Recognizable by its pale yellow to greenish-yellow cap, often with white to greyish patches (remnants of the universal veil). It has white gills, a ring on the stem, and a distinct bulbous base (volva). It often has a raw potato-like smell.",
+        "habitat": "Commonly found in deciduous and coniferous woodlands, forming mycorrhizal relationships with trees like oak, beech, and pine. Fruits in late summer and autumn.",
+        "edibility": "Inedible/Mildly Poisonous",
+        "notes": "Contains alpha-amanitin in very low, non-toxic amounts, but also bufotenin. While not as deadly as some other Amanitas, it can cause gastrointestinal distress. Due to its resemblance to highly poisonous species like Amanita phalloides, it is best avoided. The potato-like smell is a key identifier.",
+        "image_path": "/images/amanita_citrina.jpg"
+    },
+    {
+        "scientific_name": "Amanita muscaria",
+        "common_name": "Fly Agaric",
+        "type": "Fungus",
+        "description": "Iconic mushroom with a bright red to orange (sometimes yellow) cap adorned with white to yellowish wart-like spots (remnants of the universal veil). It has white gills, a prominent ring on the stem, and a bulbous base.",
+        "habitat": "Found in coniferous and deciduous woodlands, forming mycorrhizal associations, particularly with birch and pine trees. Widely distributed in temperate and boreal regions of the Northern Hemisphere.",
+        "edibility": "Poisonous/Psychoactive",
+        "notes": "Contains psychoactive compounds ibotenic acid and muscimol. Effects can be unpredictable, unpleasant, and include nausea, muscle twitches, confusion, and visual distortions. Toxicity can vary with region and preparation.",
+        "image_path": "/images/amanita_muscaria.jpg"
+    },
+    {
+        "scientific_name": "Amanita pantherina",
+        "common_name": "Panther Cap",
+        "type": "Fungus",
+        "description": "Characterized by its brown to greyish-brown cap covered with numerous small, white, cottony warts. It has white gills, a distinct ring (often striate on top) on the stem, and a marginate bulb at the base.",
+        "habitat": "Found in deciduous and coniferous forests, forming mycorrhizal relationships with various trees. Fruits from summer to autumn.",
+        "edibility": "Poisonous/Psychoactive",
+        "notes": "Contains ibotenic acid and muscimol, similar to Amanita muscaria, and can cause serious poisoning with neurological symptoms. Distinguished from the edible Amanita rubescens by its non-blushing flesh and the smooth (not grooved) ring.",
+        "image_path": "/images/amanita_pantherina.jpg"
+    },
+    {
+        "scientific_name": "Amanita rubescens",
+        "common_name": "The Blusher",
+        "type": "Fungus",
+        "description": "Distinguished by its cap, which varies from pale brownish to reddish-brown and bruises reddish when damaged. The cap often has greyish or pinkish-brown patches. Gills are white, bruising reddish. Stem has a ring and a bulbous base, also blushing.",
+        "habitat": "Common in deciduous and coniferous woods, forming mycorrhizal associations. Fruits from summer to late autumn.",
+        "edibility": "Edible with caution",
+        "notes": "Must be thoroughly cooked before consumption, as it contains hemolytic toxins when raw. Care must be taken to distinguish it from poisonous Amanita species, especially Amanita pantherina. The key distinguishing feature is the reddish bruising.",
+        "image_path": "/images/amanita_rubescens.jpg"
+    },
+    {
+        "scientific_name": "Apioperdon pyriforme",
+        "common_name": "Stump Puffball, Pear-shaped Puffball",
+        "type": "Fungus",
+        "description": "A small to medium-sized puffball, typically pear-shaped or somewhat spherical, with a whitish to brownish exterior that may be smooth or have small warts. The interior is white and firm when young, turning yellowish-brown and powdery with spores when mature.",
+        "habitat": "Grows in clusters on dead wood (logs, stumps, or buried wood) of both hardwoods and conifers. Common in late summer and autumn.",
+        "edibility": "Edible",
+        "notes": "Edible and good when young and the flesh is pure white and firm throughout. Avoid if the interior has started to turn yellow or brown.",
+        "image_path": "/images/apioperdon_pyriforme.jpg"
+    },
+    {
+        "scientific_name": "Armillaria borealis",
+        "common_name": "Northern Honey Fungus",
+        "type": "Fungus",
+        "description": "A honey-colored mushroom that grows in clusters. Caps are convex, later flattening, yellowish-brown to reddish-brown, often with small, dark scales, especially near the center. Stems have a persistent ring. Gills are whitish to pale yellowish.",
+        "habitat": "Grows on wood of both deciduous and coniferous trees, often parasitic on living trees or saprobic on dead wood. Fruits in autumn.",
+        "edibility": "Edible with caution",
+        "notes": "Must be thoroughly cooked; can cause gastrointestinal upset in some individuals or if undercooked. Part of the Armillaria mellea complex. Can be a significant forest pathogen.",
+        "image_path": "/images/armillaria_borealis.jpg"
+    },
+    {
+        "scientific_name": "Artomyces pyxidatus",
+        "common_name": "Crown-tipped Coral Fungus",
+        "type": "Fungus",
+        "description": "A distinctive coral fungus with whitish to pale yellowish branches that are repeatedly branched, terminating in a crown-like cup with several small points around the rim.",
+        "habitat": "Grows on decaying hardwood logs and branches, particularly aspen and poplar. Fruits from spring to fall.",
+        "edibility": "Edible",
+        "notes": "Generally considered edible, though not highly choice. Its unique branching pattern makes it easy to identify among coral fungi.",
+        "image_path": "/images/artomyces_pyxidatus.jpg"
+    },
+    {
+        "scientific_name": "Bjerkandera adusta",
+        "common_name": "Smoky Polypore, Smoky Bracket",
+        "type": "Fungus",
+        "description": "A bracket fungus with a whitish to greyish, often velvety upper surface that may become darker with age. The pore surface underneath is characteristically grey to black (smoky), and the pores are very small. The margin often remains whitish.",
+        "habitat": "Very common on dead hardwood, causing a white rot. Appears year-round.",
+        "edibility": "Inedible",
+        "notes": "The dark pore surface is a key identifying feature. Plays an important role in wood decomposition.",
+        "image_path": "/images/bjerkandera_adusta.jpg"
+    },
+    {
+        "scientific_name": "Boletus edulis",
+        "common_name": "Porcini, King Bolete, Penny Bun",
+        "type": "Fungus",
+        "description": "A large, robust bolete with a smooth, convex, brownish cap (color can vary from light tan to reddish-brown). The underside has pores instead of gills, initially whitish, turning yellowish and then olive-green with age. Stem is thick, often bulbous, with a fine white reticulation (net-like pattern), especially on the upper part.",
+        "habitat": "Forms mycorrhizal relationships with various coniferous (pine, spruce, fir) and deciduous (oak, beech) trees. Found in summer and autumn.",
+        "edibility": "Choice Edible",
+        "notes": "Highly prized for its nutty flavor and firm texture. Can be eaten fresh, dried, or preserved. Care should be taken not to confuse it with bitter or poisonous boletes (e.g., Tylopilus felleus, which has pinkish pores and a darker, more pronounced reticulation).",
+        "image_path": "/images/boletus_edulis.jpg"
+    },
+    {
+        "scientific_name": "Boletus reticulatus",
+        "common_name": "Summer Bolete, Netted Bolete",
+        "type": "Fungus",
+        "description": "Similar to Boletus edulis, with a convex, dry, often velvety cap that is typically light to dark brown and may crack in dry weather. The key feature is a distinct, usually complete whitish to brownish reticulation (net pattern) over most of the stout stem. Pores are initially white, then yellowish, then olive.",
+        "habitat": "Mycorrhizal with deciduous trees, especially oak and beech, in open woodlands and clearings. Fruits earlier than B. edulis, often starting in late spring or early summer.",
+        "edibility": "Choice Edible",
+        "notes": "Also highly valued and delicious. The extensive reticulation on the stem is a good distinguishing feature from B. edulis, which typically has reticulation only on the upper part of the stem.",
+        "image_path": "/images/boletus_reticulatus.jpg"
+    },
+    {
+        "scientific_name": "Calocera viscosa",
+        "common_name": "Yellow Stagshorn, Yellow False Coral",
+        "type": "Fungus",
+        "description": "A jelly fungus that forms tough, gelatinous, horn-like or antler-like fruiting bodies. It is bright orange-yellow to orange, and the branches are often forked. It has a slippery or sticky (viscid) surface when wet.",
+        "habitat": "Grows on decaying coniferous wood, such as stumps and logs of pine and spruce. Appears from summer to late autumn.",
+        "edibility": "Inedible",
+        "notes": "Though not poisonous, it is considered inedible due to its tough, gelatinous texture. Its bright color makes it quite conspicuous.",
+        "image_path": "/images/calocera_viscosa.jpg"
+    },
+    {
+        "scientific_name": "Calycina citrina",
+        "common_name": "Yellow Fairy Cups, Lemon Disco",
+        "type": "Fungus",
+        "description": "A small cup fungus, forming tiny, bright yellow to orange-yellow, saucer-shaped or cup-shaped fruiting bodies, often without a distinct stem or with a very short one. The surface is smooth.",
+        "habitat": "Grows on decaying wood of both hardwoods and conifers, often on barkless wood or bark. Common and widespread, can appear year-round but more frequent in moist conditions.",
+        "edibility": "Inedible",
+        "notes": "Too small and insubstantial to be considered for eating. Its bright yellow color makes these tiny cups noticeable.",
+        "image_path": "/images/calycina_citrina.jpg"
+    },
+    {
+        "scientific_name": "Cantharellus cibarius",
+        "common_name": "Chanterelle, Golden Chanterelle, Girolle",
+        "type": "Fungus",
+        "description": "A distinctive mushroom with a funnel-shaped or trumpet-shaped cap, typically egg-yolk yellow to orange-yellow. Instead of true gills, it has blunt, gill-like ridges (false gills or veins) that run down the stem (decurrent). The flesh is firm and often has a fruity, apricot-like aroma.",
+        "habitat": "Forms mycorrhizal relationships with various trees, both deciduous (oak, beech) and coniferous. Found in summer and autumn, often in damp mossy areas.",
+        "edibility": "Choice Edible",
+        "notes": "Highly prized edible mushroom. Important to distinguish from the poisonous Jack O'Lantern mushroom (Omphalotus olearius), which has true, sharp gills and grows in clusters on wood, and the False Chanterelle (Hygrophoropsis aurantiaca), which has forked gills and is less choice.",
+        "image_path": "/images/cantharellus_cibarius.jpg"
+    },
+    {
+        "scientific_name": "Cerioporus squamosus",
+        "common_name": "Dryad's Saddle, Pheasant's Back Mushroom",
+        "type": "Fungus",
+        "description": "A large, fan-shaped or saddle-shaped polypore with a pale yellowish-brown to tan cap covered with distinctive, large, dark brown to blackish scales. The underside has large, angular pores. It typically has a short, thick, off-center or lateral stem that is dark at the base.",
+        "habitat": "Grows on living or dead hardwood trees, especially elm, maple, and sycamore. Common in spring and early summer, but can appear later.",
+        "edibility": "Edible when young",
+        "notes": "Best eaten when young and tender, as it becomes tough and leathery with age. Has a characteristic mealy or cucumber-like smell. The 'pheasant's back' pattern of scales is a key identifier.",
+        "image_path": "/images/cerioporus_squamosus.jpg"
+    },
+    {
+        "scientific_name": "Cetraria islandica",
+        "common_name": "Iceland Moss",
+        "type": "Lichen",
+        "description": "A fruticose (shrubby) lichen, forming erect or sub-erect tufts. Lobes are strap-shaped, channeled or rolled, brownish to greenish-grey on the upper surface, and paler, often with whitish spots (pseudocyphellae) on the lower surface. Margins often have short, stiff cilia.",
+        "habitat": "Grows on soil in arctic and alpine regions, heathlands, and open woodlands, often among mosses and grasses.",
+        "edibility": "Edible after processing",
+        "notes": "Technically a lichen (a symbiosis of a fungus and an alga/cyanobacterium). Traditionally used in herbal medicine and as a famine food after boiling or soaking to remove bitter lichen acids. High in carbohydrates.",
+        "image_path": "/images/cetraria_islandica.jpg"
+    },
+    {
+        "scientific_name": "Chlorociboria aeruginascens",
+        "common_name": "Green Elfcup, Turquoise Elfcup, Green Wood Stain",
+        "type": "Fungus",
+        "description": "A small cup fungus, typically 2-10 mm across, cup-shaped or disc-shaped, and a distinctive blue-green color. The most noticeable feature is often the blue-green stain it imparts to the wood it inhabits.",
+        "habitat": "Grows on dead, barkless hardwood, particularly oak and beech. The stained wood is often more common to find than the fruiting bodies.",
+        "edibility": "Inedible",
+        "notes": "The fungus itself is tiny and not consumed. The blue-green stained wood ('green oak') has been historically used in decorative woodworking (e.g., Tunbridge ware).",
+        "image_path": "/images/chlorociboria_aeruginascens.jpg"
+    },
+    {
+        "scientific_name": "Chondrostereum purpureum",
+        "common_name": "Silver Leaf Fungus",
+        "type": "Fungus",
+        "description": "A crust-like or bracket-like fungus. The fertile (lower) surface is smooth, purplish to lilac when fresh and moist, fading to brownish with age. The upper surface (if present as a bracket) is hairy and greyish. Causes 'silver leaf' disease in fruit trees and other broadleaf trees, where leaves develop a silvery sheen.",
+        "habitat": "Grows on living and dead wood of many broadleaf trees, especially Rosaceae family (e.g., apple, plum, cherry). Fruiting bodies appear year-round, but are more common in autumn and winter.",
+        "edibility": "Inedible",
+        "notes": "Known primarily as a plant pathogen. The fungus itself is tough and leathery.",
+        "image_path": "/images/chondrostereum_purpureum.jpg"
+    },
+    {
+        "scientific_name": "Cladonia fimbriata",
+        "common_name": "Trumpet Lichen, Fringed Cup Lichen",
+        "type": "Lichen",
+        "description": "A lichen with primary thallus of small, scale-like squamules on the substrate. From these arise greenish-grey, hollow, trumpet-shaped or cup-shaped vertical structures (podetia), which are covered in a fine, powdery (sorediate) surface, especially the cups. The rims of the cups are often fringed or dentate.",
+        "habitat": "Common on acidic soil, rotting wood, mossy banks, and tree bases in various habitats.",
+        "edibility": "Inedible",
+        "notes": "This is a lichen. The powdery soredia are for asexual reproduction. One of many Cladonia species with cup-shaped podetia.",
+        "image_path": "/images/cladonia_fimbriata.jpg"
+    },
+    {
+        "scientific_name": "Cladonia rangiferina",
+        "common_name": "Reindeer Lichen, Grey Reindeer Lichen",
+        "type": "Lichen",
+        "description": "A fruticose lichen forming intricate, shrubby, much-branched tufts or mats, typically whitish-grey to ash-grey. The branching is primarily dichotomous or trichotomous, with slender, hollow branches that often curve in the same direction at the tips.",
+        "habitat": "Grows on the ground in open, acidic, nutrient-poor soils in boreal forests, tundra, and heathlands. Often forms extensive carpets.",
+        "edibility": "Edible after processing (traditionally)",
+        "notes": "This is a lichen. An important food source for reindeer and caribou. Humans have also consumed it in times of famine after leaching out lichen acids. It is very slow-growing.",
+        "image_path": "/images/cladonia_rangiferina.jpg"
+    },
+    {
+        "scientific_name": "Cladonia stellaris",
+        "common_name": "Star-tipped Reindeer Lichen, Northern Reindeer Lichen",
+        "type": "Lichen",
+        "description": "A fruticose lichen forming dense, cushion-like, hemispherical tufts. It is typically yellowish-green to whitish-green. The branching is highly intricate, with the terminal branches forming distinct, compact, cauliflower-like heads or 'stars'.",
+        "habitat": "Grows on the ground in similar environments to C. rangiferina: boreal forests, pine barrens, and tundra, on well-drained, acidic soils.",
+        "edibility": "Edible after processing (traditionally)",
+        "notes": "This is a lichen. Also a food for reindeer. Its distinctive compact, 'starry' branching pattern helps differentiate it from other reindeer lichens. Often used in floral arrangements and model making.",
+        "image_path": "/images/cladonia_stellaris.jpg"
+    },
+    {
+        "scientific_name": "Clitocybe nebularis",
+        "common_name": "Clouded Agaric, Clouded Funnel",
+        "type": "Fungus",
+        "description": "A large mushroom with a convex cap that flattens and may become slightly funnel-shaped with age. The cap is greyish to greyish-brown, often with a 'clouded' or frosted appearance. Gills are whitish to cream, crowded, and decurrent (running down the stem). The stem is stout and fibrous. Has a strong, distinctive, somewhat sweet or floral smell, which some find unpleasant.",
+        "habitat": "Grows in troops or rings in deciduous and coniferous woodlands, often in leaf litter. Common in late autumn.",
+        "edibility": "Edible with caution / Widely disputed",
+        "notes": "Traditionally considered edible by some after thorough cooking (parboiling and discarding the water is often recommended). However, it is known to cause gastrointestinal upset in a significant number of people. Contains nebularine, a cytotoxic compound, though its role in digestive issues is unclear. Many authorities now advise against its consumption. Can be confused with the poisonous Entoloma sinuatum.",
+        "image_path": "/images/clitocybe_nebularis.jpg"
+    },
+    {
+        "scientific_name": "Coltricia perennis",
+        "common_name": "Tiger's Eye, Funnel Polypore",
+        "type": "Fungus",
+        "description": "A small to medium-sized polypore with a circular, centrally-stemmed, funnel-shaped cap. The upper surface is velvety and typically shows concentric zones of various shades of brown, reddish-brown, and yellowish-brown. The underside has small, brownish pores. The stem is velvety and brown.",
+        "habitat": "Grows on the ground in sandy or disturbed soils, often in coniferous forests or heathlands, sometimes on burnt ground. Fruits in summer and autumn, and fruitbodies can persist.",
+        "edibility": "Inedible",
+        "notes": "Tough and leathery. The concentric color zones on the cap are characteristic. The species name 'perennis' refers to its ability to persist for more than one season.",
+        "image_path": "/images/coltricia_perennis.jpg"
+    },
+    {
+        "scientific_name": "Coprinellus disseminatus",
+        "common_name": "Fairy Inkcap, Trooping Crumble Cap",
+        "type": "Fungus",
+        "description": "A very small, delicate inkcap that grows in large, dense clusters. Caps are initially ovoid or bell-shaped, pale yellowish-brown to greyish-brown, becoming grooved or pleated. They do not deliquesce (turn to ink) as dramatically as some other inkcaps but will shrivel. Gills are whitish, then grey, then blackish.",
+        "habitat": "Grows in huge numbers on and around decaying hardwood stumps, logs, or buried wood. Appears from spring to autumn, often after rain.",
+        "edibility": "Inedible (due to size and texture)",
+        "notes": "While not considered poisonous, they are too small and fragile to be of culinary interest. The sight of hundreds or thousands fruiting together is quite remarkable.",
+        "image_path": "/images/coprinellus_disseminatus.jpg"
+    },
+    {
+        "scientific_name": "Coprinellus micaceus",
+        "common_name": "Mica Cap, Glistening Inkcap",
+        "type": "Fungus",
+        "description": "A small to medium-sized inkcap that grows in dense clusters. The cap is initially bell-shaped, yellowish-brown to tawny, and covered with tiny, glistening, mica-like particles (especially when young), which can wash off with rain. The cap becomes grooved and will eventually partially deliquesce. Gills are initially whitish, turning grey then black.",
+        "habitat": "Commonly found on and around decaying hardwood stumps and buried wood. Fruits from spring to autumn.",
+        "edibility": "Edible (with caution)",
+        "notes": "Edible when young, before the gills turn black, but must not be consumed with alcohol due to the presence of coprine (or similar compounds) which can cause a disulfiram-like reaction (though this species is often reported to be safe in this regard, caution is still advised by some sources or if confused with Coprinopsis atramentaria). The glistening particles are a key identifier.",
+        "image_path": "/images/coprinellus_micaceus.jpg"
+    },
+    {
+        "scientific_name": "Coprinopsis atramentaria",
+        "common_name": "Common Inkcap, Tippler's Bane",
+        "type": "Fungus",
+        "description": "A medium-sized inkcap that grows in clusters. The cap is ovoid or bell-shaped when young, greyish-brown, often with a scaly or smooth surface, and radially grooved. It quickly deliquesces into a black, inky fluid. Gills are initially whitish, rapidly turning grey, then black and liquefying.",
+        "habitat": "Grows on buried wood, rich soil, lawns, and waste ground. Common from spring to autumn.",
+        "edibility": "Edible with extreme caution (Conditionally Edible)",
+        "notes": "Contains coprine, which causes a severe disulfiram-like reaction (nausea, vomiting, palpitations, flushing) if alcohol is consumed within a few hours to several days of eating the mushroom. Otherwise, it is considered edible by some, but the risk is significant. This is the 'Tippler's Bane'.",
+        "image_path": "/images/coprinopsis_atramentaria.jpg"
+    },
+    {
+        "scientific_name": "Coprinus comatus",
+        "common_name": "Shaggy Inkcap, Lawyer's Wig, Shaggy Mane",
+        "type": "Fungus",
+        "description": "A distinctive mushroom with a tall, cylindrical or bullet-shaped cap that is white and covered in shaggy, upturned scales, often brownish at the apex. As it matures, the cap and gills begin to deliquesce (auto-digest) into a black, inky fluid from the margin upwards. Gills are initially white, then pinkish, then black.",
+        "habitat": "Grows in grassy areas, lawns, disturbed ground, and roadsides, often in rich soil. Common in late summer and autumn.",
+        "edibility": "Choice Edible (when young)",
+        "notes": "Highly prized when very young, before the gills start to turn pink or black. Must be cooked quickly after picking as it deliquesces rapidly. Does NOT contain coprine, so it is safe to consume with alcohol, unlike Coprinopsis atramentaria.",
+        "image_path": "/images/coprinus_comatus.jpg"
+    },
+    {
+        "scientific_name": "Crucibulum laeve",
+        "common_name": "Common Bird's Nest Fungus, White-egg Bird's Nest",
+        "type": "Fungus",
+        "description": "A tiny fungus resembling a miniature bird's nest. It starts as a yellowish, fuzzy, closed sphere or cup, which then opens to reveal several small, whitish, disc-shaped 'eggs' (peridioles) attached to the cup wall by fine cords. The outer surface is yellowish to brownish and felty; the inner surface is smooth and greyish.",
+        "habitat": "Grows on dead wood, wood debris, wood chip mulch, and sometimes on old sacking or plant stems. Common and appears from summer to winter.",
+        "edibility": "Inedible",
+        "notes": "The 'eggs' contain spores and are dispersed by raindrops splashing into the cup. Fascinating to observe but not for eating.",
+        "image_path": "/images/crucibulum_laeve.jpg"
+    },
+    {
+        "scientific_name": "Daedaleopsis confragosa",
+        "common_name": "Thin-maze Polypore, Blushing Bracket",
+        "type": "Fungus",
+        "description": "A tough, leathery, bracket-like polypore. The upper surface is zoned in shades of grey, brown, and reddish-brown, often somewhat radially wrinkled. The key feature is the pore surface, which can be gill-like (lamellate), maze-like (daedaloid), or poroid, sometimes varying on the same fruitbody. The pore surface bruises reddish or brownish when handled (hence 'blushing bracket').",
+        "habitat": "Grows on dead hardwood, especially willow, birch, and alder. Common year-round.",
+        "edibility": "Inedible",
+        "notes": "Very variable pore surface. The blushing reaction is a useful identification characteristic. Important wood decomposer.",
+        "image_path": "/images/daedaleopsis_confragosa.jpg"
+    },
+    {
+        "scientific_name": "Daedaleopsis tricolor",
+        "common_name": "Tricolored Gill Polypore",
+        "type": "Fungus",
+        "description": "Similar to D. confragosa but often more brightly colored, with distinct zones of reddish-brown, yellowish, and sometimes darker brown on the upper surface. The underside typically has gill-like (lamellate) structures that are relatively thin and spaced, often a paler buff to brownish color. Does not typically show a strong blushing reaction like D. confragosa.",
+        "habitat": "Primarily found on dead branches and trunks of deciduous trees, particularly beech and birch.",
+        "edibility": "Inedible",
+        "notes": "Distinguished from D. confragosa by its more consistently gill-like underside and lack of strong bruising. The zonate colors on top can be quite striking.",
+        "image_path": "/images/daedaleopsis_tricolor.jpg"
+    },
+    {
+        "scientific_name": "Evernia mesomorpha",
+        "common_name": "Boreal Oakmoss Lichen",
+        "type": "Lichen",
+        "description": "A fruticose lichen with angular or somewhat flattened, strap-like, branched thallus, often forming bushy tufts. It's typically yellowish-green to greenish-grey. The branches are often forked and have a somewhat warty or ridged surface. Soredia (powdery reproductive propagules) are usually present.",
+        "habitat": "Grows on the bark of trees, especially conifers but also hardwoods, in open woodlands and boreal forests. Also found on wooden fences.",
+        "edibility": "Inedible",
+        "notes": "This is a lichen. It's more common in northern and boreal regions. Distinguished from Evernia prunastri by its more angular branches and distribution of soredia.",
+        "image_path": "/images/evernia_mesomorpha.jpg"
+    },
+    {
+        "scientific_name": "Evernia prunastri",
+        "common_name": "Oakmoss Lichen",
+        "type": "Lichen",
+        "description": "A fruticose lichen forming bushy, strap-shaped, dichotomously branched tufts. The upper surface is typically greenish-grey to yellowish-green, while the lower surface is distinctly paler, whitish, or pale greyish-green. Both surfaces are corticated (have an outer skin). Soredia may be present.",
+        "habitat": "Grows on the bark of trees, particularly oak and fruit trees, but also other deciduous trees and occasionally conifers or fences. Common in temperate regions.",
+        "edibility": "Inedible (used in perfumery)",
+        "notes": "This is a lichen. Highly valued in the perfume industry for its fixative properties and earthy scent, though its use is now restricted due to allergenic compounds. The two distinct colors on upper and lower surfaces are a key feature.",
+        "image_path": "/images/evernia_prunastri.jpg"
+    },
+    {
+        "scientific_name": "Flammulina velutipes",
+        "common_name": "Velvet Shank, Enokitake (cultivated form)",
+        "type": "Fungus",
+        "description": "Wild form: Small to medium-sized mushroom with a sticky or slimy, orange-yellow to reddish-brown cap. Gills are whitish to pale yellow. The stem is distinctively velvety, dark brown to blackish, especially towards the base, and tough. Cultivated 'Enoki' are very different: long, thin, white stems with tiny caps, grown in the dark with high CO2.",
+        "habitat": "Grows in clusters on dead wood of deciduous trees (e.g., elm, willow, beech) during late autumn, winter, and early spring. Tolerant of cold temperatures.",
+        "edibility": "Edible",
+        "notes": "The wild form is edible and good, with a pleasant flavor, but the tough stem is usually discarded. Its winter fruiting makes it a notable find. The cultivated form is a popular culinary mushroom.",
+        "image_path": "/images/flammulina_velutipes.jpg"
+    },
+    {
+        "scientific_name": "Fomes fomentarius",
+        "common_name": "Tinder Fungus, Hoof Fungus, Amadou",
+        "type": "Fungus",
+        "description": "A large, perennial, hoof-shaped or bracket-shaped polypore. The upper surface is hard, woody, and zoned in shades of grey, brownish-grey, to almost black, often with a paler margin. The underside has tiny, greyish to brownish pores. The flesh is brownish and fibrous.",
+        "habitat": "Grows primarily on dead or weakened birch trees, but also on beech and other hardwoods. Causes a white rot. Fruitbodies are very long-lived.",
+        "edibility": "Inedible",
+        "notes": "Historically very important as a source of tinder (amadou) for starting fires. Also used for medicinal purposes and as a styptic. Very tough and woody.",
+        "image_path": "/images/fomes_fomentarius.jpg"
+    },
+    {
+        "scientific_name": "Fomitopsis betulina",
+        "common_name": "Birch Polypore, Razor Strop Fungus",
+        "type": "Fungus",
+        "description": "A kidney-shaped or fan-shaped annual polypore with a smooth, leathery, whitish to greyish-brown upper surface that often peels back like skin. The margin is thick and rounded. The underside has small, white pores that yellow with age. It has a distinctive, slightly sour smell.",
+        "habitat": "Almost exclusively grows on birch trees (Betula species), usually on dead or dying trees, but can also infect living ones. Common.",
+        "edibility": "Edible when young (medicinal uses more common)",
+        "notes": "Young specimens are somewhat edible but become very tough quickly. More known for its traditional medicinal uses (anti-inflammatory, antiseptic) and as a 'razor strop' for sharpening knives. Ötzi the Iceman carried this fungus.",
+        "image_path": "/images/fomitopsis_betulina.jpg"
+    },
+    {
+        "scientific_name": "Fomitopsis pinicola",
+        "common_name": "Red-belted Polypore, Red-banded Polypore",
+        "type": "Fungus",
+        "description": "A perennial, hoof-shaped or shelf-like polypore. The upper surface is initially often orangish-red near the margin (the 'red belt'), with older parts becoming greyish to black, hard, and crusty, often with resinous deposits. The underside has small, cream to yellowish pores. Flesh is pale wood-colored and woody.",
+        "habitat": "Grows primarily on coniferous trees (pine, spruce, fir, hemlock), but occasionally on hardwoods. Causes a brown rot. Common and widespread.",
+        "edibility": "Inedible",
+        "notes": "Very tough and woody. The reddish band near the margin is a key identifying feature, though it can be less prominent on older specimens. Important in forest ecosystems for wood decay.",
+        "image_path": "/images/fomitopsis_pinicola.jpg"
+    },
+    {
+        "scientific_name": "Ganoderma applanatum",
+        "common_name": "Artist's Conk, Artist's Bracket",
+        "type": "Fungus",
+        "description": "A large, perennial, shelf-like or bracket-shaped polypore with a hard, woody consistency. The upper surface is greyish-brown to dull brown, often covered with a layer of cocoa-brown spores, and may be irregular or lumpy. The underside has a white to pale brownish pore surface with tiny pores that instantly bruise dark brown when scratched or drawn upon, hence the common name.",
+        "habitat": "Grows on dead or living hardwood trees, and occasionally conifers. Causes a white rot. Very common and widespread.",
+        "edibility": "Inedible (medicinal uses)",
+        "notes": "Famous for the ability to draw on its fresh white pore surface. Used in traditional Chinese medicine. Very tough and woody.",
+        "image_path": "/images/ganoderma_applanatum.jpg"
+    },
+    {
+        "scientific_name": "Graphis scripta",
+        "common_name": "Script Lichen, Common Scribe",
+        "type": "Lichen",
+        "description": "A crustose lichen that forms a thin, smooth, whitish to pale greyish or greenish crust on bark. Its most distinctive feature is the presence of black, elongated, branched, and often curved fruiting bodies (lirellae) that resemble hieroglyphs or script-like markings.",
+        "habitat": "Commonly found on the smooth bark of deciduous trees, especially in shaded, humid locations.",
+        "edibility": "Inedible",
+        "notes": "This is a lichen. The 'script' markings are its apothecia (fruiting structures). The appearance can vary considerably, but the hieroglyphic pattern is characteristic.",
+        "image_path": "/images/graphis_scripta.jpg"
+    },
+    {
+        "scientific_name": "Gyromitra esculenta",
+        "common_name": "False Morel, Brain Mushroom, Turban Fungus",
+        "type": "Fungus",
+        "description": "Characterized by a brain-like or saddle-shaped cap that is reddish-brown to yellowish-brown and convoluted with lobes and wrinkles. The cap is attached to a whitish to pinkish, chambered stem at several points.",
+        "habitat": "Found in sandy soils in coniferous forests, often near pine trees, in spring and early summer. Also associated with disturbed ground.",
+        "edibility": "Deadly Poisonous (unless properly processed)",
+        "notes": "Contains gyromitrin, which is hydrolyzed to monomethylhydrazine (MMH), a volatile and highly toxic compound (also a rocket fuel component). MMH is carcinogenic. While consumed in some regions after specific parboiling and drying procedures to reduce toxin levels, it is responsible for poisonings and fatalities. Its sale is prohibited in many countries. Best considered deadly poisonous.",
+        "image_path": "/images/gyromitra_esculenta.jpg"
+    },
+    {
+        "scientific_name": "Gyromitra gigas",
+        "common_name": "Giant False Morel, Snow Morel (sometimes)",
+        "type": "Fungus",
+        "description": "A large false morel with a heavily wrinkled and convoluted cap, often yellowish-brown to tan. The cap is typically more massive and less distinctly lobed than G. esculenta, appearing more brain-like. The stem is thick, whitish, and chambered.",
+        "habitat": "Grows in spring, often in montane coniferous forests, near melting snowbanks, or in rich soil with hardwoods.",
+        "edibility": "Poisonous (potentially less toxic than G. esculenta, but still risky)",
+        "notes": "Also contains gyromitrin, though often reported in lower concentrations than G. esculenta. Due to the risks and similarity to G. esculenta, it should be avoided or treated with extreme caution (i.e., proper detoxification methods, which are not always reliable).",
+        "image_path": "/images/gyromitra_gigas.jpg"
+    },
+    {
+        "scientific_name": "Gyromitra infula",
+        "common_name": "Hooded False Morel, Elf's Saddle, Bishop's Cap",
+        "type": "Fungus",
+        "description": "Distinctive with a saddle-shaped, lobed, or irregularly hood-like cap that is reddish-brown to dark brown. The cap margin is often free from the stem. The stem is whitish to pinkish-tan and can be smooth or slightly fuzzy.",
+        "habitat": "Grows on decaying coniferous wood or woody debris, sometimes on soil rich in wood. Appears in late summer and autumn, unlike most other Gyromitra species which are spring fungi.",
+        "edibility": "Poisonous",
+        "notes": "Contains gyromitrin and should be considered poisonous. Its autumn fruiting and saddle-shaped cap help distinguish it.",
+        "image_path": "/images/gyromitra_infula.jpg"
+    },
+    {
+        "scientific_name": "Hericium coralloides",
+        "common_name": "Comb Tooth, Coral Hedgehog",
+        "type": "Fungus",
+        "description": "A striking fungus that forms a branched, coral-like structure, typically white to creamy white. It consists of a central mass from which numerous short, delicate spines (less than 1 cm long) hang down from the branches, resembling icicles or a comb.",
+        "habitat": "Grows on dead hardwood logs and stumps, especially beech and maple. Fruits in late summer and autumn.",
+        "edibility": "Choice Edible",
+        "notes": "Valued for its delicate flavor and unique texture. Should be cooked. Other Hericium species are also edible and similar in appearance (e.g., H. erinaceus - Lion's Mane, H. americanum - Bear's Head Tooth).",
+        "image_path": "/images/hericium_coralloides.jpg"
+    },
+    {
+        "scientific_name": "Hygrophoropsis aurantiaca",
+        "common_name": "False Chanterelle",
+        "type": "Fungus",
+        "description": "Resembles a chanterelle but has true, forked gills that are typically thinner and more crowded than the blunt ridges of true chanterelles. The cap is orange to yellowish-orange, often with a depressed center. The stem is also orange and often slender.",
+        "habitat": "Grows on well-rotted wood, sawdust, woodchips, or peat, especially in coniferous forests. Common in summer and autumn.",
+        "edibility": "Edible (but not choice) / Some sources say inedible or causes mild upset",
+        "notes": "Often confused with true chanterelles (Cantharellus cibarius). While not dangerously poisonous, it is considered inferior in taste and texture, and some individuals report mild gastrointestinal distress. The key difference is the true, forked gills vs. blunt ridges.",
+        "image_path": "/images/hygrophoropsis_aurantiaca.jpg"
+    },
+    {
+        "scientific_name": "Hypholoma fasciculare",
+        "common_name": "Sulphur Tuft",
+        "type": "Fungus",
+        "description": "Grows in dense clusters. Caps are convex, sulphur-yellow to greenish-yellow, often with a darker orange-brown center. Gills are initially yellowish, becoming greenish then purplish-brown to blackish as spores mature. Stem is slender, yellowish, often darker towards the base. Has a bitter taste.",
+        "habitat": "Very common on dead wood of both conifers and hardwoods, such as stumps and logs. Fruits year-round but is most abundant in autumn.",
+        "edibility": "Poisonous",
+        "notes": "One of the most common woodland mushrooms. Poisonous, causing gastrointestinal upset. The bitter taste and greenish gills are key identifiers. Can be confused with edible Hypholoma capnoides (Conifer Tuft), which has greyish gills and lacks the bitter taste, or the edible Kuehneromyces mutabilis, which has a scaly stem and a distinct ring.",
+        "image_path": "/images/hypholoma_fasciculare.jpg"
+    },
+    {
+        "scientific_name": "Hypholoma lateritium",
+        "common_name": "Brick Cap, Brick Tuft",
+        "type": "Fungus",
+        "description": "Grows in clusters, with caps that are brick-red to brownish-orange, typically paler towards the margin. Gills are initially yellowish, becoming greyish and then purplish-grey to dark brown. The stem is yellowish, often with a rusty tinge towards the base, and may have faint remnants of a veil.",
+        "habitat": "Common on stumps and logs of deciduous trees, especially oak. Fruits in autumn and early winter.",
+        "edibility": "Edible (with caution by some) / Inedible by others",
+        "notes": "Edibility is debated. Some consider it edible and good, particularly in North America, while European sources often list it as inedible or mildly poisonous due to bitterness or potential for upset. If considered, only young specimens should be tried, and thorough cooking is essential. Distinguished from Sulphur Tuft by its reddish cap and lack of greenish tones in the gills.",
+        "image_path": "/images/hypholoma_lateritium.jpg"
+    },
+    {
+        "scientific_name": "Hypogymnia physodes",
+        "common_name": "Monk's-hood Lichen, Puffed Shield Lichen",
+        "type": "Lichen",
+        "description": "A foliose (leafy) lichen forming greyish to greenish-grey rosettes or irregular patches. Lobes are typically hollow and inflated (especially towards the tips), strap-shaped, and forked. The undersurface is black and lacks rhizines (root-like structures). Soralia (powdery reproductive structures) are often present on the burst-open tips of the lobes or on the surface.",
+        "habitat": "Very common on tree bark (both coniferous and deciduous), twigs, rocks, and fence posts in a wide range of habitats. Tolerant of some air pollution.",
+        "edibility": "Inedible",
+        "notes": "This is a lichen. The hollow, inflated lobes and black undersurface are key characteristics. One of the most common lichens in many temperate regions.",
+        "image_path": "/images/hypogymnia_physodes.jpg"
+    },
+    {
+        "scientific_name": "Imleria badia",
+        "common_name": "Bay Bolete",
+        "type": "Fungus",
+        "description": "A medium-sized bolete with a convex, bay-brown to chestnut-brown cap that is often velvety when young and can be slightly sticky when wet. Pores are initially pale yellow, becoming yellowish-green to olive, and bruise bluish-green or blue when damaged. The stem is yellowish-brown, often streaked, and lacks reticulation.",
+        "habitat": "Forms mycorrhizal relationships with coniferous trees (especially pine and spruce) and sometimes deciduous trees, on acidic soils. Common in summer and autumn.",
+        "edibility": "Choice Edible",
+        "notes": "A popular edible bolete. The blue-bruising pores and lack of reticulation on the stem are key features. Care should be taken to distinguish from other boletes.",
+        "image_path": "/images/imleria_badia.jpg"
+    },
+    {
+        "scientific_name": "Inonotus obliquus",
+        "common_name": "Chaga Mushroom, Clinker Polypore",
+        "type": "Fungus",
+        "description": "Most commonly seen as a sterile conk, which is a large, black, cracked, and charcoal-like mass (sclerotium) protruding from birch trees. This sterile mass is not the fruiting body. The actual fruiting body is a resupinate (crust-like) polypore that forms under the bark of dead trees, rarely seen.",
+        "habitat": "Parasitic on birch trees, causing a white heart rot. The black conk can take many years to develop. Found in cool, northern climates.",
+        "edibility": "Inedible (as a mushroom, but used as a medicinal tea)",
+        "notes": "The black, clinker-like sterile conk is harvested for medicinal purposes, traditionally used to make a tea with various claimed health benefits (antioxidant, anti-inflammatory). The fungus itself (fruiting body) is not what is typically referred to as 'Chaga'.",
+        "image_path": "/images/inonotus_obliquus.jpg"
+    },
+    {
+        "scientific_name": "Kuehneromyces mutabilis",
+        "common_name": "Sheathed Woodtuft, Two-toned Woodtuft, Brown Stew Fungus",
+        "type": "Fungus",
+        "description": "Grows in clusters. Cap is convex, typically two-toned (hygrophanous): brownish-orange to cinnamon when moist, drying to a paler tan or yellowish from the center outwards. Gills are initially pale yellowish-brown, becoming rusty brown. Stem is slender, brownish, with a distinct, persistent ring and noticeable scales below the ring.",
+        "habitat": "Common on stumps and logs of deciduous trees (especially beech, birch) and occasionally conifers. Fruits from spring to autumn.",
+        "edibility": "Edible (good)",
+        "notes": "A good edible mushroom, but careful identification is crucial due to its resemblance to the deadly poisonous Galerina marginata (Funeral Bell), which also grows on wood, has a ring, and brown spores. Key differences: K. mutabilis has scales on the stem below the ring, a hygrophanous cap, and a pleasant smell; G. marginata has a non-scaly (often silky) stem below the ring, a non-hygrophanous (or less distinctly so) cap, and often smells mealy. **Extreme caution is advised.**",
+        "image_path": "/images/kuehneromyces_mutabilis.jpg"
+    },
+    {
+        "scientific_name": "Lactarius deliciosus",
+        "common_name": "Saffron Milk Cap, Red Pine Mushroom",
+        "type": "Fungus",
+        "description": "A medium to large mushroom with a convex cap that becomes centrally depressed or funnel-shaped. The cap is orange to orangey-pink, often with darker concentric zones, and may develop greenish stains with age or where damaged. Gills are orange and decurrent. When broken, it exudes a carrot-orange latex (milk) that slowly turns wine-red and then greenish.",
+        "habitat": "Forms mycorrhizal relationships with pine trees (Pinus species) on acidic soils. Common in autumn.",
+        "edibility": "Choice Edible",
+        "notes": "Highly prized edible. The orange latex that doesn't turn purple or violet is a key feature. There are several similar-looking orange-latex Lactarius species associated with conifers, many of which are also edible (e.g., L. deterrimus, L. salmonicolor). Green staining is natural and does not affect edibility.",
+        "image_path": "/images/lactarius_deliciosus.jpg"
+    },
+    {
+        "scientific_name": "Lactarius torminosus",
+        "common_name": "Woolly Milkcap, Bearded Milkcap",
+        "type": "Fungus",
+        "description": "Cap is convex, becoming depressed, pinkish to flesh-colored, with distinct concentric zones and a conspicuously hairy or woolly margin, especially when young. Gills are pale pinkish. Exudes a white, acrid (peppery) latex that does not change color or turns slightly yellowish.",
+        "habitat": "Mycorrhizal with birch trees (Betula species) in woodlands and heathlands. Common in late summer and autumn.",
+        "edibility": "Poisonous (unless specially prepared)",
+        "notes": "Acutely poisonous if eaten raw or improperly prepared, causing severe gastrointestinal distress. In some Eastern European countries, it is consumed after prolonged boiling or pickling, which reportedly removes the toxins. However, it's best avoided by most foragers. The woolly cap margin is very distinctive.",
+        "image_path": "/images/lactarius_torminosus.jpg"
+    },
+    {
+        "scientific_name": "Lactarius turpis",
+        "common_name": "Ugly Milkcap, Dirty Milkcap",
+        "type": "Fungus",
+        "description": "A large, robust mushroom with a centrally depressed to funnel-shaped cap that is dark olive-brown to almost black, often sticky or slimy, and may have a velvety texture. Gills are crowded, yellowish to dingy cream, and stain olive-brown when bruised. Exudes a white, acrid latex that may turn slightly olive or not change on exposure to air but stains gills brownish.",
+        "habitat": "Mycorrhizal with birch (Betula) and sometimes conifers, in damp woodland and heathland. Common in late summer and autumn.",
+        "edibility": "Poisonous / Suspected Carcinogen",
+        "notes": "Considered poisonous. Contains mutagenic compounds (e.g., necatorin) and is suspected to be carcinogenic. Should not be eaten. Its dark, often slimy appearance and association with birch are key features.",
+        "image_path": "/images/lactarius_turpis.jpg"
+    },
+    {
+        "scientific_name": "Laetiporus sulphureus",
+        "common_name": "Chicken of the Woods, Sulphur Shelf",
+        "type": "Fungus",
+        "description": "A striking polypore that forms large, bracket-like clusters of overlapping fan-shaped caps. The upper surface is bright sulphur-yellow to orange, fading with age. The underside is sulphur-yellow with small pores. The flesh is thick, soft, and watery when young, becoming tougher and crumbly.",
+        "habitat": "Grows on living or dead hardwood trees (especially oak, cherry, willow) and sometimes on conifers (though some believe conifer-growing variants may cause more digestive upset). Causes a brown rot. Fruits from late spring to autumn.",
+        "edibility": "Choice Edible (when young)",
+        "notes": "Highly prized for its chicken-like texture and flavor when young and tender. Only the soft, outer edges of mature brackets are usually palatable. Must be cooked thoroughly. Some people experience mild allergic reactions or gastrointestinal upset, especially if it's growing on certain trees (e.g., eucalyptus, conifers) or is undercooked. Harvest only young, moist specimens.",
+        "image_path": "/images/laetiporus_sulphureus.jpg"
+    },
+    {
+        "scientific_name": "Leccinum albostipitatum",
+        "common_name": "Orange Oak Bolete (one of several similar species)",
+        "type": "Fungus",
+        "description": "A bolete with a bright orange to reddish-orange cap. The stem is whitish and covered with whitish scabers (small tufts or scales) that do not significantly darken with age or may turn slightly yellowish/rusty. Pores are small, whitish to cream, bruising dingy. Flesh is white, may stain vinaceous or greyish when cut.",
+        "habitat": "Mycorrhizal with oak (Quercus) and possibly other deciduous trees. Fruits in summer and autumn.",
+        "edibility": "Edible",
+        "notes": "One of several orange-capped Leccinum species associated with deciduous trees. Leccinum identification can be tricky. Requires thorough cooking. The non-darkening (or only slightly darkening) scabers on the stem are a key feature for this species compared to some others.",
+        "image_path": "/images/leccinum_albostipitatum.jpg"
+    },
+    {
+        "scientific_name": "Leccinum aurantiacum",
+        "common_name": "Orange Birch Bolete, Red-capped Scaber Stalk (sensu lato)",
+        "type": "Fungus",
+        "description": "A large bolete with a bright orange to reddish-brown cap. The stem is whitish and covered with scabers (small scales) that are initially whitish but typically darken to reddish-brown or blackish with age or handling. Pores are small, whitish to greyish. Flesh is white, often bruising pinkish, then greyish or purplish-black when cut.",
+        "habitat": "Mycorrhizal primarily with aspen (Populus tremula) but also other poplars and sometimes birch. Fruits in summer and autumn.",
+        "edibility": "Edible (good)",
+        "notes": "A good edible mushroom, but must be cooked thoroughly (some recommend at least 15-20 minutes) as undercooked Leccinums can cause gastrointestinal upset. The darkening scabers and host tree are important for identification. The name L. aurantiacum has been applied to several related species.",
+        "image_path": "/images/leccinum_aurantiacum.jpg"
+    },
+    {
+        "scientific_name": "Leccinum scabrum",
+        "common_name": "Brown Birch Bolete, Birch Bolete",
+        "type": "Fungus",
+        "description": "A medium to large bolete with a convex cap that is brownish, greyish-brown, or yellowish-brown, often somewhat mottled. The stem is whitish and covered with small, dark grey to black scabers. Pores are small, whitish to greyish-buff. Flesh is white and does not usually change color significantly when cut, or may turn slightly pinkish or greyish.",
+        "habitat": "Mycorrhizal exclusively with birch trees (Betula species). Very common in summer and autumn.",
+        "edibility": "Edible",
+        "notes": "Considered a good edible, though perhaps not as highly rated as some other boletes. Must be cooked thoroughly. The association with birch and the dark scabers on a non-staining (or weakly staining) flesh are key characteristics.",
+        "image_path": "/images/leccinum_scabrum.jpg"
+    },
+    {
+        "scientific_name": "Leccinum versipelle",
+        "common_name": "Orange Birch Bolete (another one), Mosaic Bolete",
+        "type": "Fungus",
+        "description": "A large bolete with a bright orange to apricot-orange or tawny-orange cap, often with an overhanging sterile flap of tissue at the margin. The stem is robust, whitish, and densely covered with blackish scabers. Pores are small, greyish. Flesh is white, turning pinkish-grey then violaceous-grey or blackish when cut.",
+        "habitat": "Mycorrhizal with birch (Betula species), often in damp or peaty areas. Fruits in summer and autumn.",
+        "edibility": "Edible (good)",
+        "notes": "Good edible, but like all Leccinums, requires thorough cooking. The orange cap with an overhanging margin, black scabers, and association with birch are key features. The flesh staining is also distinctive.",
+        "image_path": "/images/leccinum_versipelle.jpg"
+    },
+    {
+        "scientific_name": "Lepista nuda",
+        "common_name": "Wood Blewit, Blue Stalk Mushroom",
+        "type": "Fungus",
+        "description": "A distinctive mushroom with a convex cap that flattens with age, variable in color from violaceous or lilac-purple when young, fading to brownish or tan with a purplish tinge. Gills are crowded, notched at the stem, and similarly purplish, fading to buff. Stem is stout, fibrous, purplish, and often has a swollen base covered in mycelium. Has a characteristic perfumed or floral scent.",
+        "habitat": "Grows in deciduous and coniferous woodland litter, compost piles, and gardens. Common in autumn and can persist into mild winters.",
+        "edibility": "Choice Edible",
+        "notes": "Highly prized edible, but must be cooked thoroughly as it can cause mild digestive upset in some if eaten raw. There are poisonous purple Cortinarius species that could be confused; Blewits have a pale pinkish-buff spore print, while Cortinarius have a rusty brown spore print. Always confirm spore print if in doubt.",
+        "image_path": "/images/lepista_nuda.jpg"
+    },
+    {
+        "scientific_name": "Lobaria pulmonaria",
+        "common_name": "Lungwort Lichen, Tree Lungwort",
+        "type": "Lichen",
+        "description": "A large foliose lichen with broad, leathery, olive-green to brownish-green (when dry) or bright green (when wet) lobes. The upper surface has a distinctive network of ridges and depressions, resembling lung tissue. The undersurface is paler, tomentose (fuzzy), with bare patches. Soredia and/or apothecia (fruiting bodies) can be present.",
+        "habitat": "Grows on the bark of mature deciduous trees (and occasionally conifers or rocks) in old-growth forests with clean air and high humidity.",
+        "edibility": "Inedible (used medicinally and for dyeing)",
+        "notes": "This is a lichen. It is an indicator species for ancient woodlands and clean air. Traditionally used for medicinal purposes (treating lung ailments due to its appearance - doctrine of signatures) and for dyeing wool.",
+        "image_path": "/images/lobaria_pulmonaria.jpg"
+    },
+    {
+        "scientific_name": "Lycoperdon perlatum",
+        "common_name": "Common Puffball, Gem-studded Puffball, Warted Puffball",
+        "type": "Fungus",
+        "description": "A medium-sized puffball, typically pear-shaped or somewhat spherical with a tapering base. The outer surface is white to pale tan and covered with small, conical spines or warts that easily rub off, leaving a faint net-like pattern. A pore opens at the apex to release olive-brown spores when mature.",
+        "habitat": "Very common in woodlands, grassy areas, and on disturbed ground. Fruits from summer to autumn.",
+        "edibility": "Edible (when young)",
+        "notes": "Edible and good when the internal flesh is pure white and firm throughout. Discard if the flesh has started to turn yellowish or brownish. The easily detachable spines are a good identifier.",
+        "image_path": "/images/lycoperdon_perlatum.jpg"
+    },
+    {
+        "scientific_name": "Macrolepiota procera",
+        "common_name": "Parasol Mushroom",
+        "type": "Fungus",
+        "description": "A large, striking mushroom. The cap is initially egg-shaped, expanding to become broad and convex or flat, with a prominent dark central umbo. The surface is whitish to pale brown and covered with coarse, shaggy brown scales. Gills are white to cream, free from the stem. Stem is tall, slender, with a bulbous base and a distinctive, movable double ring. The stem surface has a snakeskin-like pattern.",
+        "habitat": "Found in grassy fields, pastures, open woodlands, and roadsides. Common in late summer and autumn.",
+        "edibility": "Choice Edible (cap only)",
+        "notes": "Highly prized edible, only the cap is usually eaten as the stem is fibrous. The movable ring, shaggy scales on the cap, and snakeskin pattern on the stem are key features. Must be distinguished from poisonous look-alikes, especially Chlorophyllum molybdites (Green-spored Parasol), which has greenish gills when mature and causes severe gastrointestinal poisoning. C. molybdites is more common in warmer climates. Always check spore print if unsure (M. procera is white/cream; C. molybdites is green).",
+        "image_path": "/images/macrolepiota_procera.jpg"
+    },
+    {
+        "scientific_name": "Merulius tremellosus",
+        "common_name": "Trembling Merulius, Jelly Rot",
+        "type": "Fungus",
+        "description": "A crust-like or thinly bracket-like fungus that forms spreading patches. The fertile surface is a network of irregular, gelatinous, wrinkle-like folds or shallow pores, typically pinkish-orange to reddish-orange. The margin is often whitish and fuzzy, and may curl away from the substrate. The texture is somewhat rubbery or gelatinous when fresh.",
+        "habitat": "Grows on dead and decaying hardwood, sometimes conifers, causing a white rot. Common year-round but more noticeable in moist conditions.",
+        "edibility": "Inedible",
+        "notes": "The gelatinous, wrinkled, orange-pink pore surface is distinctive. Not considered for eating due to its texture and insubstantial nature.",
+        "image_path": "/images/merulius_tremellosus.jpg"
+    },
+    {
+        "scientific_name": "Mutinus ravenelii",
+        "common_name": "Ravenel's Stinkhorn, Little Red Stinkhorn",
+        "type": "Fungus",
+        "description": "A small stinkhorn that emerges from an egg-like volva. The stalk is slender, cylindrical or slightly tapered, pink to reddish-pink, and hollow. The spore-bearing slime (gleba) is dark olive-brown to blackish and covers the upper part of the stalk (usually the pointed tip). It has a fetid odor, though often less pungent than some other stinkhorns.",
+        "habitat": "Grows in rich soil, mulch, gardens, and woodlands. Fruits in summer and autumn.",
+        "edibility": "Inedible (eggs are reportedly edible by some, but not recommended)",
+        "notes": "The pinkish stalk and more localized gleba distinguish it from Mutinus caninus (Dog Stinkhorn), which typically has an orange-red tip with gleba below it. The smell attracts insects which disperse the spores. Eggs are considered edible by some adventurous individuals but generally avoided.",
+        "image_path": "/images/mutinus_ravenelii.jpg"
+    },
+    {
+        "scientific_name": "Nectria cinnabarina",
+        "common_name": "Coral Spot Fungus",
+        "type": "Fungus",
+        "description": "Appears in two stages. The asexual stage (anamorph) consists of small, bright pink to orange-red, cushion-like pustules (sporodochia) that erupt through bark. The sexual stage (teleomorph) consists of darker red, raspberry-like, globose fruiting bodies (perithecia) that often develop on or among the earlier pink pustules.",
+        "habitat": "Very common on dead or dying branches and twigs of deciduous trees and shrubs, particularly hardwoods like sycamore, beech, and lime. It's a weak parasite or saprobe.",
+        "edibility": "Inedible",
+        "notes": "The bright pink-orange 'coral spots' are a common sight on deadwood. Not a culinary mushroom.",
+        "image_path": "/images/nectria_cinnabarina.jpg"
+    },
+    {
+        "scientific_name": "Panellus stipticus",
+        "common_name": "Bitter Oysterling, Luminescent Panellus (some strains)",
+        "type": "Fungus",
+        "description": "A small, tough, kidney-shaped or fan-shaped mushroom with a very short, stubby, off-center stem, or stemless. The cap is pale tan to brownish, often with a dry, slightly fuzzy surface. Gills are crowded, thin, and light brown. It has a very astringent or bitter taste.",
+        "habitat": "Grows in shelf-like clusters on dead hardwood logs and branches (e.g., oak, birch, beech). Common year-round.",
+        "edibility": "Inedible (due to bitterness and texture)",
+        "notes": "Known for its intense bitterness. North American strains, particularly from the eastern regions, are often bioluminescent (glow in the dark), while European strains typically are not. This bioluminescence is faint and best seen in complete darkness after the eyes have adapted.",
+        "image_path": "/images/panellus_stipticus.jpg"
+    },
+    {
+        "scientific_name": "Parmelia sulcata",
+        "common_name": "Shield Lichen, Hammered Shield Lichen",
+        "type": "Lichen",
+        "description": "A foliose lichen forming grey to bluish-grey rosettes or irregular patches. The lobes are relatively broad and flat, with a distinctive network of pale cracks or ridges on the upper surface (pseudocyphellae). Soralia (powdery reproductive structures) are often present along these ridges. The undersurface is black with simple rhizines (root-like attachments).",
+        "habitat": "Very common on tree bark (both deciduous and coniferous), rocks, and occasionally on old wooden structures. Tolerant of some air pollution.",
+        "edibility": "Inedible",
+        "notes": "This is a lichen. The reticulate pattern of cracks/ridges on the lobes is a key identifier. One of the most widespread lichens in temperate regions.",
+        "image_path": "/images/parmelia_sulcata.jpg"
+    },
+    {
+        "scientific_name": "Paxillus involutus",
+        "common_name": "Brown Roll-rim, Poison Pax",
+        "type": "Fungus",
+        "description": "A medium to large mushroom with a convex cap that becomes centrally depressed or funnel-shaped, with a distinctly inrolled margin (especially when young). The cap is yellowish-brown to reddish-brown or olive-brown, and often velvety or sticky. Gills are yellowish to rusty brown, crowded, decurrent, and bruise dark reddish-brown readily. Stem is central or off-center.",
+        "habitat": "Mycorrhizal with a wide range of trees, especially birch, alder, and poplar, in woodlands, heathlands, and disturbed ground. Very common from summer to autumn.",
+        "edibility": "Deadly Poisonous",
+        "notes": "Formerly considered edible in some areas, but now known to be dangerously poisonous. It can cause a severe autoimmune reaction (Paxillus syndrome) leading to hemolysis (destruction of red blood cells) and organ failure, which can be fatal, especially with repeated consumption over time. The strongly inrolled margin and bruising gills are key features. **Avoid consumption entirely.**",
+        "image_path": "/images/paxillus_involutus.jpg"
+    },
+    {
+        "scientific_name": "Peltigera aphthosa",
+        "common_name": "Studded Leather Lichen, Green Dog Lichen (confusingly)",
+        "type": "Lichen",
+        "description": "A large foliose lichen with broad, spreading lobes. The upper surface is bright green when wet, greyish-green when dry, and characteristically has small, dark green to blackish cephalodia (wart-like structures containing cyanobacteria) scattered on its surface. The undersurface is whitish to pale tan with fuzzy, anastomosing (net-like) veins and whitish rhizines.",
+        "habitat": "Grows on mossy ground, rocks, and tree bases in damp, shaded environments, often in coniferous or mixed woodlands.",
+        "edibility": "Inedible",
+        "notes": "This is a lichen. The prominent cephalodia on the upper surface are a key distinguishing feature. The 'aphtae' or studs give it its name. 'Dog lichen' is also used for P. canina, which lacks these surface cephalodia.",
+        "image_path": "/images/peltigera_aphthosa.jpg"
+    },
+    {
+        "scientific_name": "Peltigera praetextata",
+        "common_name": "Scaly Dog Lichen, Pretext Dog Lichen",
+        "type": "Lichen",
+        "description": "A foliose lichen with medium to large lobes, greyish-brown to brown when dry, and dark green when wet. The upper surface is often tomentose (hairy), especially near the margins. A key feature is the presence of small, scale-like or lobule-like phyllidia (asexual propagules) along the lobe margins and cracks, giving it a somewhat ragged or scaly appearance. Undersurface has indistinct, flattened veins and tufted rhizines.",
+        "habitat": "Grows on mossy soil, rocks, tree bases, and logs in shaded, moist woodlands.",
+        "edibility": "Inedible",
+        "notes": "This is a lichen. The presence of phyllidia, particularly along the lobe margins, is characteristic. The name 'praetextata' refers to a bordered toga, perhaps alluding to these marginal scales.",
+        "image_path": "/images/peltigera_praetextata.jpg"
+    },
+    {
+        "scientific_name": "Phaeophyscia orbicularis",
+        "common_name": "Shadow Lichen",
+        "type": "Lichen",
+        "description": "A small foliose lichen forming circular rosettes or irregular patches, typically grey to brownish-grey or olive-brown, sometimes darker. Lobes are narrow and somewhat flattened, often with fine, whitish hairs (cilia) along the margins, though these can be sparse or absent. Soralia (powdery dots for reproduction) are common, appearing as laminal (on the surface) or marginal, round, pale to dark grey spots. The undersurface is black with black rhizines.",
+        "habitat": "Grows on bark (especially nutrient-enriched bark of roadside or urban trees), rock (especially calcareous or nutrient-rich), and man-made substrates like concrete and asbestos. Tolerant of nutrient enrichment.",
+        "edibility": "Inedible",
+        "notes": "This is a lichen. Its small size, often orbicular shape, and dark undersurface are typical. Common in urban and disturbed areas.",
+        "image_path": "/images/phaeophyscia_orbicularis.jpg"
+    },
+    {
+        "scientific_name": "Phallus impudicus",
+        "common_name": "Common Stinkhorn",
+        "type": "Fungus",
+        "description": "Emerges from a whitish, egg-like volva. The mature fruiting body has a tall, hollow, porous, whitish stalk (receptaculum) topped with a conical or bell-shaped cap (pileus) which is covered in a slimy, olive-green to dark brown, foul-smelling spore mass (gleba). The cap has a reticulated surface beneath the gleba.",
+        "habitat": "Common in woodlands, gardens, and parks, growing in rich soil and leaf litter or around decaying wood. Fruits from summer to late autumn.",
+        "edibility": "Inedible (eggs reportedly edible by some, but smell is off-putting)",
+        "notes": "The strong, carrion-like odor attracts flies and other insects, which feed on the gleba and disperse the spores. The 'eggs' are considered edible by some before the stalk elongates and the smell develops, but this is not a common practice. Its appearance is quite phallic.",
+        "image_path": "/images/phallus_impudicus.jpg"
+    },
+    {
+        "scientific_name": "Phellinus igniarius",
+        "common_name": "Willow Bracket, False Tinder Fungus",
+        "type": "Fungus",
+        "description": "A very hard, woody, perennial polypore that is hoof-shaped or shelf-like. The upper surface is greyish-black to black, often cracked and rough, sometimes with greenish algal growth. The pore surface underneath is brownish with tiny pores. The flesh is rusty brown and extremely hard.",
+        "habitat": "Primarily parasitic on willow (Salix species), but also found on other hardwoods like alder and birch, causing a white heart rot. Fruitbodies are very long-lived and grow slowly.",
+        "edibility": "Inedible",
+        "notes": "Extremely tough and woody. Similar to Fomes fomentarius but typically found on willow and has a darker, often more cracked upper surface and brownish (not greyish) pores. The 'igniarius' refers to fire, as it might have been used as tinder, though Fomes fomentarius is more famous for this.",
+        "image_path": "/images/phellinus_igniarius.jpg"
+    },
+    {
+        "scientific_name": "Phellinus tremulae",
+        "common_name": "Aspen Bracket, Aspen Trunk Rot",
+        "type": "Fungus",
+        "description": "A hard, woody, perennial polypore, typically hoof-shaped, but can be more variable. The upper surface is greyish to blackish, often furrowed and cracked. The pore surface is brownish. It is specifically associated with aspen and poplar trees.",
+        "habitat": "Parasitic on living aspen (Populus tremula) and other poplar species, causing a distinctive heart rot often referred to as 'Phellinus rot' or 'Aspen trunk rot'. Common in boreal and temperate forests where aspen is present.",
+        "edibility": "Inedible",
+        "notes": "Similar to other Phellinus species but distinguished by its primary host (aspen/poplar). Economically significant as a cause of timber decay in aspen stands. Very hard and woody.",
+        "image_path": "/images/phellinus_tremulae.jpg"
+    },
+    {
+        "scientific_name": "Phlebia radiata",
+        "common_name": "Wrinkled Crust, Radiating Phlebia",
+        "type": "Fungus",
+        "description": "A resupinate (crust-like) fungus that forms spreading patches on wood. The fertile surface is distinctively wrinkled or folded into radiating or vein-like ridges, often with a waxy appearance. Color is variable, commonly pinkish-orange, orange-red, to yellowish-orange, sometimes paler.",
+        "habitat": "Grows on dead wood of both deciduous and coniferous trees, particularly on barkless logs and branches. Appears year-round but is more prominent in moist conditions.",
+        "edibility": "Inedible",
+        "notes": "The radiating, wrinkled, colourful surface is characteristic. Plays a role in wood decomposition.",
+        "image_path": "/images/phlebia_radiata.jpg"
+    },
+    {
+        "scientific_name": "Pholiota aurivella",
+        "common_name": "Golden Scalycap, Golden Pholiota",
+        "type": "Fungus",
+        "description": "A medium to large mushroom that grows in clusters. The cap is convex, becoming broadly convex, bright golden-yellow to rusty-orange, and covered with conspicuous, darker, upturned scales. The cap surface is slimy or sticky (viscid) when moist. Gills are initially yellowish, becoming rusty brown. Stem has a faint ring zone and is often scaly below it.",
+        "habitat": "Grows on living or dead hardwood trees, especially beech, birch, and maple. Fruits in autumn.",
+        "edibility": "Inedible / Edibility disputed",
+        "notes": "While some older field guides list it as edible, many modern sources consider it inedible or of poor quality, and there are reports of it causing gastrointestinal upset in some. The slimy cap and prominent scales are distinctive. Similar to Pholiota squarrosa, but P. aurivella has a distinctly viscid cap.",
+        "image_path": "/images/pholiota_aurivella.jpg"
+    },
+    {
+        "scientific_name": "Pholiota squarrosa",
+        "common_name": "Shaggy Scalycap, Shaggy Pholiota",
+        "type": "Fungus",
+        "description": "Grows in dense clusters, often at the base of trees. The cap is convex to broadly convex, yellowish-brown to rusty-brown, and densely covered with prominent, recurved, pointed, darker brown scales. The cap surface is dry, not slimy. Gills are initially yellowish, later rusty brown. Stem is tough, scaly like the cap, and often has a ragged ring.",
+        "habitat": "Grows on living or dead trees, both hardwoods and conifers, often at the base or on roots. Fruits in autumn.",
+        "edibility": "Edible with caution / Inedible by some",
+        "notes": "Edibility is debated; some consider it edible when young and well-cooked, while others find it indigestible or mildly toxic, potentially causing gastrointestinal upset. Can cause a reaction if consumed with alcohol by some individuals. The dry, very scaly cap and stem are key identifiers. Distinguished from P. aurivella by its dry cap.",
+        "image_path": "/images/pholiota_squarrosa.jpg"
+    },
+    {
+        "scientific_name": "Physcia adscendens",
+        "common_name": "Hooded Rosette Lichen",
+        "type": "Lichen",
+        "description": "A small foliose lichen forming grey to whitish-grey rosettes or tufts. The lobes are narrow and strap-shaped, and a key characteristic is the presence of helmet-shaped or hood-shaped swellings at the lobe tips, which bear soredia inside. Long, pale cilia (hairs) are usually present along the lobe margins.",
+        "habitat": "Common on nutrient-enriched bark of trees (especially roadside and urban trees), twigs, and occasionally on rock or man-made substrates. Tolerant of some pollution and nutrient enrichment.",
+        "edibility": "Inedible",
+        "notes": "This is a lichen. The distinctive 'hoods' at the lobe tips containing soredia are diagnostic. Often found with other Physcia species.",
+        "image_path": "/images/physcia_adscendens.jpg"
+    },
+    {
+        "scientific_name": "Platismatia glauca",
+        "common_name": "Ragged Shield Lichen, Variable Ragbag",
+        "type": "Lichen",
+        "description": "A medium to large foliose lichen, forming broad, loosely attached lobes. The upper surface is typically pale greyish-green to whitish-grey, sometimes with brownish tinges, and often has a wrinkled or puckered appearance. Lobe margins are often crisped, frilled, and may have isidia (small, coralloid outgrowths) or soredia. The undersurface is black in the center, paler brown towards the margins, with scattered rhizines.",
+        "habitat": "Grows on tree bark (conifers and hardwoods) and occasionally on rocks in humid, temperate, and boreal regions.",
+        "edibility": "Inedible",
+        "notes": "This is a lichen. Highly variable in appearance, hence 'variable ragbag'. The ragged, often isidiate or sorediate margins and the two-toned undersurface are helpful features.",
+        "image_path": "/images/platismatia_glauca.jpg"
+    },
+    {
+        "scientific_name": "Pleurotus ostreatus",
+        "common_name": "Oyster Mushroom",
+        "type": "Fungus",
+        "description": "Forms shelf-like clusters. Caps are fan-shaped or oyster-shell shaped, smooth, and variable in color from whitish to grey, greyish-brown, or even dark brown (depending on strain and conditions). Gills are white to cream, decurrent (running down the stem). Stem is short, off-center or lateral, and sometimes hairy at the base. Has a mild, pleasant smell.",
+        "habitat": "Grows on dead or dying hardwood trees (e.g., beech, oak, aspen, poplar), and is also widely cultivated. Fruits in cooler weather, typically autumn and spring, but can appear in winter.",
+        "edibility": "Choice Edible",
+        "notes": "A popular and widely cultivated edible mushroom. Known for its delicate flavor and velvety texture. Wild oyster mushrooms should be checked for small beetles that sometimes inhabit the gills. The decurrent gills and clustered, shelf-like growth on wood are characteristic.",
+        "image_path": "/images/pleurotus_ostreatus.jpg"
+    },
+    {
+        "scientific_name": "Pleurotus pulmonarius",
+        "common_name": "Phoenix Mushroom, Indian Oyster, Italian Oyster, Lung Oyster",
+        "type": "Fungus",
+        "description": "Very similar to Pleurotus ostreatus, forming shelf-like clusters. Caps are fan-shaped, typically paler in color than P. ostreatus, ranging from whitish to pale tan or light greyish-brown. Gills are white to cream, decurrent. Stem is often more developed than in P. ostreatus, but still typically off-center or lateral. Generally fruits in warmer weather than P. ostreatus.",
+        "habitat": "Grows on dead or dying hardwood trees. Also cultivated. Tends to fruit in summer and warmer periods of spring and autumn.",
+        "edibility": "Choice Edible",
+        "notes": "Also a choice edible, very similar to P. ostreatus in taste and texture. Often considered a warm-weather counterpart. Distinguishing between them can sometimes be difficult without observing fruiting temperature preferences or subtle morphological differences.",
+        "image_path": "/images/pleurotus_pulmonarius.jpg"
+    },
+    {
+        "scientific_name": "Pseudevernia furfuracea",
+        "common_name": "Tree Moss (misnomer), Hooded Bone Lichen",
+        "type": "Lichen",
+        "description": "A fruticose lichen forming bushy, strap-shaped, dichotomously branched tufts, often hanging from branches. The upper surface is typically greyish to greenish-grey, while the lower surface is blackish in the center, fading to paler at the margins, and has distinct channels or grooves. Isidia (small, granular or finger-like outgrowths) are usually abundant on the upper surface and margins, giving it a mealy or 'furfuraceous' appearance. Some morphs have more flattened lobes.",
+        "habitat": "Grows primarily on the bark and twigs of coniferous trees, but also on deciduous trees and occasionally rocks, in montane and boreal regions with clean air.",
+        "edibility": "Inedible",
+        "notes": "This is a lichen, not a moss. The 'tree moss' name is often used in floral arrangements. The two-toned, channeled undersurface and the presence of isidia are key features. Two main chemotypes/morphotypes exist: var. furfuracea (with isidia) and var. ceratea (lobes more swollen, fewer isidia, different chemistry).",
+        "image_path": "/images/pseudevernia_furfuracea.jpg"
+    },
+    {
+        "scientific_name": "Rhytisma acerinum",
+        "common_name": "Tar Spot Fungus (on Maple)",
+        "type": "Fungus",
+        "description": "A plant pathogenic fungus that causes 'tar spot' disease on maple leaves (Acer species). It appears as raised, shiny black spots (stromata) on the upper surface of living leaves, resembling drops of tar. Within these black spots, the fungus produces its fruiting bodies (apothecia) which mature in fallen leaves over winter.",
+        "habitat": "Specifically on living leaves of maple trees (Acer spp.). The black spots develop during summer and autumn.",
+        "edibility": "Inedible (it's a leaf disease)",
+        "notes": "While very noticeable, this is a disease of maple leaves and not a mushroom in the typical sense for foraging. It generally doesn't cause severe harm to healthy trees.",
+        "image_path": "/images/rhytisma_acerinum.jpg"
+    },
+    {
+        "scientific_name": "Sarcomyxa serotina",
+        "common_name": "Late Oyster, Olive Oysterling",
+        "type": "Fungus",
+        "description": "A fan-shaped to kidney-shaped mushroom that grows in overlapping clusters or individually. The cap is olive-green to yellowish-brown or brownish, often with a gelatinous or slimy layer when moist. Gills are yellowish to pale orange, contrasting with the cap. Stem is very short, lateral, and densely fuzzy with yellowish hairs.",
+        "habitat": "Grows on dead hardwood logs and stumps, and occasionally on conifers. Fruits late in the season, from autumn into early winter.",
+        "edibility": "Edible (but often considered poor or bitter)",
+        "notes": "Edibility is debated; some find it acceptable, especially after parboiling to remove bitterness, while others consider it unpalatable or slightly bitter. The olive-tinged cap, yellowish gills, and fuzzy yellow stem base are characteristic. Formerly known as Panellus serotinus.",
+        "image_path": "/images/sarcomyxa_serotina.jpg"
+    },
+    {
+        "scientific_name": "Sarcoscypha austriaca",
+        "common_name": "Scarlet Elf Cup, Austrian Elfcup (one of several similar red elf cups)",
+        "type": "Fungus",
+        "description": "A striking cup fungus. The fruiting body is cup-shaped or goblet-shaped, with a brilliant scarlet red inner surface (hymenium). The outer surface is paler, whitish to pinkish, and often covered in fine, downy hairs. It has a short, often indistinct stem.",
+        "habitat": "Grows on decaying hardwood twigs and branches, often partially buried in leaf litter or moss, in damp woodlands. Appears in late winter and early spring, sometimes in autumn.",
+        "edibility": "Edible (but not highly regarded)",
+        "notes": "Generally considered edible but insubstantial and not particularly flavorful; mainly used for its vibrant color as a garnish. There are several very similar red Sarcoscypha species (e.g., S. coccinea, S. dudleyi) that are difficult to distinguish without microscopy. They are all treated similarly for edibility.",
+        "image_path": "/images/sarcoscypha_austriaca.jpg"
+    },
+    {
+        "scientific_name": "Sarcosoma globosum",
+        "common_name": "Charred Gummy, Globose Sarcosoma, Jelly Urn",
+        "type": "Fungus",
+        "description": "A rare and unusual fungus. The fruiting body is large, roughly spherical or urn-shaped when young, becoming more top-shaped or barrel-shaped. The outer surface is dark brown to blackish and velvety. The interior is filled with a clear, gelatinous liquid when young and fresh. The spore-bearing surface is the flattened, dark disc at the top.",
+        "habitat": "Grows on the ground in mature coniferous forests, particularly with spruce, often in mossy areas. Fruits in early spring, sometimes near melting snow.",
+        "edibility": "Inedible",
+        "notes": "A very distinctive and uncommon fungus, listed as threatened or endangered in some regions. The large size and internal jelly are unique. Not for consumption.",
+        "image_path": "/images/sarcosoma_globosum.jpg"
+    },
+    {
+        "scientific_name": "Schizophyllum commune",
+        "common_name": "Splitgill Mushroom, Common Splitgill",
+        "type": "Fungus",
+        "description": "A small, tough, fan-shaped or shell-shaped mushroom, often without a stem or with a rudimentary one. The upper surface is dry, hairy, and greyish-white to pale brownish. The most distinctive feature is the 'gills' on the underside, which are not true gills but are radially arranged, gill-like folds that are split longitudinally down the middle. These splits can close in dry weather and reopen when moist.",
+        "habitat": "Extremely common worldwide, growing on dead wood of a vast range of trees and shrubs, and even on other organic materials. Appears year-round.",
+        "edibility": "Inedible (traditionally) / Edible (in some cultures, medicinal)",
+        "notes": "Very tough and leathery, generally considered inedible in Western cultures. However, it is consumed in some tropical countries and has a history of use in traditional medicine. It is also known to be a rare opportunistic human pathogen, capable of causing infections (mycoses) in immunocompromised individuals, though this is uncommon. The split 'gills' are unique.",
+        "image_path": "/images/schizophyllum_commune.jpg"
+    },
+    {
+        "scientific_name": "Stereum hirsutum",
+        "common_name": "Hairy Curtain Crust, Hairy Stereum",
+        "type": "Fungus",
+        "description": "A leathery, crust-like or bracket-like fungus that often forms tiered layers or rosette-like clusters. The upper surface is distinctly hairy (hirsute), especially towards the margin, and typically zoned in shades of grey, yellowish, and brownish-orange. The fertile undersurface is smooth, without pores or gills, and is yellowish to orangish-buff, sometimes bleeding a yellowish liquid when cut or bruised if very fresh.",
+        "habitat": "Very common on dead hardwood logs, branches, and stumps. Appears year-round.",
+        "edibility": "Inedible",
+        "notes": "Tough and leathery. Can be confused with Trametes versicolor (Turkey Tail), but Stereum hirsutum has a smooth, unpored underside and a more conspicuously hairy upper surface. The 'bleeding' reaction (if present) is also a good indicator.",
+        "image_path": "/images/stereum_hirsutum.jpg"
+    },
+    {
+        "scientific_name": "Stropharia aeruginosa",
+        "common_name": "Verdigris Agaric",
+        "type": "Fungus",
+        "description": "A striking mushroom with a convex cap that is initially deep blue-green to verdigris green, covered in a slimy gluten and often with whitish, fleecy scales near the margin (especially when young). The green color fades with age to yellowish or tan. Gills are initially whitish, becoming purplish-grey to purplish-black. Stem is pale, slimy, with a fragile ring that is often stained by dark spores.",
+        "habitat": "Grows in grassy areas, woodlands (especially coniferous), woodchip mulch, and disturbed ground. Common in autumn.",
+        "edibility": "Inedible / Some sources say edible but not recommended",
+        "notes": "While some older literature might list it as edible, it's generally not recommended for consumption due to its sliminess, potential confusion with other species, and some reports of mild toxicity or indigestibility. The vibrant blue-green color (when fresh) is very distinctive.",
+        "image_path": "/images/stropharia_aeruginosa.jpg"
+    },
+    {
+        "scientific_name": "Suillus granulatus",
+        "common_name": "Weeping Bolete, Granulated Bolete",
+        "type": "Fungus",
+        "description": "A small to medium-sized bolete with a sticky or slimy (viscid) cap, yellowish-brown to cinnamon-brown. Pores are small, yellowish, and often exude milky droplets when young and fresh (hence 'weeping'). The stem is yellowish, dotted with glandular granules, especially on the upper part, and lacks a ring.",
+        "habitat": "Mycorrhizal with pine trees, particularly two- and three-needle pines. Common in summer and autumn, often in sandy soil.",
+        "edibility": "Edible (but peel cap cuticle)",
+        "notes": "Considered edible, but the slimy cap cuticle is often removed before cooking as it can cause digestive upset or have a laxative effect in some people. The glandular dots on the stem and association with pines are key features. Similar to Suillus luteus, but S. granulatus lacks a ring.",
+        "image_path": "/images/suillus_granulatus.jpg"
+    },
+    {
+        "scientific_name": "Suillus grevillei",
+        "common_name": "Larch Bolete, Greville's Bolete",
+        "type": "Fungus",
+        "description": "A medium-sized bolete with a distinctly slimy or viscid cap that is bright yellow to orange-yellow or reddish-brown. Pores are small, angular, and yellowish, sometimes bruising brownish. The stem is yellowish, often with reddish-brown streaks or spots, and has a whitish to yellowish, cottony ring (which may disappear with age).",
+        "habitat": "Mycorrhizal exclusively with Larch trees (Larix species). Common in summer and autumn, wherever larch is present.",
+        "edibility": "Edible (but peel cap cuticle)",
+        "notes": "Edible, but like other Suillus species, the slimy cap cuticle is usually removed. The association with Larch and the presence of a ring are key identifiers. Color can be quite variable.",
+        "image_path": "/images/suillus_grevillei.jpg"
+    },
+    {
+        "scientific_name": "Suillus luteus",
+        "common_name": "Slippery Jack, Pine Bolete",
+        "type": "Fungus",
+        "description": "A medium-sized bolete with a very slimy or viscid, chocolate-brown to yellowish-brown cap. Pores are small, yellowish, becoming olive-yellow. The stem is pale yellow above a prominent, purplish-brown or whitish, membranous ring, and often has glandular dots above and below the ring.",
+        "habitat": "Mycorrhizal with various species of pine trees (Pinus), especially two- and three-needle pines. Very common in autumn.",
+        "edibility": "Edible (but peel cap cuticle)",
+        "notes": "Widely consumed, but the slimy cap cuticle must be removed before cooking as it can cause gastrointestinal upset or have a laxative effect. The prominent ring and association with pines are key. Can occur in large troops.",
+        "image_path": "/images/suillus_luteus.jpg"
+    },
+    {
+        "scientific_name": "Trametes hirsuta",
+        "common_name": "Hairy Bracket, Hairy Trametes",
+        "type": "Fungus",
+        "description": "A tough, leathery, bracket-like polypore. The upper surface is distinctly hairy or bristly (hirsute), especially when young, and typically zoned in shades of grey, yellowish-grey, or brownish. The margin is often a contrasting yellowish-brown. The pore surface is whitish to greyish or yellowish, with relatively large, angular or somewhat irregular pores.",
+        "habitat": "Very common on dead hardwood logs and branches, and occasionally on conifer wood. Appears year-round.",
+        "edibility": "Inedible",
+        "notes": "Tough and woody. Distinguished from Trametes versicolor by its more uniformly greyish and hairier upper surface and larger, more angular pores. The 'hirsuta' refers to its hairy nature.",
+        "image_path": "/images/trametes_hirsuta.jpg"
+    },
+    {
+        "scientific_name": "Trametes ochracea",
+        "common_name": "Ochre Bracket",
+        "type": "Fungus",
+        "description": "A bracket-forming polypore, often semicircular or elongated. The upper surface is finely velvety to smooth, with distinct concentric zones of various shades of ochre, yellowish-brown, reddish-brown, and sometimes greyish. The pore surface is cream to pale ochre, with small, round to angular pores. Thicker and more rigid than T. versicolor.",
+        "habitat": "Grows on dead hardwood, less commonly on conifers. Common year-round.",
+        "edibility": "Inedible",
+        "notes": "Can be confused with Trametes versicolor, but T. ochracea is typically thicker, more rigid, and its color zones are more consistently in the ochre/brown range without the blues or greens often seen in T. versicolor. Pores might be slightly larger on average than T. versicolor.",
+        "image_path": "/images/trametes_ochracea.jpg"
+    },
+    {
+        "scientific_name": "Trametes versicolor",
+        "common_name": "Turkey Tail",
+        "type": "Fungus",
+        "description": "A thin, leathery, bracket-like polypore that often grows in overlapping tiers or rosettes. The upper surface is velvety and highly variable in color, displaying striking concentric zones of different colors, including browns, blues, greys, reds, oranges, and white. The key feature for identification is the underside, which has very small, numerous, whitish to pale yellowish pores (visible with a hand lens).",
+        "habitat": "Extremely common on dead hardwood logs, stumps, and branches worldwide. Occasionally on conifer wood. Fruits year-round.",
+        "edibility": "Inedible (as a mushroom, but used medicinally)",
+        "notes": "One of the most recognizable fungi. Not eaten due to its leathery texture, but it is widely used for its medicinal properties, particularly in traditional Chinese medicine and as a source of polysaccharide-K (PSK) and polysaccharide-peptide (PSP), which have immunomodulatory effects. Must be distinguished from Stereum species (which have a smooth, non-pored underside) and other Trametes species.",
+        "image_path": "/images/trametes_versicolor.jpg"
+    },
+    {
+        "scientific_name": "Tremella mesenterica",
+        "common_name": "Witch's Butter, Yellow Brain Fungus",
+        "type": "Fungus",
+        "description": "A gelatinous fungus forming irregular, lobed, or brain-like masses. It is bright orange-yellow to yellow, and has a slippery, jelly-like consistency when wet. It becomes hard and horn-like when it dries out, but can rehydrate.",
+        "habitat": "Grows on dead, attached or fallen branches of deciduous trees (especially hardwoods with bark), often parasitizing other wood-decay fungi (usually Peniophora species). Common year-round, especially during wet weather.",
+        "edibility": "Edible (but tasteless)",
+        "notes": "While edible, it is mostly water and has little flavor or texture, so it's not highly regarded as food. Its bright color and gelatinous form make it easy to spot. Similar to Tremella aurantia which is more opaque and often associated with Stereum hirsutum.",
+        "image_path": "/images/tremella_mesenterica.jpg"
+    },
+    {
+        "scientific_name": "Trichaptum biforme",
+        "common_name": "Violet-toothed Polypore",
+        "type": "Fungus",
+        "description": "A thin, leathery, bracket-like or effused-reflexed (crust-like with bracket edges) polypore. The upper surface is hairy, zoned in shades of grey and whitish, sometimes with greenish algal growth. The most distinctive feature is the pore surface (or tooth-like in older specimens) which is bright violet or purplish, especially at the growing margin and when young, fading to brownish-purple or buff with age.",
+        "habitat": "Very common on dead hardwood, especially oak, beech, and birch. Less common on conifers. Appears year-round.",
+        "edibility": "Inedible",
+        "notes": "The violet pore surface is key, though it fades. It's often one of the first fungi to colonize fallen branches. Tough and leathery.",
+        "image_path": "/images/trichaptum_biforme.jpg"
+    },
+    {
+        "scientific_name": "Tricholomopsis rutilans",
+        "common_name": "Plums and Custard, Red-haired Agaric",
+        "type": "Fungus",
+        "description": "A striking mushroom with a convex cap that is dry and velvety, covered in dense, purplish-red to wine-red or plum-colored scales or fibrils on a yellowish background (the 'plums'). Gills are bright egg-yellow to golden yellow ('custard'), crowded, and notched at the stem. Stem is yellowish, often with reddish fibrils similar to the cap.",
+        "habitat": "Grows on well-rotted coniferous wood, such as stumps, logs, or sawdust piles (especially pine). Fruits in summer and autumn.",
+        "edibility": "Edible (but not choice) / Inedible by some",
+        "notes": "Edibility is debated; some find it edible but of poor quality or slightly bitter, while others consider it inedible. Its vibrant colors and habitat on conifer wood are distinctive. Not a Tricholoma, despite the name similarity.",
+        "image_path": "/images/tricholomopsis_rutilans.jpg"
+    },
+    {
+        "scientific_name": "Urnula craterium",
+        "common_name": "Devil's Urn, Black Tulip Fungus",
+        "type": "Fungus",
+        "description": "A distinctive cup fungus that is deeply cup-shaped or urn-shaped, becoming goblet-like as it expands. The inner surface (hymenium) is smooth and blackish-brown to black. The outer surface is rough, scurfy, and blackish-brown. The stem is relatively thick and blackish. The flesh is tough and leathery.",
+        "habitat": "Grows on dead hardwood branches and sticks, often partially buried, in deciduous forests. Appears in early spring.",
+        "edibility": "Inedible",
+        "notes": "One of the early spring fungi. Its dark color and urn shape are characteristic. Often associated with a specific plant pathogenic state (anamorph) on oak branches.",
+        "image_path": "/images/urnula_craterium.jpg"
+    },
+    {
+        "scientific_name": "Verpa bohemica",
+        "common_name": "Early Morel, Wrinkled Thimble-cap, Bohemian Verpa",
+        "type": "Fungus",
+        "description": "Resembles a true morel but is technically a 'false morel'. It has a conical or bell-shaped cap that is yellowish-brown to dark brown and deeply wrinkled or folded, but the cap hangs free from the whitish stem like a thimble or skirt (attached only at the very apex). The stem is tall, whitish, and often somewhat fragile and chambered.",
+        "habitat": "Found in early spring, often in damp woodlands, near rivers, and particularly associated with cottonwood/poplar and aspen trees.",
+        "edibility": "Edible with extreme caution / Potentially toxic",
+        "notes": "Contains small amounts of gyromitrin-like compounds or other toxins that can cause gastrointestinal upset or more severe reactions in sensitive individuals or if consumed in large quantities. Thorough cooking (parboiling and discarding water is sometimes recommended, though this may not remove all toxins) is essential. Many foragers avoid it due to the risks and similarity to toxic Gyromitra species. True morels (Morchella spp.) have caps that are fully attached to the stem or attached along a significant portion of the rim, not hanging free.",
+        "image_path": "/images/verpa_bohemica.jpg"
+    },
+    {
+        "scientific_name": "Vulpicida pinastri",
+        "common_name": "Powdered Sunshine Lichen, Matted Yellow Lichen",
+        "type": "Lichen",
+        "description": "A small, foliose to almost crustose lichen that forms bright sulphur-yellow to greenish-yellow patches. The lobes are very fine and somewhat flattened, often highly dissected and appearing 'matted'. The margins and tips of the lobes typically disintegrate into bright yellow, powdery soredia. Apothecia (fruiting bodies) are rare.",
+        "habitat": "Grows primarily on the bark and twigs of coniferous trees (especially pine and spruce), but also on birch and old wooden structures in boreal and montane regions. Often found in well-lit situations.",
+        "edibility": "Inedible (Toxic)",
+        "notes": "This is a lichen. Its brilliant yellow color is due to vulpinic acid, which is toxic. The 'pinastri' part of its name refers to its common occurrence on pine. The abundant powdery soredia are a key feature.",
+        "image_path": "/images/vulpicida_pinastri.jpg"
+    },
+    {
+        "scientific_name": "Xanthoria parietina",
+        "common_name": "Common Orange Lichen, Yellow Wall Lichen, Maritime Sunburst Lichen",
+        "type": "Lichen",
+        "description": "A foliose lichen forming bright orange to yellowish-orange (sometimes greenish-yellow in shade) rosettes or irregular patches. Lobes are flattened, somewhat wrinkled, and often rounded or crinkled at the tips. The undersurface is whitish. Orange, disc-like apothecia (fruiting bodies) are usually abundant, especially in the center of the thallus.",
+        "habitat": "Very common on nutrient-rich bark of trees (especially elder, ash, sycamore, and fruit trees), rocks (especially bird perches or nutrient-enriched), walls, and roofs. Tolerant of nitrogen pollution and often found in coastal areas or agricultural regions.",
+        "edibility": "Inedible",
+        "notes": "This is a lichen. Its bright orange color and numerous apothecia make it very conspicuous. The intensity of the orange color can depend on sun exposure (brighter in sun).",
+        "image_path": "/images/xanthoria_parietina.jpg"
+    }
+]

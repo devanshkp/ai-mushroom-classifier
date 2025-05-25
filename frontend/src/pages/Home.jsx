@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Upload,
   Camera,
   Loader2,
   AlertTriangle,
   CheckCircle,
+  ArrowRight,
 } from "lucide-react";
 
 function Home() {
@@ -16,20 +18,18 @@ function Home() {
 
   const handleFileChange = (e) => {
     const selected = e.target.files[0];
-    setFile(selected);
-    setPredictions([]);
-    setError(null);
 
     if (selected) {
+      setFile(selected);
+      setPredictions([]);
+      setError(null);
       const reader = new FileReader();
       reader.onload = (e) => setPreview(e.target.result);
       reader.readAsDataURL(selected);
-    } else {
-      setPreview(null);
     }
   };
 
-  const handleUpload = async () => {
+  const handleRequest = async () => {
     if (!file) return;
 
     setLoading(true);
@@ -103,15 +103,16 @@ function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Background pattern */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}
       ></div>
+
+      <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
 
       <div className="relative z-10 container mx-auto px-4 py-8 min-h-screen flex flex-col">
         {/* Header */}
@@ -181,7 +182,7 @@ function Home() {
             </div>
 
             <button
-              onClick={handleUpload}
+              onClick={handleRequest}
               disabled={!file || loading}
               className={`w-full mt-6 py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-3 ${
                 file && !loading
@@ -234,9 +235,15 @@ function Home() {
                       }`}
                     >
                       <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-lg font-semibold text-white">
+                        <Link
+                          to={`/species/${encodeURIComponent(
+                            prediction.label
+                          )}`}
+                          className="text-lg font-semibold text-white hover:text-green-300 transition-colors duration-200 flex items-center"
+                        >
                           {prediction.label}
-                        </h3>
+                          <ArrowRight className="w-4 h-4 ml-2 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
+                        </Link>
                         <span
                           className={`text-sm font-medium px-3 py-1 rounded-full ${
                             confidence > 80
