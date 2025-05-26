@@ -240,6 +240,5 @@ ai-mushroom-classifier/
 
 ## Contact
 
-**Devansh Kapoor**
--   Connect on [LinkedIn](https://linkedin.com/in/devansh-kapoor)
--   Reach out via Email: `devansh.kp@outlook.com`
+Connect on [LinkedIn](https://linkedin.com/in/devansh-kapoor) <br>
+Reach out via Email: `devansh.kp@outlook.com`
