@@ -9,6 +9,7 @@ import {
   Loader2,
   Info,
 } from "lucide-react";
+import Navbar from "../components/navbar";
 
 function SpeciesList() {
   const { mushrooms, loading, error, searchMushrooms } = useMushroomData();
@@ -70,16 +71,18 @@ function SpeciesList() {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      {/* Background pattern layers - ensure z-indexes are appropriate */}
+      {/* Background pattern layers - fixed positioning issues */}
       <div
-        className="fixed inset-0 z-0"
+        className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}
       ></div>
-      <div className="fixed inset-0 bg-black opacity-50 z-10"></div>
+      <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
 
-      <div className="relative z-20 container mx-auto px-4 py-8">
+      <Navbar />
+
+      <div className="relative z-20 container mx-auto px-4 py-8 pt-20">
         <header className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-teal-400 via-cyan-500 to-sky-600 bg-clip-text text-transparent mb-4">
             Mushroom Species Library
@@ -116,27 +119,39 @@ function SpeciesList() {
                   to={`/species/${encodeURIComponent(
                     mushroom.scientific_name
                   )}`}
-                  className="group bg-white/5 hover:bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20 shadow-xl transition-all duration-300 hover:shadow-cyan-500/30 flex flex-col justify-between"
+                  className="group relative bg-white/5 rounded-2xl p-5 border border-white/20 shadow-xl transition-colors duration-200 hover:bg-white/10 flex flex-col justify-between"
                 >
-                  <div>
+                  {/* Subtle glow effect on hover */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/0 via-cyan-500/0 to-cyan-500/0 group-hover:from-cyan-500/5 group-hover:via-cyan-500/10 group-hover:to-cyan-500/5 transition-all duration-500 ease-out"></div>
+
+                  <div className="relative z-10">
                     <div className="aspect-video rounded-lg overflow-hidden mb-4 bg-gray-700/50 flex items-center justify-center">
                       {mushroom.image_path ? (
                         <img
                           src={mushroom.image_path}
                           alt={commonNames[0] || mushroom.scientific_name}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                          onError={(e) =>
-                            (e.currentTarget.style.display = "none")
-                          } // Hide if image fails to load
+                          className="w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-110 group-hover:brightness-110"
+                          loading="lazy"
+                          onError={(e) => {
+                            e.currentTarget.style.display = "none";
+                            const placeholder =
+                              e.currentTarget.nextElementSibling;
+                            if (placeholder) placeholder.style.display = "flex";
+                          }}
                         />
                       ) : (
-                        <Sprout className="w-12 h-12 text-gray-500" />
+                        <Sprout className="w-12 h-12 text-gray-500 transition-all duration-300 group-hover:text-cyan-400 group-hover:scale-110" />
+                      )}
+                      {mushroom.image_path && (
+                        <div className="hidden w-full h-full items-center justify-center">
+                          <Sprout className="w-12 h-12 text-gray-500 transition-all duration-300 group-hover:text-cyan-400 group-hover:scale-110" />
+                        </div>
                       )}
                     </div>
-                    <h2 className="text-xl font-semibold text-white mb-1 group-hover:text-cyan-400 transition-colors">
+                    <h2 className="text-xl font-semibold text-white mb-1 group-hover:text-cyan-300 transition-colors duration-300">
                       {commonNames[0] || mushroom.scientific_name}
                     </h2>
-                    <p className="text-sm text-gray-400 italic mb-2">
+                    <p className="text-sm text-gray-400 italic mb-2 group-hover:text-gray-300 transition-colors duration-300">
                       {commonNames[0]
                         ? mushroom.scientific_name
                         : commonNames.length > 1
@@ -144,9 +159,11 @@ function SpeciesList() {
                         : " "}
                     </p>
                   </div>
-                  <div className="mt-3 flex items-center justify-end text-sm text-cyan-400 group-hover:text-cyan-300">
-                    View Details
-                    <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
+                  <div className="relative z-10 mt-3 flex items-center justify-end text-sm text-cyan-400 group-hover:text-cyan-300 transition-all duration-300">
+                    <span className="mr-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      View Details
+                    </span>
+                    <ChevronRight className="w-4 h-4 ml-1 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" />
                   </div>
                 </Link>
               );

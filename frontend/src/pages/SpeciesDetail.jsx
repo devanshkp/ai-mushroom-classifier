@@ -14,8 +14,9 @@ import {
 } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useMushroomData } from "../context/MushroomDataContext";
+import Navbar from "../components/navbar";
 
-function MushroomSpeciesDetail() {
+function SpeciesDetail() {
   const { scientificName } = useParams();
   const navigate = useNavigate();
 
@@ -154,6 +155,8 @@ function MushroomSpeciesDetail() {
     ? mushroom.common_name.split(",").map((name) => name.trim())
     : [];
 
+  console.log(mushroom.image_path);
+
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Background pattern */}
@@ -166,7 +169,9 @@ function MushroomSpeciesDetail() {
 
       <div className="fixed inset-0 bg-black opacity-50 z-10"></div>
 
-      <div className="relative z-10 container mx-auto px-4 py-6">
+      <Navbar />
+
+      <div className="relative z-10 container mx-auto px-4 py-6 pt-20">
         {/* Back Button */}
         <button
           onClick={handleBackClick}
@@ -386,4 +391,4 @@ function MushroomSpeciesDetail() {
   );
 }
 
-export default MushroomSpeciesDetail;
+export default SpeciesDetail;
