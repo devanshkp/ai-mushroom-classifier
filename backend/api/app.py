@@ -1,26 +1,39 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS, cross_origin
 import tensorflow as tf
-import keras
 import numpy as np
 from PIL import Image
 import io
 import json
+import os
 
 app = Flask(__name__)
 
-# Enable CORS for all routes
-CORS(app, origins=["http://localhost:3000", "http://localhost:5173", "http://127.0.0.1:3000", "http://127.0.0.1:5173"])
+try:
+    model_path = 'model/mushroom.keras'
+    class_names_path = 'class_names.json'
 
-# Class names imported from json file
-with open('backend/class_names.json', 'r') as f:
-    class_names = json.load(f)
+    if not os.path.exists(model_path) or not os.path.exists(class_names_path):
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        backend_dir = os.path.dirname(current_dir) 
+        model_path = os.path.join(backend_dir, 'model', 'mushroom.keras')
+        class_names_path = os.path.join(backend_dir, 'class_names.json')
 
-# Loading Model
-model = keras.models.load_model('backend/model/mushroom.keras')
+    with open(class_names_path, 'r') as f:
+        class_names = json.load(f)
+
+    model = tf.keras.models.load_model(model_path)
+    print(f"Model loaded from: {model_path}")
+    print(f"Class names loaded from: {class_names_path}")
+
+
+except Exception as e:
+    print(f"CRITICAL ERROR loading model or class_names: {e}")
+    print(f"Attempted model path: {model_path if 'model_load_path' in locals() else 'not defined'}")
+    print(f"Attempted class_names path: {class_names_path if 'class_names_load_path' in locals() else 'not defined'}")
+    class_names = []
+    model = None
 
 CONFIDENCE_THRESHOLD = 0.5   # MINIMUM ACCURACY TO GIVE OUT A CONFIDENT RESULT
-
 
 # Helper function to preprocess uplaoded image before model prediction
 def preprocess_image(image_bytes, target_size=(224, 224)):
@@ -30,12 +43,10 @@ def preprocess_image(image_bytes, target_size=(224, 224)):
     image_array = np.expand_dims(image_array, axis=0)
     return image_array
 
-@app.route('/predict', methods=['POST', 'OPTIONS'])  # Add OPTIONS for preflight requests
-@cross_origin()  # Enable CORS for this specific route
+@app.route('/predict', methods=['POST']) 
 def predict():
-    # Handle preflight OPTIONS request
-    if request.method == 'OPTIONS':
-        return '', 200
+    if model is None or not class_names:
+        return jsonify({'error': 'Model not loaded or class names missing on server.'}), 500
     
     if 'file' not in request.files:
         return jsonify({'error': 'No file provided'}), 400
@@ -54,9 +65,6 @@ def predict():
         image_bytes = file.read()
         preprocessed = preprocess_image(image_bytes)
         preds = model.predict(preprocessed)
-
-        top_index = np.argmax(preds[0])
-        top_confidence = preds[0][top_index]
 
         # Get top 3 predictions
         top_3_indices = preds[0].argsort()[-3:][::-1]
@@ -79,9 +87,8 @@ def predict():
 
 # Add a simple health check endpoint
 @app.route('/health', methods=['GET'])
-@cross_origin()
 def health_check():
     return jsonify({'status': 'healthy', 'message': 'Mushroom classifier API is running'})
 
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+# if __name__ == '__main__':
+#     app.run(debug=True, host='0.0.0.0', port=5000)

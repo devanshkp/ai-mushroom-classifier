@@ -1,6 +1,4 @@
 flask
-flask-cors
 tensorflow
-keras
 pillow
 numpy
