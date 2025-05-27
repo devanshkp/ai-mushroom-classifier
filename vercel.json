@@ -13,7 +13,12 @@
             "src": "backend/api/app.py",
             "use": "@vercel/python",
             "config": {
-                "maxLambdaSize": "50mb"
+                "maxLambdaSize": "50mb",
+                "includeFiles": [
+                    "backend/model/mushroom.keras",
+                    "backend/class_names.json"
+                ],
+                "memory": 1024
             }
         }
     ],
@@ -30,15 +35,6 @@
             "dest": "/frontend/index.html"
         }
     ],
-    "functions": {
-        "backend/api/app.py": {
-            "includeFiles": [
-                "backend/model/mushroom.keras",
-                "backend/class_names.json"
-            ],
-            "memory": 1024
-        }
-    },
     "headers": [
         {
             "source": "/api/(.*)",
