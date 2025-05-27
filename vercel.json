@@ -22,17 +22,10 @@
             }
         }
     ],
-    "routes": [
+    "rewrites": [
         {
-            "src": "/api/(.*)",
-            "dest": "backend/api/app.py"
-        },
-        {
-            "handle": "filesystem"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/frontend/index.html"
+            "source": "/api/(.*)",
+            "destination": "backend/api/app.py"
         }
     ],
     "headers": [
