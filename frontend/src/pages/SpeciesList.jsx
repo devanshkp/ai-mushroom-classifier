@@ -83,7 +83,7 @@ function SpeciesList() {
       <Navbar />
 
       <div className="relative z-20 container mx-auto px-4 py-8 pt-20">
-        <header className="text-center mb-12">
+        <header className="text-center mb-6 py-6">
           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-teal-400 via-cyan-500 to-sky-600 bg-clip-text text-transparent mb-4">
             Mushroom Species Library
           </h1>
@@ -93,7 +93,7 @@ function SpeciesList() {
         </header>
 
         {/* Search Bar */}
-        <div className="mb-10 max-w-2xl mx-auto">
+        <div className="mb-10 max-w-2xl mx-auto py-2">
           <div className="relative">
             <input
               type="text"

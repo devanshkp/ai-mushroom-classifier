@@ -88,13 +88,24 @@ export const MushroomDataProvider = ({ children }) => {
     if (!query || query.trim() === "") return mushrooms;
 
     const lowerQuery = query.toLowerCase().trim();
-    return mushrooms.filter(
-      (mushroom) =>
-        mushroom.scientific_name.toLowerCase().includes(lowerQuery) ||
-        mushroom.common_name.toLowerCase().includes(lowerQuery) ||
-        (mushroom.description &&
-          mushroom.description.toLowerCase().includes(lowerQuery))
-    );
+
+    return mushrooms.filter((mushroom) => {
+      const scientificWords =
+        mushroom.scientific_name?.toLowerCase().split(/\s+/) || [];
+
+      const commonWords = mushroom.common_name
+        ? mushroom.common_name
+            .toLowerCase()
+            .split(/[\s,]+/)
+            .map((word) => word.trim())
+        : [];
+
+      // Check if any word in scientific or common name starts with query
+      return (
+        scientificWords.some((word) => word.startsWith(lowerQuery)) ||
+        commonWords.some((word) => word.startsWith(lowerQuery))
+      );
+    });
   };
 
   // Filter mushrooms by edibility status

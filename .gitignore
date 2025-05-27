@@ -3,4 +3,3 @@ mushroom_classifier.h5
 training_history.pkl
 backend/venv
 backend/model/checkpoint.keras
-frontend/public/images

@@ -33,6 +33,33 @@ function SpeciesDetail() {
     }
   }, [scientificName, loading, getMushroomByScientificName]);
 
+  const [showImageModal, setShowImageModal] = useState(false);
+
+  const ImageModal = () =>
+    showImageModal && (
+      <div
+        className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-8"
+        onClick={() => setShowImageModal(false)}
+      >
+        <div className="relative max-w-2xl max-h-[70vh] flex items-center justify-center">
+          <button
+            onClick={() => setShowImageModal(false)}
+            className="absolute -top-20 -right-20 text-white hover:text-gray-300 transition-colors z-10"
+          >
+            <XCircle className="w-8 h-8" />
+          </button>
+          <img
+            src={mushroom.image_path}
+            alt={
+              commonNames.length > 0 ? commonNames[0] : mushroom.scientific_name
+            }
+            className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      </div>
+    );
+
   const getEdibilityInfo = (edibility) => {
     if (!edibility) {
       return {
@@ -155,8 +182,6 @@ function SpeciesDetail() {
     ? mushroom.common_name.split(",").map((name) => name.trim())
     : [];
 
-  console.log(mushroom.image_path);
-
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Background pattern */}
@@ -184,29 +209,74 @@ function SpeciesDetail() {
         {/* Hero Section with Image and Title */}
         <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl mb-8">
           <div className="grid lg:grid-cols-5 gap-8 items-start">
-            {/* Image - Smaller and more proportional */}
+            {/* Image */}
             <div className="lg:col-span-2">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-gray-800 flex items-center justify-center shadow-lg">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg relative group">
                 {!imageError && mushroom.image_path ? (
-                  <img
-                    src={mushroom.image_path}
-                    alt={
-                      commonNames.length > 0
-                        ? commonNames[0]
-                        : mushroom.scientific_name
-                    }
-                    className="w-full h-full object-cover"
-                    onError={handleImageError}
-                  />
+                  <div className="relative w-full h-full">
+                    {/* Blurred background image */}
+                    <div
+                      className="absolute inset-0 bg-cover bg-center filter blur-md scale-110"
+                      style={{
+                        backgroundImage: `url(${mushroom.image_path})`,
+                      }}
+                    />
+                    {/* Overlay to darken the blurred background */}
+                    <div className="absolute inset-0 bg-black/40" />
+
+                    {/* Main image */}
+                    <div className="relative w-full h-full flex items-center justify-center p-0">
+                      <img
+                        src={mushroom.image_path}
+                        alt={
+                          commonNames.length > 0
+                            ? commonNames[0]
+                            : mushroom.scientific_name
+                        }
+                        className="max-w-full max-h-full object-contain drop-shadow-2xl"
+                        onError={handleImageError}
+                      />
+                    </div>
+
+                    {/* Expand button - shows on hover */}
+                    <button
+                      onClick={() => setShowImageModal(true)}
+                      className="absolute bottom-3 right-3 bg-black/70 hover:bg-black/90 text-white p-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 backdrop-blur-sm border border-white/20"
+                      title="Click to expand"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+                        <path d="M21 8V5a2 2 0 0 0-2-2h-3" />
+                        <path d="M3 16v3a2 2 0 0 0 2 2h3" />
+                        <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+                      </svg>
+                    </button>
+                    <div
+                      className="absolute inset-0 cursor-pointer"
+                      onClick={() => setShowImageModal(true)}
+                    />
+                  </div>
                 ) : (
-                  <div className="text-center text-gray-400 p-6">
-                    <Camera className="w-16 h-16 mx-auto mb-3 opacity-50" />
-                    <p className="text-lg font-medium">Image not available</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      {commonNames.length > 0
-                        ? commonNames[0]
-                        : mushroom.scientific_name}
-                    </p>
+                  <div className="bg-gray-800 h-full flex items-center justify-center text-center text-gray-400 p-6">
+                    <div>
+                      <Camera className="w-16 h-16 mx-auto mb-3 opacity-50" />
+                      <p className="text-lg font-medium">Image not available</p>
+                      <p className="text-sm text-gray-500 mt-1">
+                        {commonNames.length > 0
+                          ? commonNames[0]
+                          : mushroom.scientific_name}
+                      </p>
+                    </div>
                   </div>
                 )}
               </div>
@@ -387,6 +457,7 @@ function SpeciesDetail() {
           </p>
         </div>
       </div>
+      {ImageModal()}
     </div>
   );
 }

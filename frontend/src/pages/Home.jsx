@@ -127,7 +127,7 @@ function Home() {
 
       <div className="relative z-10 container mx-auto px-4 py-8 pt-20 min-h-screen flex flex-col">
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-8 py-6 pb-8">
           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-4">
             AI Mushroom Classifier
           </h1>
@@ -137,9 +137,9 @@ function Home() {
           </p>
         </div>
 
-        <div className="flex-1 max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-10 items-stretch">
+        <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-10">
           {/* Upload Section */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-2xl flex flex-col h-[400px] md:h-[550px]">
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-2xl flex flex-col h-[450px] md:h-[550px]">
             <div
               onDrop={handleDrop}
               onDragOver={handleDragOver}
@@ -154,11 +154,11 @@ function Home() {
                 }`}
               >
                 {preview ? (
-                  <div className="relative w-full h-full overflow-hidden rounded-lg min-h-0">
+                  <div className="relative w-full h-full overflow-hidden rounded-lg min-h-0 bg-black/25">
                     <img
                       src={preview}
                       alt="Preview"
-                      className="w-full h-full p-6 object-contain"
+                      className="w-full h-full p-2 object-contain"
                     />
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
                       <span className="text-white font-medium">
@@ -221,22 +221,22 @@ function Home() {
           </div>
 
           {/* Results Section */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-2xl flex flex-col h-[400px] md:h-[550px]">
-            <div className="flex-1 overflow-y-auto">
-              {predictions.length > 0 ? (
-                <div className="space-y-4">
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-2xl flex flex-col min-h-[450px] md:min-h-[550px]">
+            {predictions.length > 0 ? (
+              <div className="flex flex-col h-full">
+                <div className="flex-1 flex flex-col space-y-3">
                   {predictions.map((prediction, idx) => {
                     const confidence = prediction.confidence * 100;
                     return (
                       <div
                         key={idx}
-                        className={`p-4 rounded-xl border transition-all duration-300 ${
+                        className={`flex-1 p-4 rounded-xl border transition-all duration-300 ${
                           idx === 0
-                            ? "bg-green-500/20 border-green-500/50"
+                            ? "bg-green-500/15 border-green-500/40 hover:bg-green-500/20"
                             : "bg-white/5 border-white/20 hover:bg-white/10"
                         }`}
                       >
-                        <div className="flex items-start space-x-4">
+                        <div className="flex items-start space-x-4 h-full">
                           {/* Species Image */}
                           <div className="flex-shrink-0">
                             <img
@@ -251,13 +251,13 @@ function Home() {
                             />
                           </div>
 
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center justify-between mb-2">
+                          <div className="flex-1 min-w-0 flex flex-col justify-center">
+                            <div className="flex items-center mb-2 space-x-3">
                               <Link
                                 to={`/species/${encodeURIComponent(
                                   prediction.label
                                 )}`}
-                                className="text-lg font-semibold text-white hover:text-green-300 transition-colors duration-200 flex items-center group"
+                                className="flex-1 text-lg font-semibold text-white hover:text-green-300 transition-colors duration-200 flex items-center group overflow-hidden"
                               >
                                 <span className="truncate">
                                   {prediction.label}
@@ -265,24 +265,24 @@ function Home() {
                                 <ArrowRight className="w-4 h-4 ml-2 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200 flex-shrink-0" />
                               </Link>
                               <span
-                                className={`text-sm font-medium px-3 py-1 rounded-full flex-shrink-0 ml-2 ${
-                                  confidence > 80
+                                className={`text-sm font-medium px-3 py-1 rounded-full flex-shrink-0 whitespace-nowrap ${
+                                  confidence > 70
                                     ? "bg-green-500/30 text-green-300"
-                                    : confidence > 60
+                                    : confidence > 50
                                     ? "bg-yellow-500/30 text-yellow-300"
                                     : "bg-red-500/30 text-red-300"
                                 }`}
                               >
-                                {confidence.toFixed(1)}%
+                                {confidence.toFixed(2)}%
                               </span>
                             </div>
 
                             <div className="w-full bg-gray-700 rounded-full h-2 mb-3">
                               <div
                                 className={`h-2 rounded-full transition-all duration-500 ${
-                                  confidence > 80
+                                  confidence > 70
                                     ? "bg-gradient-to-r from-green-500 to-green-400"
-                                    : confidence > 60
+                                    : confidence > 50
                                     ? "bg-gradient-to-r from-yellow-500 to-yellow-400"
                                     : "bg-gradient-to-r from-red-500 to-red-400"
                                 }`}
@@ -290,8 +290,9 @@ function Home() {
                               ></div>
                             </div>
 
-                            {prediction.warning && (
-                              <div className="mt-3 p-3 bg-yellow-500/20 border border-yellow-500/50 rounded-lg">
+                            {/* Show warning for low confidence or helpful message for top prediction */}
+                            {prediction.warning ? (
+                              <div className="mt-auto p-3 bg-yellow-500/20 border border-yellow-500/50 rounded-lg">
                                 <div className="flex items-start space-x-2">
                                   <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
                                   <p className="text-yellow-200 text-sm">
@@ -299,6 +300,19 @@ function Home() {
                                   </p>
                                 </div>
                               </div>
+                            ) : (
+                              idx === 0 && (
+                                <div className="mt-auto p-3 bg-blue-600/20 border border-blue-400/50 rounded-lg">
+                                  <div className="flex items-start space-x-2">
+                                    <CheckCircle className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
+                                    <p className="text-blue-200 text-sm">
+                                      Likely match - For higher certainty,
+                                      provide more angles showing all key
+                                      mushroom parts.
+                                    </p>
+                                  </div>
+                                </div>
+                              )
                             )}
                           </div>
                         </div>
@@ -306,28 +320,28 @@ function Home() {
                     );
                   })}
                 </div>
-              ) : (
-                <div className="flex items-center justify-center h-full">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle className="w-8 h-8 text-gray-500" />
-                    </div>
-                    <p className="text-gray-400 text-lg">
-                      Upload an image to see classification results
-                    </p>
-                    <p className="text-gray-500 text-sm mt-2">
-                      Our AI will analyze the mushroom and provide species
-                      predictions with confidence scores
-                    </p>
+              </div>
+            ) : (
+              <div className="flex items-center justify-center h-full">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-gray-500" />
                   </div>
+                  <p className="text-gray-400 text-lg">
+                    Upload an image to see classification results
+                  </p>
+                  <p className="text-gray-500 text-sm mt-2">
+                    Our AI will analyze the mushroom and provide species
+                    predictions with confidence scores
+                  </p>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-8 pt-6 border-t border-white/10">
+        <div className="text-center mt-8 pt-6 border-t border-white/10 mt-auto">
           <p className="text-gray-400 text-sm">
             Powered by advanced machine learning • Always verify with expert
             mycologists before consumption

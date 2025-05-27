@@ -19,7 +19,7 @@ function AboutPage() {
         {/* Adjust pt-X for Navbar height */}
         <header className="text-center mb-12 md:mb-16">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-sky-400 via-cyan-400 to-indigo-500 bg-clip-text text-transparent mb-4">
-            About MushroomAI Classifier 🍄
+            About MushroomAI 🍄
           </h1>
         </header>
         <div className="max-w-4xl mx-auto space-y-10 md:space-y-12">
