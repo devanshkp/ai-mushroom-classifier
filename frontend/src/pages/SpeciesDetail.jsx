@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useMushroomData } from "../context/MushroomDataContext";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 
 function SpeciesDetail() {
   const { scientificName } = useParams();

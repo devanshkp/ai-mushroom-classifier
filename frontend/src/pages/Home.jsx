@@ -8,7 +8,7 @@ import {
   CheckCircle,
   ArrowRight,
 } from "lucide-react";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 
 function Home() {
   const [file, setFile] = useState(null);

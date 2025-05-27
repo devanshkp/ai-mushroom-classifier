@@ -9,7 +9,7 @@ import {
   Loader2,
   Info,
 } from "lucide-react";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 
 function SpeciesList() {
   const { mushrooms, loading, error, searchMushrooms } = useMushroomData();
