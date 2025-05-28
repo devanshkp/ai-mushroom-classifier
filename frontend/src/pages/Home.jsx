@@ -43,7 +43,7 @@ function Home() {
       console.log("Sending request to backend...");
 
       const res = await fetch(
-        "https://ai-mushroom-classifier.onrender.com/predict",
+        "https://ai-mushroom-classifier-461801609103.europe-west1.run.app/predict",
         {
           method: "POST",
           body: formData,
