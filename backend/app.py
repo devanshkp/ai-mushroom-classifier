@@ -12,11 +12,11 @@ app = Flask(__name__)
 CORS(app, origins=["http://localhost:3000", "http://localhost:5173", "http://127.0.0.1:3000", "http://127.0.0.1:5173", "https://ai-mushroom-classifier-r2ed.vercel.app"])
 
 # Class names imported from json file
-with open('backend/class_names.json', 'r') as f:
+with open('class_names.json', 'r') as f:
     class_names = json.load(f)
 
 # Loading Model
-model = tf.keras.models.load_model('backend/model/mushroom.keras')
+model = tf.keras.models.load_model('model/mushroom.keras')
 
 CONFIDENCE_THRESHOLD = 0.5   # MINIMUM ACCURACY TO GIVE OUT A CONFIDENT RESULT
 
