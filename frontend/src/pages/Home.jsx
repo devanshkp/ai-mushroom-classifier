@@ -72,9 +72,7 @@ function Home() {
       console.error("Prediction error:", err);
 
       if (err.name === "TypeError" && err.message.includes("fetch")) {
-        setError(
-          "Cannot connect to server. Please ensure the Flask app is running on port 5000."
-        );
+        setError("Cannot connect to server. Please try again later.");
       } else if (err.message.includes("CORS")) {
         setError("CORS error. Please check server configuration.");
       } else {
