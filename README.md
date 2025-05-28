@@ -2,7 +2,7 @@
 
 An intelligent web application that identifies mushroom species from uploaded images using a custom-trained deep learning model. Users receive real-time predictions with confidence scores, aiding in the preliminary identification of mushrooms.
 
-`< image placeholder >`
+<img src="./screenshots/Home.png" alt="Home" width="750">
 
 ## Table of Contents
 
@@ -75,9 +75,11 @@ The core of this application is a Convolutional Neural Network (CNN) trained for
     -   Fine-tuning of the later layers of the pre-trained MobileNetV2.
 -   **Performance:** Achieved approximately **80% accuracy** on the test set for classifying 100 distinct mushroom species.
 
-## 🖼️ Screenshots (Placeholder)
+## 🖼️ Screenshots
 
-
+  <img src="./screenshots/Home.png" alt="Home" width="750">
+  <img src="./screenshots/SpeciesList.png" alt="Species List" width="750">
+  <img src="./screenshots/Species.png" alt="Species" width="750">
 
 ## ⚙️ System Architecture
 
