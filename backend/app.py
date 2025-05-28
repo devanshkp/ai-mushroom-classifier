@@ -9,7 +9,7 @@ import json
 app = Flask(__name__)
 
 # Enable CORS for all routes
-CORS(app, origins=["http://localhost:3000", "http://localhost:5173", "http://127.0.0.1:3000", "http://127.0.0.1:5173"])
+CORS(app, origins=["http://localhost:3000", "http://localhost:5173", "http://127.0.0.1:3000", "http://127.0.0.1:5173", "https://ai-mushroom-classifier-r2ed.vercel.app"])
 
 # Class names imported from json file
 with open('backend/class_names.json', 'r') as f:
@@ -83,4 +83,4 @@ def health_check():
     return jsonify({'status': 'healthy', 'message': 'Mushroom classifier API is running'})
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000)
