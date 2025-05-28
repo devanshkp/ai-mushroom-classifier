@@ -1,3 +1,6 @@
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1" 
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 import tensorflow as tf
@@ -5,7 +8,6 @@ import numpy as np
 from PIL import Image
 import io
 import json
-import os
 
 app = Flask(__name__)
 
