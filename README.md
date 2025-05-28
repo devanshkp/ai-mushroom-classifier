@@ -26,6 +26,11 @@ An intelligent web application that identifies mushroom species from uploaded im
 
 The AI Mushroom Classifier is a full-stack application designed to make mushroom identification more accessible. It combines a user-friendly React frontend with a powerful Flask backend that serves predictions from a TensorFlow/Keras Convolutional Neural Network (CNN). This tool aims to provide quick, AI-driven insights into 100 different mushroom species based on visual data.
 
+## 🚀 Live Demo
+
+Check out the deployed AI Mushroom Classifier app here:  
+[https://ai-mushroom-classifier-r2ed.vercel.app/](https://ai-mushroom-classifier-r2ed.vercel.app/)
+
 ## ✨ Features
 
 -   **Image Upload:** Intuitive interface for uploading mushroom images (supports drag-and-drop and file browser).
