@@ -42,13 +42,10 @@ function Home() {
     try {
       console.log("Sending request to backend...");
 
-      const res = await fetch(
-        "https://ai-mushroom-classifier-461801609103.europe-west1.run.app/predict",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const res = await fetch("http://13.236.71.74:5000/predict", {
+        method: "POST",
+        body: formData,
+      });
 
       console.log("Response status:", res.status);
 
