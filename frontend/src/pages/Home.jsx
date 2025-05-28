@@ -42,7 +42,7 @@ function Home() {
     try {
       console.log("Sending request to backend...");
 
-      const res = await fetch("/api/predict", {
+      const res = await fetch("http://localhost:5000/predict", {
         method: "POST",
         body: formData,
       });
