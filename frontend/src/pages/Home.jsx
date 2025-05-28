@@ -42,10 +42,13 @@ function Home() {
     try {
       console.log("Sending request to backend...");
 
-      const res = await fetch("https://ai-mushroom-classifier.onrender.com", {
-        method: "POST",
-        body: formData,
-      });
+      const res = await fetch(
+        "https://ai-mushroom-classifier.onrender.com/predict",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       console.log("Response status:", res.status);
 
