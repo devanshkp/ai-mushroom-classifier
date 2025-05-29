@@ -8,6 +8,7 @@ An intelligent web application that identifies mushroom species from uploaded im
 
 -   [Overview](#overview)
 -   [Features](#-features)
+-   [Live Demo](#-live-demo)
 -   [Technologies Used](#️-technologies-used)
 -   [Model Training & Performance](#-model-training--performance)
 -   [Screenshots (Placeholder)](#️-screenshots-placeholder)
@@ -61,7 +62,7 @@ Check out the deployed AI Mushroom Classifier app here:
     -   Git & GitHub (Version Control)
     -   VS Code (or preferred IDE)
     -   Jupyter
-    -   Standard command-line tools
+    -   Amazon Web Services (EC2)
 
 ## 🧠 Model Training & Performance
 
