@@ -29,7 +29,7 @@ The AI Mushroom Classifier is a full-stack application designed to make mushroom
 
 ## 🚀 Live Demo
 
-Check out the deployed AI Mushroom Classifier app here:  
+Check out the deployed app here:  
 [https://ai-mushroom-classifier-r2ed.vercel.app/](https://ai-mushroom-classifier-r2ed.vercel.app/)
 
 ## ✨ Features
