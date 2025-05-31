@@ -139,7 +139,7 @@ function Home() {
         </div>
         <div className="w-full max-w-6xl mx-auto grid px-2 grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-start">
           {/* Upload Section */}
-          <div className="w-full max-w-lg mx-auto md:max-w-none bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 border border-white/20 shadow-2xl flex flex-col h-[450px] md:h-[550px]">
+          <div className="w-full max-w-lg mx-auto md:max-w-none bg-white/10 backdrop-blur-md rounded-2xl p-3 md:p-6 border border-white/20 shadow-2xl flex flex-col h-[450px] md:h-[550px]">
             <div
               onDrop={handleDrop}
               onDragOver={handleDragOver}
@@ -190,11 +190,20 @@ function Home() {
             <button
               onClick={handleRequest}
               disabled={!file || loading}
-              className={`w-full py-3 md:py-4 px-4 md:px-6 rounded-xl font-semibold text-base md:text-lg transition-all duration-300 flex items-center justify-center space-x-2 md:space-x-3 ${
+              className={`w-full py-3 md:py-4 px-4 md:px-6 rounded-xl font-semibold text-base md:text-lg transition-all duration-300 flex items-center justify-center space-x-2 md:space-x-3 border-2 ${
                 file && !loading
-                  ? "bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white shadow-lg transform hover:scale-105"
-                  : "bg-gray-600 text-gray-400 cursor-not-allowed"
+                  ? "bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 border-transparent bg-clip-padding text-white shadow-lg transform hover:scale-105"
+                  : "bg-gray-600 text-gray-400 cursor-not-allowed border-gray-600"
               }`}
+              style={
+                file && !loading
+                  ? {
+                      background: "linear-gradient(to right, #10b981, #2563eb)",
+                      border: "2px solid transparent",
+                      backgroundClip: "padding-box",
+                    }
+                  : {}
+              }
             >
               {loading ? (
                 <>
@@ -297,7 +306,7 @@ function Home() {
                               <div className="mt-auto p-2 md:p-3 bg-yellow-500/20 border border-yellow-500/50 rounded-lg overflow-hidden">
                                 <div className="flex items-start space-x-2">
                                   <AlertTriangle className="w-4 h-4 md:w-4 md:h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                                  <p className="text-yellow-200 text-sm md:text-sm leading-relaxed line-clamp-2">
+                                  <p className="text-yellow-200 text-sm md:text-sm leading-relaxed truncate">
                                     {prediction.warning}
                                   </p>
                                 </div>
