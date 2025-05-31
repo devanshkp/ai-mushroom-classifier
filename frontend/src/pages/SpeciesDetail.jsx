@@ -38,15 +38,15 @@ function SpeciesDetail() {
   const ImageModal = () =>
     showImageModal && (
       <div
-        className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-8"
+        className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 md:p-8"
         onClick={() => setShowImageModal(false)}
       >
         <div className="relative max-w-2xl max-h-[70vh] flex items-center justify-center">
           <button
             onClick={() => setShowImageModal(false)}
-            className="absolute -top-20 -right-20 text-white hover:text-gray-300 transition-colors z-10"
+            className="absolute -top-12 -right-4 md:-top-20 md:-right-20 text-white hover:text-gray-300 transition-colors z-10"
           >
-            <XCircle className="w-8 h-8" />
+            <XCircle className="w-6 h-6 md:w-8 md:h-8" />
           </button>
           <img
             src={mushroom.image_path}
@@ -207,11 +207,11 @@ function SpeciesDetail() {
         </button>
 
         {/* Hero Section with Image and Title */}
-        <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl mb-8">
-          <div className="grid lg:grid-cols-5 gap-8 items-start">
+        <div className="bg-white/10 backdrop-blur-md rounded-2xl md:rounded-3xl p-4 md:p-8 border border-white/20 shadow-2xl mb-6 md:mb-8">
+          <div className="grid lg:grid-cols-5 gap-4 md:gap-8 items-start">
             {/* Image */}
             <div className="lg:col-span-2">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg relative group">
+              <div className="aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden shadow-lg relative group">
                 {!imageError && mushroom.image_path ? (
                   <div className="relative w-full h-full">
                     {/* Blurred background image */}
@@ -241,13 +241,14 @@ function SpeciesDetail() {
                     {/* Expand button - shows on hover */}
                     <button
                       onClick={() => setShowImageModal(true)}
-                      className="absolute bottom-3 right-3 bg-black/70 hover:bg-black/90 text-white p-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 backdrop-blur-sm border border-white/20"
+                      className="absolute bottom-2 right-2 md:bottom-3 md:right-3 bg-black/70 hover:bg-black/90 text-white p-1.5 md:p-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 backdrop-blur-sm border border-white/20"
                       title="Click to expand"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
+                        width="16"
+                        height="16"
+                        className="md:w-5 md:h-5"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -267,11 +268,13 @@ function SpeciesDetail() {
                     />
                   </div>
                 ) : (
-                  <div className="bg-gray-800 h-full flex items-center justify-center text-center text-gray-400 p-6">
+                  <div className="bg-gray-800 h-full flex items-center justify-center text-center text-gray-400 p-4 md:p-6">
                     <div>
-                      <Camera className="w-16 h-16 mx-auto mb-3 opacity-50" />
-                      <p className="text-lg font-medium">Image not available</p>
-                      <p className="text-sm text-gray-500 mt-1">
+                      <Camera className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 opacity-50" />
+                      <p className="text-base md:text-lg font-medium">
+                        Image not available
+                      </p>
+                      <p className="text-xs md:text-sm text-gray-500 mt-1">
                         {commonNames.length > 0
                           ? commonNames[0]
                           : mushroom.scientific_name}
@@ -286,63 +289,65 @@ function SpeciesDetail() {
             <div className="lg:col-span-3 flex flex-col justify-between min-h-full">
               {/* Scientific Name and Common Names */}
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 leading-tight">
+                <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-2 md:mb-3 leading-tight">
                   {mushroom.scientific_name}
                 </h1>
                 {commonNames.length > 0 && (
-                  <div className="mb-6">
-                    <span className="text-gray-400 text-sm font-medium uppercase tracking-wider">
+                  <div className="mb-4 md:mb-6">
+                    <span className="text-gray-400 text-xs md:text-sm font-medium uppercase tracking-wider">
                       Also known as:
                     </span>
-                    <p className="text-xl text-gray-200 italic mt-1">
+                    <p className="text-base md:text-xl text-gray-200 italic mt-1">
                       {commonNames.join(" • ")}
                     </p>
                   </div>
                 )}
                 {!mushroom.common_name && (
-                  <p className="text-lg text-gray-300 italic mb-6">
+                  <p className="text-sm md:text-lg text-gray-300 italic mb-4 md:mb-6">
                     (No common names listed)
                   </p>
                 )}
               </div>
 
               {/* Prominent Edibility Status and Quick Stats */}
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <div
-                  className={`inline-flex items-center space-x-3 px-6 py-4 rounded-2xl text-lg font-bold ${edibilityInfo.bgColor} ${edibilityInfo.borderColor} border-2 shadow-lg`}
+                  className={`inline-flex items-center space-x-2 md:space-x-3 px-4 py-2 md:px-6 md:py-4 rounded-xl md:rounded-2xl text-sm md:text-lg font-bold ${edibilityInfo.bgColor} ${edibilityInfo.borderColor} border-2 shadow-lg`}
                 >
-                  <EdibilityIcon className={`w-7 h-7 ${edibilityInfo.color}`} />
+                  <EdibilityIcon
+                    className={`w-5 h-5 md:w-7 md:h-7 ${edibilityInfo.color}`}
+                  />
                   <span className={`${edibilityInfo.color}`}>
                     {edibilityInfo.status}
                   </span>
                 </div>
 
                 {/* Quick Stats Grid */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                    <div className="flex items-center space-x-3">
-                      <Leaf className="w-5 h-5 text-green-400 flex-shrink-0" />
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl p-3 md:p-4 border border-white/10">
+                    <div className="flex items-center space-x-2 md:space-x-3">
+                      <Leaf className="w-4 h-4 md:w-5 md:h-5 text-green-400 flex-shrink-0" />
                       <div>
                         <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">
                           Type
                         </p>
-                        <p className="text-white font-semibold">
+                        <p className="text-sm md:text-base text-white font-semibold">
                           {mushroom.type || "Fungus"}
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                    <div className="flex items-center space-x-3">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl p-3 md:p-4 border border-white/10">
+                    <div className="flex items-center space-x-2 md:space-x-3">
                       <Shield
-                        className={`w-5 h-5 ${edibilityInfo.color} flex-shrink-0`}
+                        className={`w-4 h-4 md:w-5 md:h-5 ${edibilityInfo.color} flex-shrink-0`}
                       />
                       <div>
                         <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">
                           Edibility
                         </p>
-                        <p className="text-white font-semibold">
+                        <p className="text-sm md:text-base text-white font-semibold">
                           {mushroom.edibility || "Unknown"}
                         </p>
                       </div>
@@ -355,30 +360,30 @@ function SpeciesDetail() {
         </div>
 
         {/* Content Grid - Equal height columns with flex */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
           {/* Left Column - Primary Information */}
-          <div className="flex flex-col space-y-8">
+          <div className="flex flex-col space-y-6 md:space-y-8">
             {/* Description Card */}
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl flex-1">
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Eye className="w-6 h-6 mr-3 text-blue-400" />
+            <div className="bg-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/20 shadow-xl flex-1">
+              <h2 className="text-lg md:text-2xl font-bold text-white mb-3 md:mb-4 flex items-center">
+                <Eye className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-blue-400" />
                 Identification
               </h2>
               <div className="prose prose-invert max-w-none">
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                   {mushroom.description || "No description available."}
                 </p>
               </div>
             </div>
 
             {/* Habitat Card */}
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl flex-1">
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <TreePine className="w-6 h-6 mr-3 text-green-400" />
+            <div className="bg-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/20 shadow-xl flex-1">
+              <h2 className="text-lg md:text-2xl font-bold text-white mb-3 md:mb-4 flex items-center">
+                <TreePine className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-green-400" />
                 Habitat & Ecology
               </h2>
               <div className="prose prose-invert max-w-none">
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                   {mushroom.habitat || "Habitat information not available."}
                 </p>
               </div>
@@ -386,42 +391,43 @@ function SpeciesDetail() {
           </div>
 
           {/* Right Column - Secondary Information */}
-          <div className="flex flex-col space-y-8">
+          <div className="flex flex-col space-y-6 md:space-y-8">
             {/* Important Notes Card */}
-
-            <div className="bg-yellow-500/20 backdrop-blur-md rounded-2xl p-6 border border-yellow-500/50 shadow-xl h-full">
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Info className="w-6 h-6 mr-3 text-yellow-400" />
+            <div className="bg-yellow-500/20 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-6 border border-yellow-500/50 shadow-xl h-full">
+              <h2 className="text-lg md:text-2xl font-bold text-white mb-3 md:mb-4 flex items-center">
+                <Info className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-yellow-400" />
                 Important Notes
               </h2>
               <div className="flex items-start space-x-3">
-                <p className="text-yellow-100 leading-relaxed">
+                <p className="text-sm md:text-base text-yellow-100 leading-relaxed">
                   {mushroom.notes}
                 </p>
               </div>
             </div>
             {/* Additional Information Card */}
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl flex-1">
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Book className="w-6 h-6 mr-3 text-purple-400" />
+            <div className="bg-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/20 shadow-xl flex-1">
+              <h2 className="text-lg md:text-2xl font-bold text-white mb-3 md:mb-4 flex items-center">
+                <Book className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-purple-400" />
                 Additional Information
               </h2>
-              <div className="space-y-4">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-white font-semibold mb-2">
+              <div className="space-y-3 md:space-y-4">
+                <div className="bg-white/5 rounded-lg p-3 md:p-4">
+                  <h3 className="text-sm md:text-base text-white font-semibold mb-2">
                     Scientific Classification
                   </h3>
-                  <p className="text-gray-300 text-sm italic">
+                  <p className="text-xs md:text-sm text-gray-300 italic">
                     {mushroom.scientific_name}
                   </p>
                 </div>
 
                 {mushroom.type && (
-                  <div className="bg-white/5 rounded-lg p-4">
-                    <h3 className="text-white font-semibold mb-2">
+                  <div className="bg-white/5 rounded-lg p-3 md:p-4">
+                    <h3 className="text-sm md:text-base text-white font-semibold mb-2">
                       Mushroom Type
                     </h3>
-                    <p className="text-gray-300 text-sm">{mushroom.type}</p>
+                    <p className="text-xs md:text-sm text-gray-300">
+                      {mushroom.type}
+                    </p>
                   </div>
                 )}
               </div>
@@ -430,15 +436,15 @@ function SpeciesDetail() {
         </div>
 
         {/* Safety Warning - Full Width */}
-        <div className="mt-8">
-          <div className="bg-red-500/20 border-l-4 border-red-500 rounded-r-2xl p-8 shadow-xl">
-            <div className="flex items-start space-x-4">
-              <AlertTriangle className="w-10 h-10 text-red-400 flex-shrink-0 mt-1" />
+        <div className="mt-6 md:mt-8">
+          <div className="bg-red-500/20 border-l-4 border-red-500 rounded-r-xl md:rounded-r-2xl p-4 md:p-8 shadow-xl">
+            <div className="flex items-start space-x-3 md:space-x-4">
+              <AlertTriangle className="w-6 h-6 md:w-10 md:h-10 text-red-400 flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-2xl font-bold text-red-300 mb-3">
+                <h3 className="text-lg md:text-2xl font-bold text-red-300 mb-2 md:mb-3">
                   Safety Warning
                 </h3>
-                <p className="text-red-200 leading-relaxed text-lg">
+                <p className="text-sm md:text-lg text-red-200 leading-relaxed">
                   Never consume any wild mushroom based solely on digital
                   identification. Always consult with expert mycologists and use
                   multiple reliable field guides before considering any wild
@@ -450,8 +456,8 @@ function SpeciesDetail() {
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-8 py-8 border-t border-white/10">
-          <p className="text-gray-400">
+        <div className="text-center mt-6 md:mt-8 py-6 md:py-8 border-t border-white/10">
+          <p className="text-xs md:text-sm text-gray-400">
             Information provided for educational purposes only • Always verify
             with expert mycologists
           </p>

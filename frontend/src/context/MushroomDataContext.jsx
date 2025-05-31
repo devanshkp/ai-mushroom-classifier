@@ -83,11 +83,13 @@ export const MushroomDataProvider = ({ children }) => {
     );
   };
 
-  // Search mushrooms by query (searches scientific name, common name, and description)
+  // Search mushrooms by query (searches scientific name and common name)
+
   const searchMushrooms = (query) => {
     if (!query || query.trim() === "") return mushrooms;
 
     const lowerQuery = query.toLowerCase().trim();
+    const queryWords = lowerQuery.split(/\s+/); // Split query into words
 
     return mushrooms.filter((mushroom) => {
       const scientificWords =
@@ -100,14 +102,20 @@ export const MushroomDataProvider = ({ children }) => {
             .map((word) => word.trim())
         : [];
 
-      // Check if any word in scientific or common name starts with query
-      return (
-        scientificWords.some((word) => word.startsWith(lowerQuery)) ||
-        commonWords.some((word) => word.startsWith(lowerQuery))
-      );
+      // Combine all searchable words
+      const allWords = [...scientificWords, ...commonWords];
+
+      // For multi-word queries, check if ALL query words are found
+      if (queryWords.length > 1) {
+        return queryWords.every((queryWord) =>
+          allWords.some((word) => word.startsWith(queryWord))
+        );
+      }
+
+      // For single word queries, use original logic
+      return allWords.some((word) => word.startsWith(lowerQuery));
     });
   };
-
   // Filter mushrooms by edibility status
   const getMushroomsByEdibility = (edibilityType) => {
     if (!edibilityType) return mushrooms;
