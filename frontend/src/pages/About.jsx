@@ -19,7 +19,7 @@ function AboutPage() {
         {/* Adjust pt-X for Navbar height */}
         <header className="text-center mb-12 md:mb-16">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-sky-400 via-cyan-400 to-indigo-500 bg-clip-text text-transparent mb-4">
-            About MushroomAI 🍄
+            About MushroomAI
           </h1>
         </header>
         <div className="max-w-4xl mx-auto space-y-10 md:space-y-12">
@@ -90,8 +90,16 @@ function AboutPage() {
               </p>
               <p>
                 <strong className="text-sky-300">Training Data:</strong> The
-                model was meticulously trained on a comprehensive dataset from
-                Kaggle, featuring thousands of images across{" "}
+                model was meticulously trained on a comprehensive dataset from{" "}
+                <a
+                  href="https://www.kaggle.com/datasets/thehir0/mushroom-species"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 underline transition-colors"
+                >
+                  Kaggle
+                </a>
+                , featuring thousands of images across{" "}
                 <strong className="text-white">
                   100 different mushroom species
                 </strong>

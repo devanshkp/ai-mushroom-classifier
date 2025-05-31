@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import {
-  Camera,
-  Menu,
-  X,
-  Home as HomeIcon,
-  BookOpen,
-  Info as InfoIcon,
-} from "lucide-react";
+import { Camera, Menu, X, Home, BookOpen, Info } from "lucide-react";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,10 +9,20 @@ function Navbar() {
   const [isAtTop, setIsAtTop] = useState(true);
 
   const navItems = [
-    { name: "Classifier", path: "/", icon: HomeIcon },
+    { name: "Classifier", path: "/", icon: Home },
     { name: "Species Guide", path: "/species", icon: BookOpen },
-    { name: "About", path: "/about", icon: InfoIcon },
+    { name: "About", path: "/about", icon: Info },
   ];
+
+  // Function to handle navigation with scroll to top
+  const handleNavigation = () => {
+    setIsMenuOpen(false);
+    // Scroll to top with smooth behavior
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     const navbarHeightThreshold = 50;
@@ -66,73 +69,102 @@ function Navbar() {
     }
     ${
       isAtTop && showNavbar && !isMenuOpen
-        ? "bg-transparent shadow-none border-b-transparent"
-        : "bg-black/75 backdrop-blur-md border-b border-white/10 shadow-lg"
+        ? "bg-transparent shadow-none"
+        : "bg-black/70 backdrop-blur-lg shadow-lg"
     }
   `;
 
   return (
     <nav className={navClasses}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
           <Link
             to="/"
-            className="flex items-center space-x-2"
-            onClick={() => setIsMenuOpen(false)}
+            className="flex items-center space-x-3 group"
+            onClick={handleNavigation}
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center">
+            <div className="w-9 h-9 bg-gradient-to-br from-emerald-400 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-emerald-500/25 transition-all duration-300">
               <Camera className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white font-bold text-lg hidden sm:block">
+            <span className="text-white font-semibold text-xl tracking-tight hidden sm:block">
               MushroomAI
             </span>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-12">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 group"
+                className="flex items-center space-x-2 text-gray-300 hover:text-emerald-400 transition-colors duration-200 group font-medium tracking-wide"
+                onClick={handleNavigation}
               >
-                <item.icon className="w-4 h-4 text-gray-300 group-hover:text-green-400 transition-colors duration-200" />
-                <span>{item.name}</span>
+                <item.icon className="w-4 h-4 text-gray-300 group-hover:text-emerald-400 transition-colors duration-200" />
+                <span className="text-gray-300">{item.name}</span>
               </Link>
             ))}
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-white p-2"
+            className="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-400/50"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            <div className="relative w-6 h-6">
+              <Menu
+                className={`w-6 h-6 absolute transition-all duration-300 ${
+                  isMenuOpen
+                    ? "opacity-0 rotate-90 scale-75"
+                    : "opacity-100 rotate-0 scale-100"
+                }`}
+              />
+              <X
+                className={`w-6 h-6 absolute transition-all duration-300 ${
+                  isMenuOpen
+                    ? "opacity-100 rotate-0 scale-100"
+                    : "opacity-0 -rotate-90 scale-75"
+                }`}
+              />
+            </div>
           </button>
         </div>
 
+        {/* Mobile Menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          className={`lg:hidden transition-all duration-300 ease-out ${
             isMenuOpen
-              ? "max-h-96 opacity-100 py-2 border-t border-white/10"
-              : "max-h-0 opacity-0 py-0"
+              ? "max-h-64 opacity-100 pb-6"
+              : "max-h-0 opacity-0 pb-0 pointer-events-none"
           }`}
         >
-          <div className="flex flex-col space-y-4 pt-2 pb-3">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                onClick={() => setIsMenuOpen(false)}
-                className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 px-2 py-2 rounded-lg hover:bg-white/5"
-              >
-                <item.icon className="w-5 h-5" />
-                <span>{item.name}</span>
-              </Link>
-            ))}
+          <div className="border-t border-white/10 pt-4">
+            <div className="flex flex-col space-y-1">
+              {navItems.map((item, index) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={handleNavigation}
+                  className={`flex items-center space-x-3 text-gray-300 hover:text-white hover:bg-white/8 active:bg-white/12 transition-all duration-200 px-4 py-3 rounded-lg font-medium group cursor-pointer transform ${
+                    isMenuOpen
+                      ? "translate-x-0 opacity-100"
+                      : "-translate-x-4 opacity-0"
+                  }`}
+                  style={{
+                    transitionDelay: isMenuOpen ? `${index * 75}ms` : "0ms",
+                  }}
+                >
+                  <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors duration-200">
+                    <item.icon className="w-4 h-4 text-gray-300 group-hover:text-emerald-400 transition-colors duration-200" />
+                  </div>
+                  <span className="tracking-wide font-medium text-gray-300">
+                    {item.name}
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
