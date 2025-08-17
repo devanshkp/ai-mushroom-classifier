@@ -43,7 +43,7 @@ export default function AboutPage() {
               </li>
               <li> Compare lookalikes to avoid common misidentifications. </li>
               <li>
-                this tool as a guide — never a substitute for expert advice.
+                Use this tool as a guide — never a substitute for expert advice.
               </li>
             </ol>
           </Card>
