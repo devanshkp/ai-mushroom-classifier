@@ -15,7 +15,7 @@ import Navbar from "../components/Navbar";
 import AmbientBackground from "../components/AmbientBackground";
 
 export default function SpeciesList() {
-  const { mushrooms, loading, error, searchMushrooms } = useMushroomData();
+  const { loading, error, searchMushrooms } = useMushroomData();
   const [query, setQuery] = useState("");
   const [debounced, setDebounced] = useState("");
   const [showTop, setShowTop] = useState(false);
@@ -86,7 +86,7 @@ export default function SpeciesList() {
               onChange={(e) => setQuery(e.target.value)}
               autoComplete="off"
               placeholder="Search species…"
-              className="w-full rounded-4xl border-white/10 bg-zinc-950/60 px-12 py-4 text-base text-white shadow-inner ring-1 ring-inset ring-white/10 placeholder:text-zinc-500 focus:outline-none"
+              className="w-full rounded-4xl border-white/10 bg-white/4 px-12 py-4 text-base text-white shadow-inner ring-1 ring-inset ring-white/10 placeholder:text-zinc-500 focus:outline-none"
             />
           </div>
         </div>
