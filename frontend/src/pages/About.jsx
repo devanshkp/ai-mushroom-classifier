@@ -5,7 +5,7 @@ import { ShieldAlert, Sparkles, ExternalLink, ArrowRight } from "lucide-react";
 export default function AboutPage() {
   return (
     <main className="relative min-h-screen bg-black text-white">
-      <AmbientBackground variant="about" />
+      <AmbientBackground variant="about" opacity={0.3} />
       <Navbar />
 
       <section className="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 lg:px-8">

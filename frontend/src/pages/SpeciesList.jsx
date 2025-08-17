@@ -60,7 +60,7 @@ export default function SpeciesList() {
 
   return (
     <main className="relative min-h-screen bg-black text-white">
-      <AmbientBackground variant="search" />
+      <AmbientBackground variant="search" opacity={0.9} />
       <Navbar />
 
       <section className="relative z-10 mx-auto max-w-7xl px-4 pb-28 pt-24 sm:px-6 lg:px-8">
