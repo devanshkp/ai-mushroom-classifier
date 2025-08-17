@@ -1,283 +1,138 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import {
   ArrowLeft,
   AlertTriangle,
-  CheckCircle,
+  CheckCircle2,
   XCircle,
   Info,
   Camera,
-  TreePine,
-  Book,
-  Leaf,
   Shield,
-  Eye,
+  Maximize2,
+  XCircle as CloseIcon,
 } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useMushroomData } from "../context/MushroomDataContext";
 import Navbar from "../components/Navbar";
+import AmbientBackground from "../components/AmbientBackground";
 
-function SpeciesDetail() {
+export default function SpeciesDetail() {
   const { scientificName } = useParams();
   const navigate = useNavigate();
 
   const [mushroom, setMushroom] = useState(null);
   const [imageError, setImageError] = useState(false);
+  const [showImageModal, setShowImageModal] = useState(false);
 
   const { getMushroomByScientificName, loading, error } = useMushroomData();
 
   useEffect(() => {
     if (!loading && scientificName) {
-      const foundMushroom = getMushroomByScientificName(scientificName);
-      setMushroom(foundMushroom);
+      const found = getMushroomByScientificName(scientificName);
+      setMushroom(found);
       setImageError(false);
     }
   }, [scientificName, loading, getMushroomByScientificName]);
 
-  const [showImageModal, setShowImageModal] = useState(false);
+  const commonNames = useMemo(
+    () =>
+      mushroom?.common_name
+        ? mushroom.common_name.split(",").map((n) => n.trim())
+        : [],
+    [mushroom]
+  );
 
-  const ImageModal = () =>
-    showImageModal && (
-      <div
-        className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 md:p-8"
-        onClick={() => setShowImageModal(false)}
-      >
-        <div className="relative max-w-2xl max-h-[70vh] flex items-center justify-center">
-          <button
-            onClick={() => setShowImageModal(false)}
-            className="absolute -top-12 -right-4 md:-top-20 md:-right-20 text-white hover:text-gray-300 transition-colors z-10"
-          >
-            <XCircle className="w-6 h-6 md:w-8 md:h-8" />
-          </button>
-          <img
-            src={mushroom.image_path}
-            alt={
-              commonNames.length > 0 ? commonNames[0] : mushroom.scientific_name
-            }
-            className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      </div>
-    );
-
-  const getEdibilityInfo = (edibility) => {
-    if (!edibility) {
-      return {
-        icon: AlertTriangle,
-        color: "text-orange-400",
-        bgColor: "bg-orange-500/20",
-        borderColor: "border-orange-500/50",
-        status: "Unknown",
-        priority: "medium",
-      };
-    }
-
-    const lower = edibility.toLowerCase();
-    if (
-      lower.includes("edible") &&
-      (lower.includes("good") || lower.includes("excellent"))
-    ) {
-      return {
-        icon: CheckCircle,
-        color: "text-green-400",
-        bgColor: "bg-green-500/20",
-        borderColor: "border-green-500/50",
-        status: "Safe to Eat",
-        priority: "high",
-      };
-    } else if (lower.includes("edible")) {
-      return {
-        icon: Info,
-        color: "text-yellow-400",
-        bgColor: "bg-yellow-500/20",
-        borderColor: "border-yellow-500/50",
-        status: "Edible with Caution",
-        priority: "medium",
-      };
-    } else if (lower.includes("toxic") || lower.includes("poisonous")) {
-      return {
-        icon: XCircle,
-        color: "text-red-400",
-        bgColor: "bg-red-500/20",
-        borderColor: "border-red-500/50",
-        status: "Toxic",
-        priority: "critical",
-      };
-    } else {
-      return {
-        icon: AlertTriangle,
-        color: "text-orange-400",
-        bgColor: "bg-orange-500/20",
-        borderColor: "border-orange-500/50",
-        status: "Unknown",
-        priority: "medium",
-      };
-    }
-  };
-
-  const handleImageError = () => {
-    setImageError(true);
-  };
-
-  const handleBackClick = () => {
-    navigate(-1);
-  };
-
-  // Loading state
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center text-white">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-lg">Loading mushroom details...</p>
-        </div>
-      </div>
-    );
-  }
-
-  // Error state from data context
-  if (error) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center text-white">
-        <div className="text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl border border-white/20">
-          <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
-          <h1 className="text-2xl mb-2">Error Loading Data</h1>
-          <p className="text-gray-300 mb-6">{error}</p>
-          <button
-            onClick={() => window.location.reload()}
-            className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors duration-200 font-semibold"
-          >
-            Retry
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  // Mushroom not found for the given scientificName
-  if (!mushroom) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center text-white">
-        <div className="text-center p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl border border-white/20">
-          <AlertTriangle className="w-16 h-16 text-orange-400 mx-auto mb-4" />
-          <h1 className="text-2xl mb-2">Species Not Found</h1>
-          <p className="text-gray-300 mb-6">
-            The mushroom species "{scientificName}" was not found in our
-            database.
-          </p>
-          <button
-            onClick={handleBackClick}
-            className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors duration-200 font-semibold"
-          >
-            Go Back
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  const edibilityInfo = getEdibilityInfo(mushroom.edibility);
+  const edibilityInfo = useMemo(
+    () => getEdibilityInfo(mushroom?.edibility),
+    [mushroom]
+  );
   const EdibilityIcon = edibilityInfo.icon;
-  const commonNames = mushroom.common_name
-    ? mushroom.common_name.split(",").map((name) => name.trim())
-    : [];
+
+  // Shared shells
+  if (loading)
+    return (
+      <CenteredState
+        icon={
+          <div className="h-16 w-16 animate-spin rounded-full border-4 border-emerald-500/70 border-t-transparent" />
+        }
+        title="Loading"
+        subtitle="Fetching species details..."
+      />
+    );
+
+  if (error)
+    return (
+      <CenteredState
+        icon={<AlertTriangle className="h-14 w-14 text-rose-400" />}
+        title="Error loading data"
+        subtitle={String(error)}
+        action={{ label: "Retry", onClick: () => window.location.reload() }}
+      />
+    );
+
+  if (!mushroom)
+    return (
+      <CenteredState
+        icon={<AlertTriangle className="h-14 w-14 text-amber-400" />}
+        title="Species not found"
+        subtitle={`We couldn't find "${scientificName}" in the database.`}
+        action={{ label: "Go back", onClick: () => navigate(-1) }}
+      />
+    );
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      {/* Background pattern */}
-      <div
-        className="fixed inset-0 z-0"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}
-      ></div>
-
-      <div className="fixed inset-0 bg-black opacity-50 z-10"></div>
-
+    <main className="relative min-h-screen bg-black text-white">
       <Navbar />
 
-      <div className="relative z-10 container mx-auto px-4 py-6 pt-20">
-        {/* Back Button */}
+      <section className="relative z-10 mx-auto max-w-7xl px-4 pb-20 pt-24 sm:px-6 lg:px-8">
+        {/* Back */}
         <button
-          onClick={handleBackClick}
-          className="mb-6 flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
+          onClick={() => navigate(-1)}
+          className="mb-6 inline-flex items-center gap-2 text-zinc-400 transition-colors hover:text-white"
         >
-          <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
-          <span>Back</span>
+          <ArrowLeft className="h-5 w-5" /> Back
         </button>
 
-        {/* Hero Section with Image and Title */}
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl md:rounded-3xl p-4 md:p-8 border border-white/20 shadow-2xl mb-6 md:mb-8">
-          <div className="grid lg:grid-cols-5 gap-4 md:gap-8 items-start">
+        {/* Hero */}
+        <div className="mb-8 rounded-3xl border border-white/10 bg-white/5 p-4 sm:p-6 lg:p-8">
+          <div className="grid gap-6 lg:grid-cols-5 lg:gap-8">
             {/* Image */}
             <div className="lg:col-span-2">
-              <div className="aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden shadow-lg relative group">
+              <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/40">
                 {!imageError && mushroom.image_path ? (
-                  <div className="relative w-full h-full">
-                    {/* Blurred background image */}
+                  <>
+                    {/* soft blur backdrop */}
                     <div
-                      className="absolute inset-0 bg-cover bg-center filter blur-md scale-110"
-                      style={{
-                        backgroundImage: `url(${mushroom.image_path})`,
-                      }}
+                      className="absolute inset-0 scale-110 bg-cover bg-center blur-md"
+                      style={{ backgroundImage: `url(${mushroom.image_path})` }}
                     />
-                    {/* Overlay to darken the blurred background */}
                     <div className="absolute inset-0 bg-black/40" />
-
-                    {/* Main image */}
-                    <div className="relative w-full h-full flex items-center justify-center p-0">
-                      <img
-                        src={mushroom.image_path}
-                        alt={
-                          commonNames.length > 0
-                            ? commonNames[0]
-                            : mushroom.scientific_name
-                        }
-                        className="max-w-full max-h-full object-contain drop-shadow-2xl"
-                        onError={handleImageError}
-                      />
-                    </div>
-
-                    {/* Expand button - shows on hover */}
+                    <img
+                      src={mushroom.image_path}
+                      alt={commonNames[0] || mushroom.scientific_name}
+                      className="relative z-10 h-full w-full object-contain p-2"
+                      onError={() => setImageError(true)}
+                    />
                     <button
+                      title="Expand"
                       onClick={() => setShowImageModal(true)}
-                      className="absolute bottom-2 right-2 md:bottom-3 md:right-3 bg-black/70 hover:bg-black/90 text-white p-1.5 md:p-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-200 backdrop-blur-sm border border-white/20"
-                      title="Click to expand"
+                      className="absolute bottom-3 right-3 z-10 inline-flex items-center gap-2 rounded-xl bg-black/70 px-3 py-1.5 text-sm text-white opacity-0 ring-1 ring-inset ring-white/20 transition-all hover:bg-black/90 group-hover:opacity-100"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        className="md:w-5 md:h-5"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M8 3H5a2 2 0 0 0-2 2v3" />
-                        <path d="M21 8V5a2 2 0 0 0-2-2h-3" />
-                        <path d="M3 16v3a2 2 0 0 0 2 2h3" />
-                        <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
-                      </svg>
+                      <Maximize2 className="h-4 w-4" /> View
                     </button>
                     <div
-                      className="absolute inset-0 cursor-pointer"
+                      className="absolute inset-0"
                       onClick={() => setShowImageModal(true)}
                     />
-                  </div>
+                  </>
                 ) : (
-                  <div className="bg-gray-800 h-full flex items-center justify-center text-center text-gray-400 p-4 md:p-6">
+                  <div className="grid h-full place-items-center p-6 text-center text-zinc-500">
                     <div>
-                      <Camera className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 opacity-50" />
-                      <p className="text-base md:text-lg font-medium">
+                      <Camera className="mx-auto mb-3 h-14 w-14 opacity-60" />
+                      <p className="text-base font-medium">
                         Image not available
                       </p>
-                      <p className="text-xs md:text-sm text-gray-500 mt-1">
-                        {commonNames.length > 0
-                          ? commonNames[0]
-                          : mushroom.scientific_name}
+                      <p className="mt-1 text-xs text-zinc-500">
+                        {commonNames[0] || mushroom.scientific_name}
                       </p>
                     </div>
                   </div>
@@ -285,187 +140,248 @@ function SpeciesDetail() {
               </div>
             </div>
 
-            {/* Title and Key Info */}
-            <div className="lg:col-span-3 flex flex-col justify-between min-h-full">
-              {/* Scientific Name and Common Names */}
+            {/* Title & quick facts */}
+            <div className="flex min-h-full flex-col justify-between lg:col-span-3">
               <div>
-                <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-2 md:mb-3 leading-tight">
+                <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
                   {mushroom.scientific_name}
                 </h1>
-                {commonNames.length > 0 && (
-                  <div className="mb-4 md:mb-6">
-                    <span className="text-gray-400 text-xs md:text-sm font-medium uppercase tracking-wider">
-                      Also known as:
+                {commonNames.length ? (
+                  <div className="mt-2">
+                    <span className="text-xs font-medium uppercase tracking-widest text-zinc-500">
+                      Also known as
                     </span>
-                    <p className="text-base md:text-xl text-gray-200 italic mt-1">
+                    <p className="mt-1 text-base italic text-zinc-300 sm:text-lg">
                       {commonNames.join(" • ")}
                     </p>
                   </div>
-                )}
-                {!mushroom.common_name && (
-                  <p className="text-sm md:text-lg text-gray-300 italic mb-4 md:mb-6">
+                ) : (
+                  <p className="mt-2 text-sm italic text-zinc-400">
                     (No common names listed)
                   </p>
                 )}
               </div>
 
-              {/* Prominent Edibility Status and Quick Stats */}
-              <div className="space-y-3 md:space-y-4">
+              <div className="mt-6 space-y-4">
                 <div
-                  className={`inline-flex items-center space-x-2 md:space-x-3 px-4 py-2 md:px-6 md:py-4 rounded-xl md:rounded-2xl text-sm md:text-lg font-bold ${edibilityInfo.bgColor} ${edibilityInfo.borderColor} border-2 shadow-lg`}
+                  className={`inline-flex items-center gap-3 rounded-2xl border px-4 py-3 text-sm font-semibold ring-1 ring-inset ${edibilityInfo.badge}`}
                 >
-                  <EdibilityIcon
-                    className={`w-5 h-5 md:w-7 md:h-7 ${edibilityInfo.color}`}
+                  <EdibilityIcon className="h-5 w-5" /> {edibilityInfo.status}
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <StatCard label="Type" value={mushroom.type || "Fungus"} />
+                  <StatCard
+                    label="Edibility"
+                    value={mushroom.edibility || "Unknown"}
+                    rightIcon={
+                      <Shield className={`h-4 w-4 ${edibilityInfo.text}`} />
+                    }
                   />
-                  <span className={`${edibilityInfo.color}`}>
-                    {edibilityInfo.status}
-                  </span>
-                </div>
-
-                {/* Quick Stats Grid */}
-                <div className="grid grid-cols-2 gap-3 md:gap-4">
-                  <div className="bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl p-3 md:p-4 border border-white/10">
-                    <div className="flex items-center space-x-2 md:space-x-3">
-                      <Leaf className="w-4 h-4 md:w-5 md:h-5 text-green-400 flex-shrink-0" />
-                      <div>
-                        <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">
-                          Type
-                        </p>
-                        <p className="text-sm md:text-base text-white font-semibold">
-                          {mushroom.type || "Fungus"}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl p-3 md:p-4 border border-white/10">
-                    <div className="flex items-center space-x-2 md:space-x-3">
-                      <Shield
-                        className={`w-4 h-4 md:w-5 md:h-5 ${edibilityInfo.color} flex-shrink-0`}
-                      />
-                      <div>
-                        <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">
-                          Edibility
-                        </p>
-                        <p className="text-sm md:text-base text-white font-semibold">
-                          {mushroom.edibility || "Unknown"}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Content Grid - Equal height columns with flex */}
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
-          {/* Left Column - Primary Information */}
-          <div className="flex flex-col space-y-6 md:space-y-8">
-            {/* Description Card */}
-            <div className="bg-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/20 shadow-xl flex-1">
-              <h2 className="text-lg md:text-2xl font-bold text-white mb-3 md:mb-4 flex items-center">
-                <Eye className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-blue-400" />
-                Identification
-              </h2>
-              <div className="prose prose-invert max-w-none">
-                <p className="text-sm md:text-base text-gray-300 leading-relaxed">
-                  {mushroom.description || "No description available."}
-                </p>
-              </div>
-            </div>
+        {/* Content grid */}
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+          <Card title="Identification" glow="emerald">
+            <p className="text-sm text-zinc-300 sm:text-base">
+              {mushroom.description || "No description available."}
+            </p>
+          </Card>
 
-            {/* Habitat Card */}
-            <div className="bg-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/20 shadow-xl flex-1">
-              <h2 className="text-lg md:text-2xl font-bold text-white mb-3 md:mb-4 flex items-center">
-                <TreePine className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-green-400" />
-                Habitat & Ecology
-              </h2>
-              <div className="prose prose-invert max-w-none">
-                <p className="text-sm md:text-base text-gray-300 leading-relaxed">
-                  {mushroom.habitat || "Habitat information not available."}
-                </p>
-              </div>
-            </div>
-          </div>
+          <Card title="Habitat & Ecology" glow="emerald">
+            <p className="text-sm text-zinc-300 sm:text-base">
+              {mushroom.habitat || "Habitat information not available."}
+            </p>
+          </Card>
 
-          {/* Right Column - Secondary Information */}
-          <div className="flex flex-col space-y-6 md:space-y-8">
-            {/* Important Notes Card */}
-            <div className="bg-yellow-500/20 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-6 border border-yellow-500/50 shadow-xl h-full">
-              <h2 className="text-lg md:text-2xl font-bold text-white mb-3 md:mb-4 flex items-center">
-                <Info className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-yellow-400" />
-                Important Notes
-              </h2>
-              <div className="flex items-start space-x-3">
-                <p className="text-sm md:text-base text-yellow-100 leading-relaxed">
-                  {mushroom.notes}
-                </p>
-              </div>
-            </div>
-            {/* Additional Information Card */}
-            <div className="bg-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/20 shadow-xl flex-1">
-              <h2 className="text-lg md:text-2xl font-bold text-white mb-3 md:mb-4 flex items-center">
-                <Book className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-purple-400" />
-                Additional Information
-              </h2>
-              <div className="space-y-3 md:space-y-4">
-                <div className="bg-white/5 rounded-lg p-3 md:p-4">
-                  <h3 className="text-sm md:text-base text-white font-semibold mb-2">
-                    Scientific Classification
-                  </h3>
-                  <p className="text-xs md:text-sm text-gray-300 italic">
-                    {mushroom.scientific_name}
-                  </p>
-                </div>
+          <Card title="Important Notes" variant="warning" glow="amber">
+            <p className="text-sm text-amber-100 sm:text-base">
+              {mushroom.notes || "—"}
+            </p>
+          </Card>
 
-                {mushroom.type && (
-                  <div className="bg-white/5 rounded-lg p-3 md:p-4">
-                    <h3 className="text-sm md:text-base text-white font-semibold mb-2">
-                      Mushroom Type
-                    </h3>
-                    <p className="text-xs md:text-sm text-gray-300">
-                      {mushroom.type}
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Safety Warning - Full Width */}
-        <div className="mt-6 md:mt-8">
-          <div className="bg-red-500/20 border-l-4 border-red-500 rounded-r-xl md:rounded-r-2xl p-4 md:p-8 shadow-xl">
-            <div className="flex items-start space-x-3 md:space-x-4">
-              <AlertTriangle className="w-6 h-6 md:w-10 md:h-10 text-red-400 flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="text-lg md:text-2xl font-bold text-red-300 mb-2 md:mb-3">
-                  Safety Warning
+          <Card title="Additional Information" glow="emerald">
+            <div className="space-y-4">
+              <div className="rounded-xl bg-white/5 p-4">
+                <h3 className="text-sm font-semibold">
+                  Scientific Classification
                 </h3>
-                <p className="text-sm md:text-lg text-red-200 leading-relaxed">
-                  Never consume any wild mushroom based solely on digital
-                  identification. Always consult with expert mycologists and use
-                  multiple reliable field guides before considering any wild
-                  mushroom for consumption. Misidentification can be fatal.
+                <p className="mt-1 text-sm italic text-zinc-300">
+                  {mushroom.scientific_name}
                 </p>
               </div>
+              {mushroom.type && (
+                <div className="rounded-xl bg-white/5 p-4">
+                  <h3 className="text-sm font-semibold">Mushroom Type</h3>
+                  <p className="mt-1 text-sm text-zinc-300">{mushroom.type}</p>
+                </div>
+              )}
+            </div>
+          </Card>
+        </div>
+
+        {/* Safety banner */}
+        <div className="mt-8 rounded-2xl border-l-4 border-rose-500 bg-rose-500/15 p-6">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="mt-0.5 h-6 w-6 text-rose-300" />
+            <div>
+              <h3 className="text-lg font-semibold text-rose-200">
+                Safety Warning
+              </h3>
+              <p className="mt-1 text-sm text-rose-100/90">
+                Never consume wild mushrooms based solely on digital
+                identification. Always consult expert mycologists and multiple
+                field guides. Misidentification can be fatal.
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="text-center mt-6 md:mt-8 py-6 md:py-8 border-t border-white/10">
-          <p className="text-xs md:text-sm text-gray-400">
-            Information provided for educational purposes only • Always verify
-            with expert mycologists
+        <footer className="mx-auto mt-10 max-w-3xl text-center text-xs text-zinc-500">
+          Information is for educational purposes only. Always verify with local
+          experts.
+        </footer>
+      </section>
+
+      {showImageModal && (
+        <div
+          className="fixed inset-0 z-50 grid place-items-center bg-black/90 p-4"
+          onClick={() => setShowImageModal(false)}
+        >
+          <div className="relative max-h-[80vh] max-w-3xl">
+            <button
+              onClick={() => setShowImageModal(false)}
+              className="absolute -right-4 -top-10 rounded-full p-1 text-zinc-200 transition-colors hover:text-white"
+              aria-label="Close"
+            >
+              <CloseIcon className="h-7 w-7" />
+            </button>
+            <img
+              src={mushroom.image_path}
+              alt={commonNames[0] || mushroom.scientific_name}
+              className="max-h-[80vh] w-full rounded-2xl object-contain shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
+    </main>
+  );
+}
+
+// === UI helpers ===
+function Card({ title, children, variant, glow = "emerald" }) {
+  // limited palette for subtle variation
+  const glowColors = {
+    emerald: "from-emerald-500/5",
+    amber: "from-amber-500/4",
+  };
+
+  const base =
+    "relative rounded-3xl border bg-white/5 p-5 sm:p-6 lg:p-7 overflow-hidden";
+  const chrome =
+    variant === "warning"
+      ? "border-amber-400/30 ring-1 ring-inset ring-amber-400/20 bg-amber-500/10"
+      : "border-white/10 ring-1 ring-inset ring-white/10";
+
+  return (
+    <section className={`${base} ${chrome}`}>
+      <div
+        className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${glowColors[glow]} to-transparent`}
+      />
+      <header className="relative mb-3">
+        <h2 className="text-xl font-semibold">{title}</h2>
+      </header>
+      <div className="relative">{children}</div>
+    </section>
+  );
+}
+
+function StatCard({ label, value, rightIcon }) {
+  return (
+    <div className="rounded-2xl border border-white/10 bg-zinc-950/60 p-4">
+      <div className="flex items-center justify-between gap-3">
+        <div>
+          <p className="text-[11px] font-medium uppercase tracking-widest text-zinc-500">
+            {label}
+          </p>
+          <p className="text-sm font-semibold text-white sm:text-base">
+            {value}
           </p>
         </div>
+        {rightIcon}
       </div>
-      {ImageModal()}
     </div>
   );
 }
 
-export default SpeciesDetail;
+function CenteredState({ icon, title, subtitle, action }) {
+  return (
+    <main className="grid min-h-screen place-items-center bg-black text-white">
+      <div className="mx-4 w-full max-w-md rounded-3xl border border-white/10 bg-white/5 p-6 text-center">
+        <div className="mx-auto mb-4 grid h-16 w-16 place-items-center rounded-2xl bg-zinc-900 ring-1 ring-inset ring-white/10">
+          {icon}
+        </div>
+        <h1 className="text-xl font-semibold">{title}</h1>
+        {subtitle && <p className="mt-1 text-sm text-zinc-400">{subtitle}</p>}
+        {action && (
+          <button
+            onClick={action.onClick}
+            className="mt-5 inline-flex items-center justify-center gap-2 rounded-2xl border border-emerald-500/30 bg-emerald-600/20 px-4 py-2 text-sm font-semibold text-emerald-200 transition-colors hover:bg-emerald-600/30"
+          >
+            {action.label}
+          </button>
+        )}
+      </div>
+    </main>
+  );
+}
+
+function getEdibilityInfo(edibility) {
+  if (!edibility) {
+    return {
+      icon: AlertTriangle,
+      status: "Unknown",
+      text: "text-amber-300",
+      badge: "text-amber-200 bg-amber-500/15 border-amber-400/30",
+    };
+  }
+  const lower = edibility.toLowerCase();
+  if (lower.includes("toxic") || lower.includes("poison")) {
+    return {
+      icon: XCircle,
+      status: "Toxic",
+      text: "text-rose-300",
+      badge: "text-rose-200 bg-rose-500/15 border-rose-400/30",
+    };
+  }
+  if (
+    lower.includes("edible") &&
+    (lower.includes("good") || lower.includes("excellent"))
+  ) {
+    return {
+      icon: CheckCircle2,
+      status: "Safe to Eat",
+      text: "text-emerald-300",
+      badge: "text-emerald-200 bg-emerald-500/15 border-emerald-400/30",
+    };
+  }
+  if (lower.includes("edible")) {
+    return {
+      icon: Info,
+      status: "Edible with Caution",
+      text: "text-amber-300",
+      badge: "text-amber-200 bg-amber-500/15 border-amber-400/30",
+    };
+  }
+  return {
+    icon: AlertTriangle,
+    status: "Unknown",
+    text: "text-amber-300",
+    badge: "text-amber-200 bg-amber-500/15 border-amber-400/30",
+  };
+}
