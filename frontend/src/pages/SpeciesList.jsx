@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Navbar from "../components/Navbar";
 import AmbientBackground from "../components/AmbientBackground";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function SpeciesList() {
   const { loading, error, searchMushrooms } = useMushroomData();
@@ -134,15 +135,58 @@ export default function SpeciesList() {
       </footer>
 
       {/* Back to top */}
-      {showTop && (
-        <button
-          aria-label="Back to top"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-6 right-6 inline-flex h-12 w-12 items-center justify-center rounded-full border border-emerald-400/30 bg-emerald-500/15 text-emerald-200 ring-1 ring-inset ring-emerald-400/20 backdrop-blur-sm transition-transform hover:scale-105"
-        >
-          <ArrowUp className="h-5 w-5" />
-        </button>
-      )}
+      <AnimatePresence>
+        {showTop && (
+          <motion.button
+            key="backToTop"
+            aria-label="Back to top"
+            title="Back to top"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            initial={{ opacity: 0, y: 12, scale: 0.96 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              transition: { duration: 0.18 },
+            }}
+            exit={{
+              opacity: 0,
+              y: 12,
+              scale: 0.96,
+              transition: { duration: 0.16 },
+            }}
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.96 }}
+            className="
+              fixed z-50 pointer-events-auto
+              bottom-[calc(1rem+env(safe-area-inset-bottom))]
+              right-[calc(1rem+env(safe-area-inset-right))]
+              inline-flex items-center justify-center
+              h-12 w-12 rounded-full
+              bg-white/6 backdrop-blur-md
+              ring-1 ring-inset ring-white/15
+              shadow-[0_6px_24px_-8px_rgba(0,0,0,0.45)]
+              transition-colors
+              hover:bg-white/8 active:bg-white/10
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/50
+            "
+            style={{
+              WebkitTapHighlightColor: "transparent",
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+          >
+            <span
+              aria-hidden
+              className="block h-3 w-3 rotate-45 border-t-2 border-l-2 mt-1 border-white/80"
+            />
+          </motion.button>
+        )}
+      </AnimatePresence>
     </main>
   );
 }

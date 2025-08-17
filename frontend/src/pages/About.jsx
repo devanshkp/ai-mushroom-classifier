@@ -49,7 +49,10 @@ export default function AboutPage() {
           </Card>
 
           <Card className="lg:col-span-5" title="Tech stack" glow="cyan">
-            <SectionRow label="Frontend" value="React, Tailwind, Lucide" />
+            <SectionRow
+              label="Frontend"
+              value="React, Tailwind, Framer, Lucide"
+            />
             <SectionRow label="Backend" value="Flask (Python)" />
             <SectionRow
               label="Model"
