@@ -11,22 +11,22 @@ export default function AboutPage() {
       <section className="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 lg:px-8">
         {/* Header – compact, cleaner */}
         <header className="mb-8 rounded-2xl border border-white/10 bg-white/5 p-5 md:p-6">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <p className="text-[11px] font-medium uppercase tracking-widest text-zinc-500">
-                About
-              </p>
-              <h1 className="mt-0.5 text-[26px] font-semibold tracking-tight sm:text-[28px]">
-                MushroomAI
-              </h1>
+          <div>
+            <p className="text-[11px] font-medium uppercase tracking-widest text-zinc-500">
+              About
+            </p>
+            <h1 className="mt-0.5 text-[26px] font-semibold tracking-tight sm:text-[28px]">
+              MushroomAI
+            </h1>
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <p className="mt-1 max-w-2xl text-sm leading-relaxed text-zinc-400">
                 A calm, responsible guide to help you explore fungi through
                 computer vision.
               </p>
+              <span className="inline-flex items-center gap-2 self-start rounded-xl border border-emerald-400/20 bg-emerald-600/10 px-3 py-1.5 text-xs font-semibold text-emerald-200 sm:self-auto">
+                <Sparkles className="h-4 w-4" /> AI-assisted identification
+              </span>
             </div>
-            <span className="inline-flex items-center gap-2 self-start rounded-xl border border-emerald-400/20 bg-emerald-600/10 px-3 py-1.5 text-xs font-semibold text-emerald-200 sm:self-auto">
-              <Sparkles className="h-4 w-4" /> AI-assisted identification
-            </span>
           </div>
         </header>
 
