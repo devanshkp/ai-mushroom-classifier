@@ -59,13 +59,13 @@ export default function SpeciesList() {
     );
 
   return (
-    <main className="relative min-h-screen bg-black text-white">
+    <main className="relative min-h-screen flex flex-col bg-[hsl(0_0_2)] text-white">
       <AmbientBackground variant="search" opacity={0.9} />
       <Navbar />
 
-      <section className="relative z-10 mx-auto max-w-7xl px-4 pb-28 pt-24 sm:px-6 lg:px-8">
+      <section className="relative z-10 mx-auto max-w-screen md:max-w-7xl px-4 pb-28 pt-24 sm:px-6 lg:px-8">
         {/* Compact header */}
-        <header className="mx-auto max-w-3xl text-center">
+        <header className="mx-auto md:mt-4   max-w-3xl text-center">
           <p className="text-[11px] font-medium uppercase tracking-widest text-zinc-500">
             Library
           </p>
@@ -86,20 +86,32 @@ export default function SpeciesList() {
               onChange={(e) => setQuery(e.target.value)}
               autoComplete="off"
               placeholder="Search species…"
-              className="w-full rounded-2xl border border-white/10 bg-zinc-950/60 px-12 py-4 text-base text-white shadow-inner ring-1 ring-inset ring-white/10 placeholder:text-zinc-500 focus:border-emerald-400/40 focus:outline-none focus:ring-emerald-500/40"
+              className="w-full rounded-4xl border-white/10 bg-zinc-950/60 px-12 py-4 text-base text-white shadow-inner ring-1 ring-inset ring-white/10 placeholder:text-zinc-500 focus:outline-none"
             />
           </div>
         </div>
 
         {/* Grid */}
         {filtered.length ? (
-          <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {filtered.map((m) => (
-              <li key={m.scientific_name}>
-                <SpeciesCard data={m} />
-              </li>
-            ))}
-          </ul>
+          <>
+            {/* Mobile: compact list */}
+            <ul className="mt-6 space-y-4 md:hidden max-w-screen">
+              {filtered.map((m) => (
+                <li key={m.scientific_name}>
+                  <MobileSpeciesRow data={m} />
+                </li>
+              ))}
+            </ul>
+
+            {/* Desktop+: card grid */}
+            <ul className="mt-8 hidden grid-cols-1 gap-5 sm:gap-6 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {filtered.map((m) => (
+                <li key={m.scientific_name}>
+                  <DesktopSpeciesCard data={m} />
+                </li>
+              ))}
+            </ul>
+          </>
         ) : (
           <EmptyState
             title="No species found"
@@ -115,11 +127,11 @@ export default function SpeciesList() {
             }
           />
         )}
-
-        <footer className="mx-auto mt-14 max-w-3xl text-center text-xs text-zinc-500">
-          Explore the fascinating world of fungi. Data for educational use only.
-        </footer>
       </section>
+
+      <footer className="mx-auto mt-4 md:mt-12 mb-4 md:mb-8 max-w-3xl text-center text-xs text-zinc-500">
+        Explore the fascinating world of fungi. Data for educational use only.
+      </footer>
 
       {/* Back to top */}
       {showTop && (
@@ -135,28 +147,84 @@ export default function SpeciesList() {
   );
 }
 
-function SpeciesCard({ data }) {
+function MobileSpeciesRow({ data }) {
   const names = data.common_name
     ? data.common_name.split(",").map((n) => n.trim())
     : [];
   const primary = names[0] || data.scientific_name;
   const secondary = names[0] ? data.scientific_name : names.slice(1).join(", ");
+  const ed = tierFromEdibility(data.edibility);
 
-  const edibility = tierFromEdibility(data.edibility);
-  const glow = (edibility && edibility.glow) || "emerald"; // restrained palette
+  return (
+    <Link
+      to={`/species/${encodeURIComponent(data.scientific_name)}`}
+      className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 active:bg-white/7 w-full min-w-0"
+    >
+      {/* Fixed safe thumb size prevents overflow */}
+      <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl bg-zinc-900">
+        {data.image_path ? (
+          <img
+            src={data.image_path}
+            alt={primary}
+            className="h-full w-full object-cover"
+            loading="lazy"
+            onError={(e) => (e.currentTarget.style.display = "none")}
+          />
+        ) : (
+          <div className="grid h-full w-full place-items-center text-zinc-600">
+            <Sprout className="h-6 w-6" />
+          </div>
+        )}
+      </div>
+
+      <div className="min-w-0 flex-1 flex flex-col items-start overflow-hidden">
+        <div className="w-full overflow-hidden">
+          <h3 className="truncate text-[18px] font-semibold w-full">
+            {primary}
+          </h3>
+          {secondary && (
+            <p className="line-clamp-1 text-sm italic text-zinc-400 w-full overflow-hidden text-ellipsis">
+              {secondary}
+            </p>
+          )}
+        </div>
+        {ed && (
+          <div className="flex justify-start mt-2">
+            <span
+              className={`inline-flex items-center gap-1 rounded-full px-2 py-[3px] text-[10px] font-semibold ring-1 ring-inset ${ed.bg} ${ed.ring} ${ed.text} whitespace-nowrap`}
+            >
+              <Shield className="h-3 w-3" /> {ed.label}
+            </span>
+          </div>
+        )}
+      </div>
+      <ChevronRight className="h-4 w-4 text-zinc-500 flex-shrink-0" />
+    </Link>
+  );
+}
+
+function DesktopSpeciesCard({ data }) {
+  const names = data.common_name
+    ? data.common_name.split(",").map((n) => n.trim())
+    : [];
+  const primary = names[0] || data.scientific_name;
+  const secondary = names[0] ? data.scientific_name : names.slice(1).join(", ");
+  const ed = tierFromEdibility(data.edibility);
+  const glow = (ed && ed.glow) || "emerald";
 
   return (
     <Link
       to={`/species/${encodeURIComponent(data.scientific_name)}`}
       className="group relative block overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition-colors hover:bg-white/7"
     >
-      {/* Internal, enclosed glow (subtle) */}
+      {/* enclosed, subtle glow */}
       <div
         className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${glowClass(
           glow
         )} to-transparent opacity-60`}
       />
 
+      {/* Fixed aspect prevents massive vertical cards; object-cover keeps image tidy */}
       <div className="relative aspect-[4/3] overflow-hidden bg-zinc-900">
         {data.image_path ? (
           <img
@@ -171,20 +239,19 @@ function SpeciesCard({ data }) {
             <Sprout className="h-10 w-10" />
           </div>
         )}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-90" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
       </div>
 
       <div className="relative p-4">
-        {/* Title row with edibility on the right */}
         <div className="mb-1 flex items-center gap-3">
-          <h3 className="min-w-0 flex-1 truncate text-base font-semibold text-white">
+          <h3 className="min-w-0 flex-1 truncate text-base font-semibold">
             {primary}
           </h3>
-          {edibility && (
+          {ed && (
             <span
-              className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-semibold ring-1 ring-inset ${edibility.bg} ${edibility.ring} ${edibility.text}`}
+              className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-semibold ring-1 ring-inset ${ed.bg} ${ed.ring} ${ed.text}`}
             >
-              <Shield className="h-3.5 w-3.5" /> {edibility.label}
+              <Shield className="h-3.5 w-3.5" /> {ed.label}
             </span>
           )}
         </div>

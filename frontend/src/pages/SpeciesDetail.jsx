@@ -80,7 +80,7 @@ export default function SpeciesDetail() {
     );
 
   return (
-    <main className="relative min-h-screen bg-black text-white">
+    <main className="relative min-h-screen flex flex-col bg-[hsl(0_0_2)] text-white">
       <Navbar />
 
       <section className="relative z-10 mx-auto max-w-7xl px-4 pb-20 pt-24 sm:px-6 lg:px-8">
@@ -141,7 +141,7 @@ export default function SpeciesDetail() {
             </div>
 
             {/* Title & quick facts */}
-            <div className="flex min-h-full flex-col justify-between lg:col-span-3">
+            <div className="flex min-h-full flex-col justify-between lg:col-span-3 b">
               <div>
                 <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
                   {mushroom.scientific_name}
@@ -240,12 +240,12 @@ export default function SpeciesDetail() {
             </div>
           </div>
         </div>
-
-        <footer className="mx-auto mt-10 max-w-3xl text-center text-xs text-zinc-500">
-          Information is for educational purposes only. Always verify with local
-          experts.
-        </footer>
       </section>
+
+      <footer className="mx-auto mt-4 md:mt-12 mb-4 md:mb-8 max-w-3xl text-center text-xs text-zinc-500">
+        Information is for educational purposes only. Always verify with local
+        experts.
+      </footer>
 
       {showImageModal && (
         <div
@@ -303,17 +303,17 @@ function Card({ title, children, variant, glow = "emerald" }) {
 
 function StatCard({ label, value, rightIcon }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-zinc-950/60 p-4">
-      <div className="flex items-center justify-between gap-3">
-        <div>
-          <p className="text-[11px] font-medium uppercase tracking-widest text-zinc-500">
-            {label}
-          </p>
+    <div className="rounded-2xl border border-white/20 bg-white/5 p-4">
+      <div>
+        <p className="text-[11px] font-regular uppercase tracking-widest text-zinc-500 md:pb-2">
+          {label}
+        </p>
+        <div className="flex items-center justify-between gap-3">
           <p className="text-sm font-semibold text-white sm:text-base">
             {value}
           </p>
+          {rightIcon}
         </div>
-        {rightIcon}
       </div>
     </div>
   );

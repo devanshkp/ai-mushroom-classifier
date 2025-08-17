@@ -38,7 +38,7 @@ const AmbientBackground = ({
 
   const BaseWrapper = ({ children }) => (
     <div
-      className={`fixed inset-0 overflow-hidden pointer-events-none z-0 ${className}`}
+      className={`absolute inset-0 overflow-hidden pointer-events-none z-0 ${className}`}
       style={{ opacity }}
     >
       <style>{keyframes}</style>
@@ -75,72 +75,50 @@ const AmbientBackground = ({
     <BaseWrapper>
       <BaseLayers />
 
-      {/* Core emerald aura */}
-      <div
-        className="absolute -top-48 -left-40 w-[38rem] h-[38rem] rounded-full blur-3xl ab-anim"
-        style={{
-          background:
-            "radial-gradient(60% 60% at 50% 50%, rgba(16,185,129,0.38) 0%, rgba(16,185,129,0.16) 40%, rgba(16,185,129,0) 70%)",
-          animation: "ab-float-slow 10s ease-in-out infinite",
-          willChange: "transform",
-        }}
-      />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        {/* === TOP SOFT SPOTLIGHT === */}
+        <div
+          className="absolute -top-60 left-1/2 -translate-x-1/2 w-[160vw] h-[120vh] blur-[180px] opacity-40"
+          style={{
+            background:
+              "radial-gradient(ellipse at 50% 0%, rgba(16,185,129,0.20) 0%, rgba(16,185,129,0.10) 30%, rgba(16,185,129,0) 70%)",
+          }}
+        />
 
-      {/* Lime accent orb */}
-      <div
-        className="absolute -top-24 -right-28 w-[30rem] h-[30rem] rounded-full blur-3xl ab-anim"
-        style={{
-          background:
-            "radial-gradient(60% 60% at 50% 50%, rgba(163,230,53,0.30) 0%, rgba(163,230,53,0.12) 45%, rgba(163,230,53,0) 72%)",
-          animation: "ab-float-alt 12s ease-in-out infinite",
-          willChange: "transform",
-        }}
-      />
+        {/* === FLOATING PARTICLES (dust-like shimmer) === */}
+        {Array.from({ length: 60 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full opacity-50"
+            style={{
+              top: `${Math.random() * 60 + 10}%`, // lower half of spotlight area
+              left: `${Math.random() * 100}%`,
+              width: "2px",
+              height: "2px",
+              background: "rgba(255,255,255,0.4)",
+              animation: `floatParticle ${
+                6 + Math.random() * 4
+              }s linear infinite`,
+              animationDelay: `${Math.random() * 5}s`,
+            }}
+          />
+        ))}
+      </div>
 
-      {/* Deep emerald base glow */}
-      <div
-        className="absolute -bottom-40 -right-16 w-[32rem] h-[32rem] rounded-full blur-3xl ab-anim"
-        style={{
-          background:
-            "radial-gradient(60% 60% at 50% 50%, rgba(5,150,105,0.28) 0%, rgba(5,150,105,0.14) 40%, rgba(5,150,105,0) 70%)",
-          animation: "ab-float-slow 11s ease-in-out infinite reverse",
-          willChange: "transform",
-        }}
-      />
-
-      {/* Subtle center breathe */}
-      <div
-        className="absolute top-1/2 left-1/2 w-[26rem] h-[26rem] rounded-full blur-3xl ab-anim"
-        style={{
-          transform: "translate(-50%, -50%)",
-          background:
-            "radial-gradient(55% 55% at 50% 50%, rgba(52,211,153,0.22) 0%, rgba(52,211,153,0.10) 45%, rgba(52,211,153,0) 70%)",
-          animation: "ab-breathe 14s ease-in-out infinite",
-        }}
-      />
-
-      {/* Beams for extra “premium” depth */}
-      <div
-        className="absolute top-1/6 left-1/3 w-[70rem] h-[18rem] rounded-full blur-3xl ab-anim"
-        style={{
-          background:
-            "linear-gradient(90deg, rgba(16,185,129,0) 0%, rgba(16,185,129,0.22) 20%, rgba(16,185,129,0.15) 50%, rgba(16,185,129,0) 80%)",
-          transform: "rotate(-8deg)",
-          animation: "ab-beam 16s ease-in-out infinite",
-          mixBlendMode: "screen",
-        }}
-      />
-
-      {/* Tiny orbiting highlight near center */}
-      <div
-        className="absolute top-1/2 left-1/2 w-10 h-10 rounded-full blur-lg opacity-70 ab-anim"
-        style={{
-          transform: "translate(-50%, -50%)",
-          background:
-            "radial-gradient(circle at 50% 50%, rgba(110,231,183,0.55) 0%, rgba(110,231,183,0.15) 55%, rgba(110,231,183,0) 70%)",
-          animation: "ab-orbit 18s linear infinite",
-        }}
-      />
+      {/* Scoped keyframes */}
+      <style>
+        {`
+        @keyframes shimmerMove {
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0%); }
+        }
+        @keyframes floatParticle {
+          0% { transform: translateY(0) translateX(0) scale(1); opacity: 0.6; }
+          50% { transform: translateY(-10px) translateX(5px) scale(1.1); opacity: 0.3; }
+          100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.6; }
+        }
+      `}
+      </style>
     </BaseWrapper>
   );
 
@@ -153,19 +131,9 @@ const AmbientBackground = ({
         className="absolute -top-40 left-1/4 w-[42rem] h-[26rem] rounded-full blur-3xl ab-anim"
         style={{
           background:
-            "linear-gradient(135deg, rgba(20,184,166,0.22) 0%, rgba(6,182,212,0.14) 50%, rgba(99,102,241,0.10) 100%)",
+            "linear-gradient(135deg, rgba(20,184,166,0.14) 0%, rgba(6,182,212,0.08) 50%, rgba(99,102,241,0.05) 100%)",
           transform: "rotate(-12deg)",
           animation: "ab-float-slow 13s ease-in-out infinite",
-        }}
-      />
-
-      {/* Emerald pillar on left */}
-      <div
-        className="absolute top-1/3 -left-24 w-80 h-[28rem] rounded-full blur-3xl ab-anim"
-        style={{
-          background:
-            "radial-gradient(45% 75% at 50% 50%, rgba(16,185,129,0.16) 0%, rgba(16,185,129,0.08) 50%, rgba(16,185,129,0) 80%)",
-          animation: "ab-float-alt 12s ease-in-out infinite",
         }}
       />
 
@@ -174,7 +142,7 @@ const AmbientBackground = ({
         className="absolute -bottom-24 right-1/4 w-[34rem] h-[28rem] rounded-full blur-3xl ab-anim"
         style={{
           background:
-            "radial-gradient(60% 60% at 50% 50%, rgba(139,92,246,0.14) 0%, rgba(139,92,246,0.08) 45%, rgba(139,92,246,0) 75%)",
+            "radial-gradient(60% 60% at 50% 50%, rgba(139,92,246,0.05) 0%, rgba(139,92,246,0.03) 45%, rgba(139,92,246,0) 75%)",
           animation: "ab-float-slow 10s ease-in-out infinite reverse",
         }}
       />

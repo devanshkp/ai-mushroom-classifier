@@ -4,7 +4,7 @@ import { ShieldAlert, Sparkles, ExternalLink, ArrowRight } from "lucide-react";
 
 export default function AboutPage() {
   return (
-    <main className="relative min-h-screen bg-black text-white">
+    <main className="relative min-h-screen flex flex-col bg-[hsl(0_0_2)] text-white">
       <AmbientBackground variant="about" opacity={0.3} />
       <Navbar />
 
@@ -33,12 +33,19 @@ export default function AboutPage() {
         {/* Grid – 12-col layout with subtle internal glows */}
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-12 lg:gap-6">
           {/* Row 1 */}
-          <Card className="lg:col-span-7" title="Mission" glow="emerald">
-            <p className="text-[15px] leading-relaxed text-zinc-300">
-              Make mushroom identification more accessible and engaging—without
-              compromising on safety. Upload a photo, get likely matches with
-              confidence scores, then dive into a clear species guide.
-            </p>
+
+          <Card className="lg:col-span-7" title="How it works" glow="purple">
+            <ol className="list-decimal space-y-1.5 pl-5 text-[15px] leading-relaxed text-zinc-300">
+              <li>Upload a clear photo (cap, gills/pores, stem, habitat).</li>
+              <li>The model returns top matches with confidence.</li>
+              <li>
+                Open a species for identification cues, habitat, and notes.
+              </li>
+              <li> Compare lookalikes to avoid common misidentifications. </li>
+              <li>
+                this tool as a guide — never a substitute for expert advice.
+              </li>
+            </ol>
           </Card>
 
           <Card className="lg:col-span-5" title="Tech stack" glow="cyan">
@@ -48,40 +55,49 @@ export default function AboutPage() {
               label="Model"
               value="TensorFlow/Keras + transfer learning"
             />
-            <SectionRow label="Data" value="100 species (Kaggle dataset)" />
+            <SectionRow label="Data" value="Kaggle dataset" isLink={true} />
           </Card>
 
           {/* Row 2 */}
-          <Card className="lg:col-span-7" title="How it works" glow="purple">
-            <ol className="list-decimal space-y-1.5 pl-5 text-[15px] leading-relaxed text-zinc-300">
-              <li>Upload a clear photo (cap, gills/pores, stem, habitat).</li>
-              <li>The model returns top matches with confidence.</li>
-              <li>
-                Open a species for identification cues, habitat, and notes.
-              </li>
-            </ol>
+          <Card className="lg:col-span-12" title="Mission" glow="emerald">
+            <p className="text-[15px] leading-relaxed text-zinc-300">
+              Make mushroom identification more accessible and engaging—without
+              compromising on safety. Upload a photo, get likely matches with
+              confidence scores, then dive into a clear species guide.
+            </p>
           </Card>
 
-          <Card className="lg:col-span-5" title="Creator" glow="amber">
-            <p className="text-[15px] leading-relaxed text-zinc-300">
-              Built by{" "}
-              <span className="font-semibold text-white">Devansh Kapoor</span>.
-            </p>
-            <div className="mt-3 flex flex-wrap items-center gap-3">
-              <a
-                href="https://linkedin.com/in/devansh-kapoor"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 rounded-xl border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-zinc-200 transition-colors hover:bg-white/7"
-              >
-                LinkedIn <ExternalLink className="h-3.5 w-3.5" />
-              </a>
-              <a
-                href="mailto:devansh.kp@outlook.com"
-                className="inline-flex items-center gap-1 rounded-xl border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-zinc-200 transition-colors hover:bg-white/7"
-              >
-                Email <ArrowRight className="h-3.5 w-3.5" />
-              </a>
+          <Card className="lg:col-span-12 flex-row" glow="amber">
+            <div className="flex flex-wrap justify-between items-center">
+              <p className="text-[15px] leading-relaxed text-zinc-300">
+                Built by{" "}
+                <span className="font-semibold text-white">Devansh Kapoor</span>
+                .
+              </p>
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href="https://github.com/devanshkp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-zinc-200 transition-colors hover:bg-white/7"
+                >
+                  Github <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+                <a
+                  href="https://linkedin.com/in/devansh-kapoor"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-zinc-200 transition-colors hover:bg-white/7"
+                >
+                  LinkedIn <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+                <a
+                  href="mailto:hello@devansh.kp@outlook.com"
+                  className="inline-flex items-center gap-1 rounded-2xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-zinc-200 transition-colors hover:bg-white/7"
+                >
+                  Email <ArrowRight className="h-3.5 w-3.5" />
+                </a>
+              </div>
             </div>
           </Card>
 
@@ -105,12 +121,11 @@ export default function AboutPage() {
             </ul>
           </Card>
         </div>
-
-        <footer className="mx-auto mt-10 max-w-3xl text-center text-xs text-zinc-500">
-          Enjoy exploring the world of mushrooms—and always prioritise safety
-          and expert verification.
-        </footer>
       </section>
+      <footer className="mx-auto mt-4 md:mt-12 mb-4 md:mb-8 max-w-3xl text-center text-xs text-zinc-500">
+        Enjoy exploring the world of mushrooms—and always prioritise safety and
+        expert verification.
+      </footer>
     </main>
   );
 }
@@ -140,15 +155,26 @@ function Card({ title, children, className = "", glow }) {
   );
 }
 
-function SectionRow({ label, value }) {
+function SectionRow({ label, value, isLink = false }) {
   return (
     <div className="grid grid-cols-12 items-center border-t border-white/10 py-2 first:border-t-0">
       <span className="col-span-5 text-[11px] uppercase tracking-widest text-zinc-500">
         {label}
       </span>
-      <span className="col-span-7 truncate text-right text-sm text-zinc-300">
-        {value}
-      </span>
+      {isLink ? (
+        <a
+          href="https://www.kaggle.com/datasets/thehir0/mushroom-species/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-end col-span-7 truncate text-right text-sm text-zinc-300 underline gap-2"
+        >
+          {value} <ExternalLink className="h-3.5 w-3.5" />
+        </a>
+      ) : (
+        <span className="col-span-7 truncate text-right text-sm text-zinc-300">
+          {value}
+        </span>
+      )}
     </div>
   );
 }

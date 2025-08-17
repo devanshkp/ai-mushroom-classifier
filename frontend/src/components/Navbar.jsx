@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Camera, Home, BookOpen, Info, Menu, X } from "lucide-react";
+import { Camera, Home, Search, Info, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
-/**
- * Pill/glass navbar that shrinks on scroll.
- * Mobile: hamburger opens a full-screen sheet.
- */
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -18,7 +15,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // lock body scroll when overlay menu is open
   useEffect(() => {
     if (isMenuOpen) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "";
@@ -27,7 +23,7 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Classifier", path: "/", icon: Home },
-    { name: "Species Guide", path: "/species", icon: BookOpen },
+    { name: "Species", path: "/species", icon: Search },
     { name: "About", path: "/about", icon: Info },
   ];
 
@@ -42,8 +38,8 @@ export default function Navbar() {
           "relative mx-auto flex w-full max-w-7xl items-center justify-between",
           "rounded-full border border-white/10 backdrop-blur-2xl ring-1 ring-inset ring-white/10",
           "transition-[padding,transform,width] duration-300",
-          "px-5 py-3 sm:px-4",
-          !scrolled && "bg-white/5",
+          "px-3 py-3",
+          "bg-white/5",
         ].join(" ")}
         style={{
           width: scrolled ? "min(100%, 980px)" : "min(100%, 1120px)",
@@ -59,11 +55,19 @@ export default function Navbar() {
           <span className="grid h-9 w-9 place-items-center rounded-4xl bg-gradient-to-br from-emerald-500 to-emerald-400 text-white shadow-sm ring-1 ring-inset ring-white/20">
             <Camera className="h-5 w-5" />
           </span>
-          {!scrolled && (
-            <span className="hidden text-[15px] font-semibold tracking-tight text-white sm:block">
-              MushroomAI
-            </span>
-          )}
+          <AnimatePresence>
+            {!scrolled && (
+              <motion.span
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -10 }}
+                transition={{ duration: 0.25, ease: "easeInOut" }}
+                className="hidden text-[15px] font-semibold tracking-tight text-white sm:block"
+              >
+                MushroomAI
+              </motion.span>
+            )}
+          </AnimatePresence>
         </Link>
 
         {/* Desktop links */}
@@ -73,7 +77,7 @@ export default function Navbar() {
               <Link
                 to={item.path}
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className={`group inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium transition-colors hover:text-white ${isActive(
+                className={`group inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium transition-colors hover:text-emerald-300 ${isActive(
                   item.path
                 )}`}
               >
@@ -101,7 +105,7 @@ export default function Navbar() {
           aria-modal="true"
           className="fixed inset-0 z-50 grid grid-rows-[auto,1fr,auto] bg-black/80 backdrop-blur-xl"
         >
-          <div className="flex items-center justify-between px-6 pt-6">
+          <div className="flex items-start justify-between px-6 pt-6">
             <Link
               to="/"
               onClick={() => {
@@ -110,7 +114,7 @@ export default function Navbar() {
               }}
               className="group inline-flex items-center gap-2"
             >
-              <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-400 text-white shadow-sm ring-1 ring-inset ring-white/20">
+              <span className="grid h-9 w-9 place-items-center rounded-4xl bg-gradient-to-br from-emerald-500 to-emerald-400 text-white shadow-sm ring-1 ring-inset ring-white/20">
                 <Camera className="h-5 w-5" />
               </span>
               <span className="text-[15px] font-semibold tracking-tight text-white">
@@ -146,10 +150,6 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          <div className="px-6 pb-8 pt-6 text-center text-xs text-zinc-500">
-            Navigate • Tap outside or close to dismiss
           </div>
         </div>
       )}

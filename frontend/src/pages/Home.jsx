@@ -8,11 +8,11 @@ import {
   CheckCircle2,
   ArrowRight,
   Sparkles,
-  Camera,
   Info,
 } from "lucide-react";
 import Navbar from "../components/Navbar";
 import AmbientBackground from "../components/AmbientBackground";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const [file, setFile] = useState(null);
@@ -40,9 +40,16 @@ export default function Home() {
     currentFileKey &&
     lastClassifiedKey === currentFileKey;
 
+  const resetParams = () => {
+    setPredictions([]);
+    setError(null);
+    setLastClassifiedKey(null);
+  };
+
   const onPickFile = (e) => {
     const selected = e.target.files?.[0];
     if (!selected) return;
+    resetParams();
     hydrateFile(selected);
   };
 
@@ -63,6 +70,7 @@ export default function Home() {
       setError("Please drop an image file (JPG, PNG, or WebP).");
       return;
     }
+    resetParams();
     hydrateFile(dropped);
   };
 
@@ -113,33 +121,42 @@ export default function Home() {
     }
   };
 
-  const resetAndPickAnother = () => {
-    setPredictions([]);
-    setError(null);
-    setLastClassifiedKey(null);
-    // Keep preview so user sees current image; immediately open picker
+  const pickAnother = () => {
     inputRef.current?.click();
   };
 
   return (
-    <main className="relative min-h-screen bg-black text-white">
-      <AmbientBackground variant="about" opacity={0.2} />
-      <AmbientBackground variant="home" opacity={0.4} />
+    <main className="relative min-h-screen flex flex-col bg-[hsl(0_0_2)] text-white">
+      <AmbientBackground variant="home" opacity={1} />
       <Navbar />
 
       {/* Content container */}
-      <section className="relative z-10 mx-auto max-w-7xl px-4 pb-20 pt-24 sm:px-6 lg:px-8">
+      <section className="relative z-10 mx-auto max-w-7xl px-4 pb-20 pt-28 md:pt-32 sm:px-6 lg:px-8">
         {/* Hero */}
-        <header className="mx-auto max-w-3xl space-y-4 text-center">
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
-            <span className="inline-flex items-center gap-3">
-              <Sparkles className="h-8 w-8 text-emerald-400" />
-              <span className="bg-gradient-to-r from-emerald-300 via-emerald-400 to-lime-300 bg-clip-text text-transparent">
-                AI Mushroom Classifier
-              </span>
+        <header className="text-center">
+          <h1
+            className="
+      relative inline-block
+      pl-7 sm:pl-8 md:pl-10
+      text-3xl sm:text-5xl md:text-6xl
+      font-semibold leading-[1.05] tracking-[-0.01em]
+    "
+          >
+            {/* Icon pinned to the first line */}
+            <Sparkles
+              aria-hidden
+              className="
+        absolute left-0 top-[0.2em]
+        h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7
+        text-emerald-400
+      "
+            />
+            <span className="bg-gradient-to-r from-emerald-300 via-emerald-400 to-lime-300 bg-clip-text text-transparent">
+              AI Mushroom Classifier
             </span>
           </h1>
-          <p className="mx-auto max-w-2xl text-balance text-sm/relaxed text-zinc-400 sm:text-base">
+
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-zinc-400 sm:text-base">
             Drop a photo. Get instant species predictions with confidence. Clean
             UI, fast feedback.
           </p>
@@ -148,7 +165,7 @@ export default function Home() {
         {/* Main grid */}
         <div className="mt-10 grid grid-cols-1 gap-6 lg:mt-14 lg:grid-cols-2">
           {/* Left: Uploader (flex column, actions pinned bottom) */}
-          <div className="flex min-h-[520px] flex-col rounded-3xl border border-white/10 bg-white/5 p-4 shadow-[0_0_0_1px_rgba(255,255,255,0.03),0_12px_40px_-16px_rgba(16,185,129,0.25)] sm:p-6 lg:p-7">
+          <div className="flex md:min-h-[520px] flex-col rounded-3xl border border-white/10 bg-[rgb(16_16_16/0.8)] p-4">
             {/* Drop zone grows to fill */}
             <div
               onDrop={onDrop}
@@ -160,46 +177,68 @@ export default function Home() {
                   inputRef.current?.click();
               }}
               className={`group relative flex flex-none
-              h-[360px] sm:h-[420px] cursor-pointer flex-col items-center
-              justify-center overflow-hidden rounded-2xl border-2 border-dashed
-              transition-all duration-300 focus:outline-none focus:ring-2
-              focus:ring-emerald-500/60 ${
-                preview
-                  ? "border-emerald-400/60 bg-black/30"
-                  : "border-zinc-700/60 bg-zinc-900/40 hover:border-emerald-400/60"
-              }`}
+                h-[360px] sm:h-[420px] cursor-pointer flex-col items-center
+                justify-center overflow-hidden rounded-2xl border-2 border-dashed
+                transition-all duration-300 focus:outline-none focus:ring-2
+                focus:ring-emerald-500/60 ${
+                  preview
+                    ? "border-emerald-400/60 bg-black/30"
+                    : "border-zinc-700/60 bg-zinc-900/40 hover:border-emerald-400/60"
+                }`}
               onClick={() => inputRef.current?.click()}
               aria-label={preview ? "Change image" : "Upload image"}
             >
-              {preview ? (
-                // Keep container height fixed; image fits inside
-                <div className="relative h-full w-full">
-                  <img
-                    src={preview}
-                    alt="Preview"
-                    className="absolute inset-0 h-full w-full object-contain p-3"
-                  />
-                  <div className="absolute inset-0 grid place-items-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    <span className="inline-flex items-center gap-2 rounded-full bg-gray-700/20 px-5 py-1.5 text-sm text-white ring-1 ring-inset ring-gray-200">
-                      <ImagePlus className="h-4 w-4" /> Change image
-                    </span>
-                  </div>
-                </div>
-              ) : (
-                <div className="grid h-full place-items-center text-center">
-                  <div>
-                    <div className="mx-auto mb-4 grid h-16 w-16 place-items-center rounded-2xl bg-emerald-500/10 ring-1 ring-inset ring-emerald-400/30">
-                      <Upload className="h-7 w-7 text-emerald-300" />
+              <AnimatePresence mode="wait">
+                {preview ? (
+                  <motion.div
+                    key="preview"
+                    className="relative h-full w-full"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                  >
+                    <img
+                      src={preview}
+                      alt="Preview"
+                      className="absolute inset-0 h-full w-full object-contain p-3"
+                    />
+                    <div className="absolute inset-0 grid place-items-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <span className="inline-flex items-center gap-2 rounded-full bg-gray-700/20 px-5 py-1.5 text-sm text-white ring-1 ring-inset ring-gray-200">
+                        <ImagePlus className="h-4 w-4" /> Change image
+                      </span>
                     </div>
-                    <p className="text-base font-medium text-zinc-200">
-                      Drop your image here or click to upload
-                    </p>
-                    <p className="mt-1 text-sm text-zinc-400">
-                      JPG, PNG, WebP — up to 10MB
-                    </p>
-                  </div>
-                </div>
-              )}
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="placeholder"
+                    className="grid h-full place-items-center text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <div>
+                      <motion.div
+                        animate={{ scale: [1, 1.05, 1] }}
+                        transition={{ duration: 3, repeat: Infinity }}
+                        className="mx-auto mb-4 grid h-16 w-16 place-items-center rounded-2xl bg-emerald-500/10 ring-1 ring-inset ring-emerald-400/30"
+                      >
+                        <Upload className="h-7 w-7 text-emerald-300" />
+                      </motion.div>
+                      <p className="text-base font-medium text-zinc-200">
+                        Drop your image here or click to upload
+                      </p>
+                      <p className="mt-1 text-sm text-zinc-400">
+                        JPG, PNG, WebP — up to 10MB
+                      </p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
               <input
                 ref={inputRef}
                 id="fileUpload"
@@ -209,60 +248,60 @@ export default function Home() {
                 onChange={onPickFile}
               />
             </div>
-
             {/* Spacer so the action area stays pinned to the bottom of the card */}
             <div className="flex-1" />
-
             {/* Actions pinned at bottom */}
-            <div className="mt-4">
-              <button
-                onClick={isSameImageClassified ? resetAndPickAnother : classify}
-                disabled={!file || loading}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-base text-white ring-1 ring-inset ring-white/10 transition-colors hover:bg-white/7 focus:outline-none focus:ring-emerald-500/40 disabled:cursor-not-allowed disabled:opacity-50"
-              >
-                {loading ? (
-                  <>
-                    <Loader2 className="h-5 w-5 animate-spin" /> Processing
-                  </>
-                ) : isSameImageClassified ? (
-                  <>
-                    <ImagePlus className="h-4 w-4" /> Pick another image
-                  </>
-                ) : (
-                  <>
-                    <CheckCircle2 className="h-4 w-4" /> Classify image
-                  </>
-                )}
-              </button>
 
-              <div className="mt-3 flex items-center justify-center gap-2 text-xs text-zinc-500">
-                <Camera className="h-4 w-4" /> Better results with clear,
-                close‑up photos
-              </div>
-
-              {error && (
-                <div className="mt-4 flex items-start gap-3 rounded-2xl border border-yellow-500/30 bg-yellow-500/10 p-3 text-yellow-200">
-                  <AlertTriangle className="mt-0.5 h-5 w-5 flex-shrink-0" />
-                  <p className="text-sm">{error}</p>
-                </div>
+            <button
+              onClick={isSameImageClassified ? pickAnother : classify}
+              disabled={!file || loading}
+              className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-base text-white ring-1 ring-inset ring-white/10 transition-colors hover:bg-white/7 focus:outline-none focus:ring-emerald-500/40 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {loading ? (
+                <>
+                  <Loader2 className="h-5 w-5 animate-spin" /> Processing
+                </>
+              ) : isSameImageClassified ? (
+                <>
+                  <ImagePlus className="h-4 w-4" /> Pick another image
+                </>
+              ) : (
+                <>
+                  <CheckCircle2 className="h-4 w-4" /> Classify image
+                </>
               )}
+            </button>
+
+            <div className="flex-1" />
+
+            <div className="mt-3 flex items-center justify-center gap-2 text-xs text-zinc-500">
+              Better results with clear, close‑up photos
             </div>
+
+            {error && (
+              <div className="mt-4 flex items-start gap-3 rounded-2xl border border-yellow-500/30 bg-yellow-500/10 p-3 text-yellow-200">
+                <AlertTriangle className="mt-0.5 h-5 w-5 flex-shrink-0" />
+                <p className="text-sm">{error}</p>
+              </div>
+            )}
           </div>
 
           {/* Right: Results */}
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-4 sm:p-6 lg:p-7">
+          <div className="min-w-0 rounded-3xl border border-white/10 bg-[rgb(16_16_16/0.8)] p-4 sm:p-6 lg:p-7">
             {predictions?.length ? (
-              <div className="flex h-full flex-col gap-4">
+              <div className="flex h-full flex-col gap-2">
                 {topPrediction && (
                   <div className="rounded-2xl border border-emerald-400/30 bg-gradient-to-br from-emerald-500/15 to-emerald-600/10 p-4 sm:p-5">
-                    <div className="flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-4">
                       <Link
                         to={`/species/${encodeURIComponent(
                           topPrediction.label
                         )}`}
-                        className="group inline-flex items-center gap-2 text-lg font-semibold text-emerald-200 hover:text-emerald-100"
+                        className="group inline-flex min-w-0 items-center gap-2 text-lg font-semibold text-emerald-200 hover:text-emerald-100"
                       >
-                        <Sparkles className="h-5 w-5" /> {topPrediction.label}
+                        <Sparkles className="h-5 w-5" />
+                        <span className="truncate">{topPrediction.label}</span>
+
                         <ArrowRight className="h-4 w-4 translate-x-0 opacity-60 transition-all group-hover:translate-x-0.5 group-hover:opacity-100" />
                       </Link>
                       <ConfidencePill value={topPrediction.confidence * 100} />
@@ -295,15 +334,14 @@ export default function Home() {
             )}
           </div>
         </div>
-
-        {/* Footer */}
-        <footer className="mx-auto mt-12 max-w-3xl text-center text-xs text-zinc-500">
-          <p>
-            Never consume wild mushrooms based on an app prediction. Consult a
-            local mycologist.
-          </p>
-        </footer>
       </section>
+      {/* Footer */}
+      <footer className="mx-auto mt-4 md:mt-12 mb-4 md:mb-8 max-w-3xl text-center text-xs text-zinc-500">
+        <p>
+          Never consume wild mushrooms based on an app prediction. Consult a
+          local mycologist.
+        </p>
+      </footer>
     </main>
   );
 }
@@ -369,9 +407,9 @@ function PredictionRow({ data, getImg }) {
         </div>
 
         {data.warning && (
-          <div className="mt-2 inline-flex items-start gap-2 rounded-lg border border-yellow-500/30 bg-yellow-500/10 px-2.5 py-1.5 text-xs text-yellow-200">
+          <div className="mt-2 inline-flex items-start gap-2 rounded-lg border border-yellow-500/30 bg-yellow-500/10 px-2.5 py-1.5 text-xs text-yellow-200 ">
             <AlertTriangle className="mt-0.5 h-4 w-4 flex-shrink-0" />
-            <span className="truncate">{data.warning}</span>
+            <span className="overflow-ellipsis">{data.warning}</span>
           </div>
         )}
       </div>
