@@ -165,7 +165,7 @@ export default function SpeciesDetail() {
 
               <div className="mt-6 space-y-4">
                 <div
-                  className={`inline-flex items-center gap-3 rounded-2xl border px-4 py-3 text-sm font-semibold ring-1 ring-inset ${edibilityInfo.badge}`}
+                  className={`inline-flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold ring-1 ring-inset ${edibilityInfo.badge}`}
                 >
                   <EdibilityIcon className="h-5 w-5" /> {edibilityInfo.status}
                 </div>
@@ -348,7 +348,7 @@ function getEdibilityInfo(edibility) {
       icon: AlertTriangle,
       status: "Unknown",
       text: "text-amber-300",
-      badge: "text-amber-200 bg-amber-500/15 border-amber-400/30",
+      badge: "text-amber-200 bg-amber-500/15 ring-amber-400/30",
     };
   }
   const lower = edibility.toLowerCase();
@@ -357,7 +357,7 @@ function getEdibilityInfo(edibility) {
       icon: XCircle,
       status: "Toxic",
       text: "text-rose-300",
-      badge: "text-rose-200 bg-rose-500/15 border-rose-400/30",
+      badge: "text-rose-200 bg-rose-500/15 ring-rose-400/30",
     };
   }
   if (
@@ -368,7 +368,7 @@ function getEdibilityInfo(edibility) {
       icon: CheckCircle2,
       status: "Safe to Eat",
       text: "text-emerald-300",
-      badge: "text-emerald-200 bg-emerald-500/15 border-emerald-400/30",
+      badge: "text-emerald-200 bg-emerald-500/15 ring-emerald-400/30",
     };
   }
   if (lower.includes("edible")) {
@@ -376,7 +376,7 @@ function getEdibilityInfo(edibility) {
       icon: Info,
       status: "Edible with Caution",
       text: "text-amber-300",
-      badge: "text-amber-200 bg-amber-500/15 border-amber-400/30",
+      badge: "text-amber-200 bg-amber-500/15 ring-amber-400/30",
     };
   }
   return {
