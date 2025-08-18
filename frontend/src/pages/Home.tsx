@@ -218,8 +218,7 @@ export default function Home() {
             transition={{ delay: 0.08 }}
             className="mx-auto mt-3 max-w-2xl text-sm text-zinc-400 sm:text-base"
           >
-            Drop a photo. Get instant species predictions with confidence. Clean
-            UI, fast feedback.
+            Drop a photo. Get instant species predictions with confidence.
           </motion.p>
         </header>
 
@@ -422,6 +421,8 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      <div className="flex-1" />
 
       {/* Footer */}
       <footer className="mx-auto mt-4 md:mt-12 mb-4 md:mb-8 max-w-3xl text-center text-xs text-zinc-500">

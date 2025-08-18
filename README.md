@@ -50,16 +50,11 @@ Check out the deployed app here:
 - **Backend:**
   - Python (3.9+ recommended, developed with 3.12.10)
   - Flask
-  - Flask-CORS (for handling cross-origin requests)
 - **Machine Learning & Image Processing:**
   - TensorFlow 2.19.0
   - Pandas
-  - Matplotlib
-  - NumPy
   - Pillow (PIL)
 - **Development Tools:**
-  - Git & GitHub (Version Control)
-  - VS Code (or preferred IDE)
   - Jupyter
   - Amazon Web Services (EC2)
 
@@ -232,6 +227,7 @@ ai-mushroom-classifier/
 │   │   ├── main.jsx                      # Main JavaScript entry point
 │   │   ├── App.jsx                       # Root React application component
 │   │   ├── index.css                     # Global styles
+|   |   ├── components                    # UI Components (navbar, ambient backgrounds)
 │   │   └── pages/                        # Page components
 │   │       ├── Home.jsx                  # Home page containing the core classifier
 │   │       ├── SpeciesList.jsx           # Lists all classifiable species
