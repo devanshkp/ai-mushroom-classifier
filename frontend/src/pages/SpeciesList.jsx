@@ -9,7 +9,8 @@ import {
   Loader2,
   Info,
   Shield,
-  ArrowUp,
+  XCircle,
+  CheckCircle2,
 } from "lucide-react";
 import Navbar from "../components/Navbar";
 import AmbientBackground from "../components/AmbientBackground";
@@ -237,7 +238,7 @@ function MobileSpeciesRow({ data }) {
             <span
               className={`inline-flex items-center gap-1 rounded-full px-2 py-[3px] text-[10px] font-semibold ring-1 ring-inset ${ed.bg} ${ed.ring} ${ed.text} whitespace-nowrap`}
             >
-              <Shield className="h-3 w-3" /> {ed.label}
+              <ed.icon className="h-3 w-3" /> {ed.label}
             </span>
           </div>
         )}
@@ -295,7 +296,7 @@ function DesktopSpeciesCard({ data }) {
             <span
               className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-semibold ring-1 ring-inset ${ed.bg} ${ed.ring} ${ed.text}`}
             >
-              <Shield className="h-3.5 w-3.5" /> {ed.label}
+              <ed.icon className="h-3.5 w-3.5" /> {ed.label}
             </span>
           )}
         </div>
@@ -332,6 +333,7 @@ function tierFromEdibility(ed) {
   if (lower.includes("toxic") || lower.includes("poison"))
     return {
       label: "Toxic",
+      icon: XCircle,
       text: "text-rose-200",
       bg: "bg-rose-500/15",
       ring: "ring-rose-400/30",
@@ -343,6 +345,7 @@ function tierFromEdibility(ed) {
   )
     return {
       label: "Edible",
+      icon: CheckCircle2,
       text: "text-emerald-200",
       bg: "bg-emerald-500/15",
       ring: "ring-emerald-400/30",
@@ -351,6 +354,7 @@ function tierFromEdibility(ed) {
   if (lower.includes("edible"))
     return {
       label: "Caution",
+      icon: Shield,
       text: "text-amber-200",
       bg: "bg-amber-500/15",
       ring: "ring-amber-400/30",
