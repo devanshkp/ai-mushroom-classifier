@@ -28,7 +28,7 @@ export default function Navbar() {
   ];
 
   const isActive = (path) =>
-    location.pathname === path ? "text-emerald-300" : "text-zinc-300";
+    location.pathname === path ? "text-emerald-300" : "text-zinc-100";
 
   return (
     <nav className="fixed inset-x-0 top-3 z-50 flex justify-center px-4">
