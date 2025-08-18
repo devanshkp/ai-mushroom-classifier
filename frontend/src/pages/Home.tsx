@@ -230,7 +230,7 @@ export default function Home() {
             variants={cardIn}
             initial="hidden"
             animate="show"
-            className="flex md:min-h-[520px] flex-col rounded-3xl border border-white/10 bg-[rgb(16_16_16/0.8)] p-4"
+            className="flex md:min-h-[520px] flex-col rounded-3xl border border-white/10 bg-[rgb(20_20_20/0.8)] p-4"
           >
             {/* Drop zone grows to fill */}
             <div
@@ -361,7 +361,7 @@ export default function Home() {
             initial="hidden"
             animate="show"
             transition={{ delay: 0.04 }}
-            className="min-w-0 rounded-3xl border border-white/10 bg-[rgb(16_16_16/0.8)] p-4 sm:p-6 lg:p-7"
+            className="min-w-0 rounded-3xl border border-white/10 bg-[rgb(20_20_20/0.8)] p-4 sm:p-6 lg:p-7"
           >
             {predictions?.length ? (
               <div className="flex h-full flex-col gap-2">

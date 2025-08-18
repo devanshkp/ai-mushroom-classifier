@@ -84,12 +84,12 @@ const AmbientBackground = ({
         />
 
         {/* === FLOATING PARTICLES (dust-like shimmer) === */}
-        {Array.from({ length: 60 }).map((_, i) => (
+        {Array.from({ length: 240 }).map((_, i) => (
           <div
             key={i}
             className="absolute rounded-full opacity-50"
             style={{
-              top: `${Math.random() * 60 + 10}%`, // lower half of spotlight area
+              top: `${Math.random() * 100 + 10}%`, // lower half of spotlight area
               left: `${Math.random() * 100}%`,
               width: "2px",
               height: "2px",
@@ -126,7 +126,7 @@ const AmbientBackground = ({
 
       {/* Cool cyan sweep */}
       <div
-        className="absolute -top-40 left-1/4 w-[42rem] h-[26rem] rounded-full blur-3xl ab-anim"
+        className="absolute -top-40 left-1/5 md:left-1/3 w-[42rem] h-[26rem] rounded-full blur-3xl ab-anim"
         style={{
           background:
             "linear-gradient(135deg, rgba(20,184,166,0.14) 0%, rgba(6,182,212,0.08) 50%, rgba(99,102,241,0.05) 100%)",
@@ -210,22 +210,103 @@ const AmbientBackground = ({
     </BaseWrapper>
   );
 
-  const minimal = (
+  const mushroom = (
     <BaseWrapper>
       <BaseLayers />
-      <div
-        className="absolute top-1/4 left-1/2 w-[36rem] h-[36rem] rounded-full blur-3xl ab-anim"
-        style={{
-          transform: "translateX(-50%)",
-          background:
-            "radial-gradient(60% 60% at 50% 50%, rgba(16,185,129,0.16) 0%, rgba(16,185,129,0.08) 40%, rgba(16,185,129,0) 70%)",
-          animation: "ab-breathe 16s ease-in-out infinite",
-        }}
-      />
+
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        {/* === SUBTLE SPORE DRIFT === */}
+        {Array.from({ length: 85 }).map((_, i) => (
+          <div
+            key={`spore-${i}`}
+            className="absolute rounded-full opacity-50"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${1 + Math.random() * 2}px`,
+              height: `${1 + Math.random() * 2}px`,
+              background: "rgba(168,162,158,0.6)",
+              animation: `sporeDrift ${
+                12 + Math.random() * 8
+              }s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 10}s`,
+            }}
+          />
+        ))}
+
+        {/* === BREATHING EARTH TONES === */}
+        <div
+          className="absolute top-1/4 left-1/8 w-[28rem] h-[32rem] rounded-full blur-3xl ab-anim"
+          style={{
+            background:
+              "radial-gradient(60% 70% at 50% 50%, rgba(120,113,108,0.5) 0%, rgba(120,113,108,0.3) 50%, rgba(120,113,108,0.1) 80%)",
+            animation: "ab-breathe 10s ease-in-out infinite",
+          }}
+        />
+
+        <div
+          className="absolute top-1/4 right-1/8 w-[36rem] h-[24rem] rounded-full blur-3xl ab-anim"
+          style={{
+            background:
+              "radial-gradient(70% 50% at 50% 50%, rgba(87,83,78,0.5) 0%, rgba(87,83,78,0.3) 60%, rgba(87,83,78,0.1) 85%)",
+            animation: "ab-breathe 10s ease-in-out infinite reverse",
+          }}
+        />
+      </div>
+
+      {/* Scoped keyframes for mushroom variant */}
+      <style>
+        {`
+        @keyframes sporeDrift {
+          0%, 100% { 
+            transform: translateY(0) translateX(0) scale(1); 
+            opacity: 0.2; 
+          }
+          25% { 
+            transform: translateY(-8px) translateX(3px) scale(1.2); 
+            opacity: 0.35; 
+          }
+          50% { 
+            transform: translateY(-12px) translateX(-2px) scale(0.9); 
+            opacity: 0.1; 
+          }
+          75% { 
+            transform: translateY(-6px) translateX(4px) scale(1.1); 
+            opacity: 0.25; 
+          }
+        }
+        @keyframes myceliumGrow {
+          0%, 100% { 
+            transform: scale(1, 1) rotate(var(--rotation, 0deg)); 
+            opacity: 0.1; 
+          }
+          50% { 
+            transform: scale(1.3, 1) rotate(var(--rotation, 0deg)); 
+            opacity: 0.15; 
+          }
+        }
+        @keyframes capFloat {
+          0%, 100% { 
+            transform: translateY(0) scale(1); 
+            opacity: 0.05; 
+          }
+          50% { 
+            transform: translateY(-15px) scale(1.1); 
+            opacity: 0.08; 
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .ab-anim { animation: none !important; }
+          [class*="spore-"], [class*="thread-"], [class*="cap-"] { 
+            animation: none !important; 
+          }
+        }
+      `}
+      </style>
     </BaseWrapper>
   );
 
-  const variants = { home, search, about, minimal };
+  const variants = { home, search, about, mushroom };
   return variants[variant] || variants.home;
 };
 

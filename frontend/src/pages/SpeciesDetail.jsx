@@ -82,7 +82,8 @@ export default function SpeciesDetail() {
   return (
     <main className="relative min-h-screen flex flex-col bg-[hsl(0_0_2)] text-white">
       <Navbar />
-
+      <AmbientBackground variant="mushroom" />
+      <AmbientBackground variant="about" opacity={0.2} />
       <section className="relative z-10 mx-auto max-w-7xl px-4 pb-20 pt-24 sm:px-6 lg:px-8">
         {/* Back */}
         <button
@@ -93,7 +94,7 @@ export default function SpeciesDetail() {
         </button>
 
         {/* Hero */}
-        <div className="mb-8 rounded-3xl border border-white/10 bg-white/5 p-4 sm:p-6 lg:p-8">
+        <div className="mb-8 rounded-3xl border border-white/15 bg-[rgb(20_20_20/0.8)] p-4 sm:p-6 lg:p-8">
           <div className="grid gap-6 lg:grid-cols-5 lg:gap-8">
             {/* Image */}
             <div className="lg:col-span-2">
@@ -277,12 +278,12 @@ export default function SpeciesDetail() {
 function Card({ title, children, variant, glow = "emerald" }) {
   // limited palette for subtle variation
   const glowColors = {
-    emerald: "from-emerald-500/5",
+    emerald: "from-emerald-500/0",
     amber: "from-amber-500/4",
   };
 
   const base =
-    "relative rounded-3xl border bg-white/5 p-5 sm:p-6 lg:p-7 overflow-hidden";
+    "relative rounded-3xl border bg-[rgb(20_20_20/0.8)] p-5 sm:p-6 lg:p-7 overflow-hidden";
   const chrome =
     variant === "warning"
       ? "border-amber-400/30 ring-1 ring-inset ring-amber-400/20 bg-amber-500/10"
