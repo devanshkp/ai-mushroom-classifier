@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import AmbientBackground from "../components/AmbientBackground";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { useMushroomData } from "../context/MushroomDataContext";
 
 /* ======================
    Animation presets
@@ -67,9 +68,7 @@ export default function Home() {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const prefersReduced = useReducedMotion();
 
-  // Convert species name to images/<species>.jpg
-  const getSpeciesImagePath = (speciesName: string) =>
-    `/images/${speciesName.toLowerCase().replace(/\s+/g, "_")}.jpg`;
+  const { getImageUrlByName } = useMushroomData();
 
   const topPrediction = useMemo(
     () => (predictions?.length ? predictions[0] : null),
@@ -403,7 +402,7 @@ export default function Home() {
                       }}
                       className="will-change-transform"
                     >
-                      <PredictionRow data={p} getImg={getSpeciesImagePath} />
+                      <PredictionRow data={p} getImg={getImageUrlByName} />
                     </motion.div>
                   ))}
                 </motion.div>

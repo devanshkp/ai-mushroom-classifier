@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect, useMemo } from "react";
 
 const MushroomDataContext = createContext();
 
@@ -64,6 +64,27 @@ export const MushroomDataProvider = ({ children }) => {
     } finally {
       setLoading(false);
     }
+  };
+
+  const mushroomLookup = useMemo(() => {
+    const map = new Map();
+    mushrooms.forEach((m) => {
+      map.set(m.scientific_name.toLowerCase().trim(), m);
+
+      if (m.common_name) {
+        m.common_name
+          .split(",")
+          .map((n) => n.trim().toLowerCase())
+          .forEach((alias) => map.set(alias, m));
+      }
+    });
+    return map;
+  }, [mushrooms]);
+
+  const getImageUrlByName = (name) => {
+    if (!name) return null;
+    const m = mushroomLookup.get(name.toLowerCase().trim());
+    return m?.image_path || null;
   };
 
   // Find mushroom by scientific name (exact match, case insensitive)
@@ -151,6 +172,7 @@ export const MushroomDataProvider = ({ children }) => {
     mushrooms,
     loading,
     error,
+    mushroomLookup,
 
     // Methods
     getMushroomByScientificName,
@@ -159,6 +181,7 @@ export const MushroomDataProvider = ({ children }) => {
     getMushroomsByEdibility,
     getMushroomsByHabitat,
     getRandomMushrooms,
+    getImageUrlByName,
     reloadData: loadMushroomData,
 
     // Computed values
