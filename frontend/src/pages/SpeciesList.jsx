@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 import AmbientBackground from "../components/AmbientBackground";
 import { motion, AnimatePresence } from "framer-motion";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function SpeciesList() {
   const { loading, error, searchMushrooms } = useMushroomData();
@@ -271,7 +270,7 @@ function DesktopSpeciesCard({ data }) {
       {/* Fixed aspect prevents massive vertical cards; object-cover keeps image tidy */}
       <div className="relative aspect-[4/3] overflow-hidden bg-zinc-900">
         {data.image_path ? (
-          <LazyLoadImage
+          <img
             src={data.image_path}
             alt={primary}
             loading="lazy"
