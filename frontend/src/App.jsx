@@ -4,11 +4,13 @@ import Home from "./pages/Home";
 import SpeciesList from "./pages/SpeciesList";
 import SpeciesDetail from "./pages/SpeciesDetail";
 import About from "./pages/About";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <MushroomDataProvider>
       <Router>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/species" element={<SpeciesList />} />

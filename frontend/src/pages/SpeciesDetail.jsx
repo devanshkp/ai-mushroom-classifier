@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useMushroomData } from "../context/MushroomDataContext";
-import Navbar from "../components/Navbar";
 import AmbientBackground from "../components/AmbientBackground";
 
 export default function SpeciesDetail() {
@@ -81,7 +80,6 @@ export default function SpeciesDetail() {
 
   return (
     <main className="relative min-h-screen flex flex-col bg-[hsl(0_0_2)] text-white">
-      <Navbar />
       <AmbientBackground variant="mushroom" />
       <AmbientBackground variant="about" opacity={0.2} />
       <section className="relative z-10 mx-auto max-w-7xl px-4 pb-20 pt-24 sm:px-6 lg:px-8">

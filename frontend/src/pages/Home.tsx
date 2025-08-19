@@ -10,14 +10,8 @@ import {
   Sparkles,
   Info,
 } from "lucide-react";
-import Navbar from "../components/Navbar";
 import AmbientBackground from "../components/AmbientBackground";
-import {
-  motion,
-  AnimatePresence,
-  useReducedMotion,
-  Variants,
-} from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 
 /* ======================
    Animation presets
@@ -179,7 +173,6 @@ export default function Home() {
   return (
     <main className="relative min-h-screen flex flex-col bg-[hsl(0_0_2)] text-white">
       <AmbientBackground variant="home" opacity={1} />
-      <Navbar />
 
       {/* Content container */}
       <section className="relative z-10 mx-auto max-w-7xl px-4 pb-20 pt-28 md:pt-32 sm:px-6 lg:px-8">

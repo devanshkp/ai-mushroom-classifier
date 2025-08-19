@@ -12,9 +12,9 @@ import {
   XCircle,
   CheckCircle2,
 } from "lucide-react";
-import Navbar from "../components/Navbar";
 import AmbientBackground from "../components/AmbientBackground";
 import { motion, AnimatePresence } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function SpeciesList() {
   const { loading, error, searchMushrooms } = useMushroomData();
@@ -63,7 +63,6 @@ export default function SpeciesList() {
   return (
     <main className="relative min-h-screen flex flex-col bg-[hsl(0_0_2)] text-white">
       <AmbientBackground variant="search" opacity={0.9} />
-      <Navbar />
 
       <section className="relative z-10 mx-auto max-w-screen md:max-w-7xl px-4 pb-28 pt-24 sm:px-6 lg:px-8">
         {/* Compact header */}
@@ -272,7 +271,7 @@ function DesktopSpeciesCard({ data }) {
       {/* Fixed aspect prevents massive vertical cards; object-cover keeps image tidy */}
       <div className="relative aspect-[4/3] overflow-hidden bg-zinc-900">
         {data.image_path ? (
-          <img
+          <LazyLoadImage
             src={data.image_path}
             alt={primary}
             loading="lazy"

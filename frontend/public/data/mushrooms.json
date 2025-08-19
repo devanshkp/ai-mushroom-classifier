@@ -7,7 +7,7 @@
         "habitat": "Commonly found in deciduous and coniferous woodlands, forming mycorrhizal relationships with trees like oak, beech, and pine. Fruits in late summer and autumn.",
         "edibility": "Inedible/Mildly Poisonous",
         "notes": "Contains alpha-amanitin in very low, non-toxic amounts, but also bufotenin. While not as deadly as some other Amanitas, it can cause gastrointestinal distress. Due to its resemblance to highly poisonous species like Amanita phalloides, it is best avoided. The potato-like smell is a key identifier.",
-        "image_path": "/images/amanita_citrina.jpg"
+        "image_path": "https://imgur.com/xta8gnn.jpg"
     },
     {
         "scientific_name": "Amanita muscaria",
@@ -17,7 +17,7 @@
         "habitat": "Found in coniferous and deciduous woodlands, forming mycorrhizal associations, particularly with birch and pine trees. Widely distributed in temperate and boreal regions of the Northern Hemisphere.",
         "edibility": "Poisonous/Psychoactive",
         "notes": "Contains psychoactive compounds ibotenic acid and muscimol. Effects can be unpredictable, unpleasant, and include nausea, muscle twitches, confusion, and visual distortions. Toxicity can vary with region and preparation.",
-        "image_path": "/images/amanita_muscaria.jpg"
+        "image_path": "https://imgur.com/hCQgS5Q.jpg"
     },
     {
         "scientific_name": "Amanita pantherina",
@@ -27,7 +27,7 @@
         "habitat": "Found in deciduous and coniferous forests, forming mycorrhizal relationships with various trees. Fruits from summer to autumn.",
         "edibility": "Poisonous/Psychoactive",
         "notes": "Contains ibotenic acid and muscimol, similar to Amanita muscaria, and can cause serious poisoning with neurological symptoms. Distinguished from the edible Amanita rubescens by its non-blushing flesh and the smooth (not grooved) ring.",
-        "image_path": "/images/amanita_pantherina.jpg"
+        "image_path": "https://imgur.com/9DNBfw7.jpg"
     },
     {
         "scientific_name": "Amanita rubescens",
@@ -37,7 +37,7 @@
         "habitat": "Common in deciduous and coniferous woods, forming mycorrhizal associations. Fruits from summer to late autumn.",
         "edibility": "Edible with caution",
         "notes": "Must be thoroughly cooked before consumption, as it contains hemolytic toxins when raw. Care must be taken to distinguish it from poisonous Amanita species, especially Amanita pantherina. The key distinguishing feature is the reddish bruising.",
-        "image_path": "/images/amanita_rubescens.jpg"
+        "image_path": "https://imgur.com/oSCTKon.jpg"
     },
     {
         "scientific_name": "Apioperdon pyriforme",
@@ -47,7 +47,7 @@
         "habitat": "Grows in clusters on dead wood (logs, stumps, or buried wood) of both hardwoods and conifers. Common in late summer and autumn.",
         "edibility": "Edible",
         "notes": "Edible and good when young and the flesh is pure white and firm throughout. Avoid if the interior has started to turn yellow or brown.",
-        "image_path": "/images/apioperdon_pyriforme.jpg"
+        "image_path": "https://imgur.com/GbbS3BU.jpg"
     },
     {
         "scientific_name": "Armillaria borealis",
@@ -57,7 +57,7 @@
         "habitat": "Grows on wood of both deciduous and coniferous trees, often parasitic on living trees or saprobic on dead wood. Fruits in autumn.",
         "edibility": "Edible with caution",
         "notes": "Must be thoroughly cooked; can cause gastrointestinal upset in some individuals or if undercooked. Part of the Armillaria mellea complex. Can be a significant forest pathogen.",
-        "image_path": "/images/armillaria_borealis.jpg"
+        "image_path": "https://imgur.com/O7IK64D.jpg"
     },
     {
         "scientific_name": "Artomyces pyxidatus",
@@ -67,7 +67,7 @@
         "habitat": "Grows on decaying hardwood logs and branches, particularly aspen and poplar. Fruits from spring to fall.",
         "edibility": "Edible",
         "notes": "Generally considered edible, though not highly choice. Its unique branching pattern makes it easy to identify among coral fungi.",
-        "image_path": "/images/artomyces_pyxidatus.jpg"
+        "image_path": "https://imgur.com/jFOD5Ah.jpg"
     },
     {
         "scientific_name": "Bjerkandera adusta",
@@ -77,7 +77,7 @@
         "habitat": "Very common on dead hardwood, causing a white rot. Appears year-round.",
         "edibility": "Inedible",
         "notes": "The dark pore surface is a key identifying feature. Plays an important role in wood decomposition.",
-        "image_path": "/images/bjerkandera_adusta.jpg"
+        "image_path": "https://imgur.com/3UAi81M.jpg"
     },
     {
         "scientific_name": "Boletus edulis",
@@ -87,7 +87,7 @@
         "habitat": "Forms mycorrhizal relationships with various coniferous (pine, spruce, fir) and deciduous (oak, beech) trees. Found in summer and autumn.",
         "edibility": "Choice Edible",
         "notes": "Highly prized for its nutty flavor and firm texture. Can be eaten fresh, dried, or preserved. Care should be taken not to confuse it with bitter or poisonous boletes (e.g., Tylopilus felleus, which has pinkish pores and a darker, more pronounced reticulation).",
-        "image_path": "/images/boletus_edulis.jpg"
+        "image_path": "https://imgur.com/y17rKIN.jpg"
     },
     {
         "scientific_name": "Boletus reticulatus",
@@ -97,7 +97,7 @@
         "habitat": "Mycorrhizal with deciduous trees, especially oak and beech, in open woodlands and clearings. Fruits earlier than B. edulis, often starting in late spring or early summer.",
         "edibility": "Choice Edible",
         "notes": "Also highly valued and delicious. The extensive reticulation on the stem is a good distinguishing feature from B. edulis, which typically has reticulation only on the upper part of the stem.",
-        "image_path": "/images/boletus_reticulatus.jpg"
+        "image_path": "https://imgur.com/BiTz8io.jpg"
     },
     {
         "scientific_name": "Calocera viscosa",
@@ -107,7 +107,7 @@
         "habitat": "Grows on decaying coniferous wood, such as stumps and logs of pine and spruce. Appears from summer to late autumn.",
         "edibility": "Inedible",
         "notes": "Though not poisonous, it is considered inedible due to its tough, gelatinous texture. Its bright color makes it quite conspicuous.",
-        "image_path": "/images/calocera_viscosa.jpg"
+        "image_path": "https://imgur.com/JKhOsTc.jpg"
     },
     {
         "scientific_name": "Calycina citrina",
@@ -117,7 +117,7 @@
         "habitat": "Grows on decaying wood of both hardwoods and conifers, often on barkless wood or bark. Common and widespread, can appear year-round but more frequent in moist conditions.",
         "edibility": "Inedible",
         "notes": "Too small and insubstantial to be considered for eating. Its bright yellow color makes these tiny cups noticeable.",
-        "image_path": "/images/calycina_citrina.jpg"
+        "image_path": "https://imgur.com/muwXHfl.jpg"
     },
     {
         "scientific_name": "Cantharellus cibarius",
@@ -127,7 +127,7 @@
         "habitat": "Forms mycorrhizal relationships with various trees, both deciduous (oak, beech) and coniferous. Found in summer and autumn, often in damp mossy areas.",
         "edibility": "Choice Edible",
         "notes": "Highly prized edible mushroom. Important to distinguish from the poisonous Jack O'Lantern mushroom (Omphalotus olearius), which has true, sharp gills and grows in clusters on wood, and the False Chanterelle (Hygrophoropsis aurantiaca), which has forked gills and is less choice.",
-        "image_path": "/images/cantharellus_cibarius.jpg"
+        "image_path": "https://imgur.com/Pf51vw3.jpg"
     },
     {
         "scientific_name": "Cerioporus squamosus",
@@ -137,7 +137,7 @@
         "habitat": "Grows on living or dead hardwood trees, especially elm, maple, and sycamore. Common in spring and early summer, but can appear later.",
         "edibility": "Edible when young",
         "notes": "Best eaten when young and tender, as it becomes tough and leathery with age. Has a characteristic mealy or cucumber-like smell. The 'pheasant's back' pattern of scales is a key identifier.",
-        "image_path": "/images/cerioporus_squamosus.jpg"
+        "image_path": "https://imgur.com/83gVYN2.jpg"
     },
     {
         "scientific_name": "Cetraria islandica",
@@ -147,7 +147,7 @@
         "habitat": "Grows on soil in arctic and alpine regions, heathlands, and open woodlands, often among mosses and grasses.",
         "edibility": "Edible after processing",
         "notes": "Technically a lichen (a symbiosis of a fungus and an alga/cyanobacterium). Traditionally used in herbal medicine and as a famine food after boiling or soaking to remove bitter lichen acids. High in carbohydrates.",
-        "image_path": "/images/cetraria_islandica.jpg"
+        "image_path": "https://imgur.com/dNGBIgD.jpg"
     },
     {
         "scientific_name": "Chlorociboria aeruginascens",
@@ -157,7 +157,7 @@
         "habitat": "Grows on dead, barkless hardwood, particularly oak and beech. The stained wood is often more common to find than the fruiting bodies.",
         "edibility": "Inedible",
         "notes": "The fungus itself is tiny and not consumed. The blue-green stained wood ('green oak') has been historically used in decorative woodworking (e.g., Tunbridge ware).",
-        "image_path": "/images/chlorociboria_aeruginascens.jpg"
+        "image_path": "https://imgur.com/vuYz4fz.jpg"
     },
     {
         "scientific_name": "Chondrostereum purpureum",
@@ -167,7 +167,7 @@
         "habitat": "Grows on living and dead wood of many broadleaf trees, especially Rosaceae family (e.g., apple, plum, cherry). Fruiting bodies appear year-round, but are more common in autumn and winter.",
         "edibility": "Inedible",
         "notes": "Known primarily as a plant pathogen. The fungus itself is tough and leathery.",
-        "image_path": "/images/chondrostereum_purpureum.jpg"
+        "image_path": "https://imgur.com/YxdtBb4.jpg"
     },
     {
         "scientific_name": "Cladonia fimbriata",
@@ -177,7 +177,7 @@
         "habitat": "Common on acidic soil, rotting wood, mossy banks, and tree bases in various habitats.",
         "edibility": "Inedible",
         "notes": "This is a lichen. The powdery soredia are for asexual reproduction. One of many Cladonia species with cup-shaped podetia.",
-        "image_path": "/images/cladonia_fimbriata.jpg"
+        "image_path": "https://imgur.com/ukuMpF0.jpg"
     },
     {
         "scientific_name": "Cladonia rangiferina",
@@ -187,7 +187,7 @@
         "habitat": "Grows on the ground in open, acidic, nutrient-poor soils in boreal forests, tundra, and heathlands. Often forms extensive carpets.",
         "edibility": "Edible after processing (traditionally)",
         "notes": "This is a lichen. An important food source for reindeer and caribou. Humans have also consumed it in times of famine after leaching out lichen acids. It is very slow-growing.",
-        "image_path": "/images/cladonia_rangiferina.jpg"
+        "image_path": "https://imgur.com/QcZfiDS.jpg"
     },
     {
         "scientific_name": "Cladonia stellaris",
@@ -197,7 +197,7 @@
         "habitat": "Grows on the ground in similar environments to C. rangiferina: boreal forests, pine barrens, and tundra, on well-drained, acidic soils.",
         "edibility": "Edible after processing (traditionally)",
         "notes": "This is a lichen. Also a food for reindeer. Its distinctive compact, 'starry' branching pattern helps differentiate it from other reindeer lichens. Often used in floral arrangements and model making.",
-        "image_path": "/images/cladonia_stellaris.jpg"
+        "image_path": "https://imgur.com/yzQK5oc.jpg"
     },
     {
         "scientific_name": "Clitocybe nebularis",
@@ -207,7 +207,7 @@
         "habitat": "Grows in troops or rings in deciduous and coniferous woodlands, often in leaf litter. Common in late autumn.",
         "edibility": "Edible with caution / Widely disputed",
         "notes": "Traditionally considered edible by some after thorough cooking (parboiling and discarding the water is often recommended). However, it is known to cause gastrointestinal upset in a significant number of people. Contains nebularine, a cytotoxic compound, though its role in digestive issues is unclear. Many authorities now advise against its consumption. Can be confused with the poisonous Entoloma sinuatum.",
-        "image_path": "/images/clitocybe_nebularis.jpg"
+        "image_path": "https://imgur.com/Vvpxw9B.jpg"
     },
     {
         "scientific_name": "Coltricia perennis",
@@ -217,7 +217,7 @@
         "habitat": "Grows on the ground in sandy or disturbed soils, often in coniferous forests or heathlands, sometimes on burnt ground. Fruits in summer and autumn, and fruitbodies can persist.",
         "edibility": "Inedible",
         "notes": "Tough and leathery. The concentric color zones on the cap are characteristic. The species name 'perennis' refers to its ability to persist for more than one season.",
-        "image_path": "/images/coltricia_perennis.jpg"
+        "image_path": "https://imgur.com/6LbH2CM.jpg"
     },
     {
         "scientific_name": "Coprinellus disseminatus",
@@ -227,7 +227,7 @@
         "habitat": "Grows in huge numbers on and around decaying hardwood stumps, logs, or buried wood. Appears from spring to autumn, often after rain.",
         "edibility": "Inedible (due to size and texture)",
         "notes": "While not considered poisonous, they are too small and fragile to be of culinary interest. The sight of hundreds or thousands fruiting together is quite remarkable.",
-        "image_path": "/images/coprinellus_disseminatus.jpg"
+        "image_path": "https://imgur.com/muZyXxW.jpg"
     },
     {
         "scientific_name": "Coprinellus micaceus",
@@ -237,7 +237,7 @@
         "habitat": "Commonly found on and around decaying hardwood stumps and buried wood. Fruits from spring to autumn.",
         "edibility": "Edible (with caution)",
         "notes": "Edible when young, before the gills turn black, but must not be consumed with alcohol due to the presence of coprine (or similar compounds) which can cause a disulfiram-like reaction (though this species is often reported to be safe in this regard, caution is still advised by some sources or if confused with Coprinopsis atramentaria). The glistening particles are a key identifier.",
-        "image_path": "/images/coprinellus_micaceus.jpg"
+        "image_path": "https://imgur.com/ickR8Ai.jpg"
     },
     {
         "scientific_name": "Coprinopsis atramentaria",
@@ -247,7 +247,7 @@
         "habitat": "Grows on buried wood, rich soil, lawns, and waste ground. Common from spring to autumn.",
         "edibility": "Edible with extreme caution (Conditionally Edible)",
         "notes": "Contains coprine, which causes a severe disulfiram-like reaction (nausea, vomiting, palpitations, flushing) if alcohol is consumed within a few hours to several days of eating the mushroom. Otherwise, it is considered edible by some, but the risk is significant. This is the 'Tippler's Bane'.",
-        "image_path": "/images/coprinopsis_atramentaria.jpg"
+        "image_path": "https://imgur.com/32b5HoD.jpg"
     },
     {
         "scientific_name": "Coprinus comatus",
@@ -257,7 +257,7 @@
         "habitat": "Grows in grassy areas, lawns, disturbed ground, and roadsides, often in rich soil. Common in late summer and autumn.",
         "edibility": "Choice Edible (when young)",
         "notes": "Highly prized when very young, before the gills start to turn pink or black. Must be cooked quickly after picking as it deliquesces rapidly. Does NOT contain coprine, so it is safe to consume with alcohol, unlike Coprinopsis atramentaria.",
-        "image_path": "/images/coprinus_comatus.jpg"
+        "image_path": "https://imgur.com/NONsncx.jpg"
     },
     {
         "scientific_name": "Crucibulum laeve",
@@ -267,7 +267,7 @@
         "habitat": "Grows on dead wood, wood debris, wood chip mulch, and sometimes on old sacking or plant stems. Common and appears from summer to winter.",
         "edibility": "Inedible",
         "notes": "The 'eggs' contain spores and are dispersed by raindrops splashing into the cup. Fascinating to observe but not for eating.",
-        "image_path": "/images/crucibulum_laeve.jpg"
+        "image_path": "https://imgur.com/RwBX902.jpg"
     },
     {
         "scientific_name": "Daedaleopsis confragosa",
@@ -277,7 +277,7 @@
         "habitat": "Grows on dead hardwood, especially willow, birch, and alder. Common year-round.",
         "edibility": "Inedible",
         "notes": "Very variable pore surface. The blushing reaction is a useful identification characteristic. Important wood decomposer.",
-        "image_path": "/images/daedaleopsis_confragosa.jpg"
+        "image_path": "https://imgur.com/zpOhGKu.jpg"
     },
     {
         "scientific_name": "Daedaleopsis tricolor",
@@ -287,7 +287,7 @@
         "habitat": "Primarily found on dead branches and trunks of deciduous trees, particularly beech and birch.",
         "edibility": "Inedible",
         "notes": "Distinguished from D. confragosa by its more consistently gill-like underside and lack of strong bruising. The zonate colors on top can be quite striking.",
-        "image_path": "/images/daedaleopsis_tricolor.jpg"
+        "image_path": "https://imgur.com/4vzJE8r.jpg"
     },
     {
         "scientific_name": "Evernia mesomorpha",
@@ -297,7 +297,7 @@
         "habitat": "Grows on the bark of trees, especially conifers but also hardwoods, in open woodlands and boreal forests. Also found on wooden fences.",
         "edibility": "Inedible",
         "notes": "This is a lichen. It's more common in northern and boreal regions. Distinguished from Evernia prunastri by its more angular branches and distribution of soredia.",
-        "image_path": "/images/evernia_mesomorpha.jpg"
+        "image_path": "https://imgur.com/qbOTVgF.jpg"
     },
     {
         "scientific_name": "Evernia prunastri",
@@ -307,7 +307,7 @@
         "habitat": "Grows on the bark of trees, particularly oak and fruit trees, but also other deciduous trees and occasionally conifers or fences. Common in temperate regions.",
         "edibility": "Inedible (used in perfumery)",
         "notes": "This is a lichen. Highly valued in the perfume industry for its fixative properties and earthy scent, though its use is now restricted due to allergenic compounds. The two distinct colors on upper and lower surfaces are a key feature.",
-        "image_path": "/images/evernia_prunastri.jpg"
+        "image_path": "https://imgur.com/b8RdCNY.jpg"
     },
     {
         "scientific_name": "Flammulina velutipes",
@@ -317,7 +317,7 @@
         "habitat": "Grows in clusters on dead wood of deciduous trees (e.g., elm, willow, beech) during late autumn, winter, and early spring. Tolerant of cold temperatures.",
         "edibility": "Edible",
         "notes": "The wild form is edible and good, with a pleasant flavor, but the tough stem is usually discarded. Its winter fruiting makes it a notable find. The cultivated form is a popular culinary mushroom.",
-        "image_path": "/images/flammulina_velutipes.jpg"
+        "image_path": "https://imgur.com/wYT7Y8O.jpg"
     },
     {
         "scientific_name": "Fomes fomentarius",
@@ -327,7 +327,7 @@
         "habitat": "Grows primarily on dead or weakened birch trees, but also on beech and other hardwoods. Causes a white rot. Fruitbodies are very long-lived.",
         "edibility": "Inedible",
         "notes": "Historically very important as a source of tinder (amadou) for starting fires. Also used for medicinal purposes and as a styptic. Very tough and woody.",
-        "image_path": "/images/fomes_fomentarius.jpg"
+        "image_path": "https://imgur.com/GuJkqbS.jpg"
     },
     {
         "scientific_name": "Fomitopsis betulina",
@@ -337,7 +337,7 @@
         "habitat": "Almost exclusively grows on birch trees (Betula species), usually on dead or dying trees, but can also infect living ones. Common.",
         "edibility": "Edible when young (medicinal uses more common)",
         "notes": "Young specimens are somewhat edible but become very tough quickly. More known for its traditional medicinal uses (anti-inflammatory, antiseptic) and as a 'razor strop' for sharpening knives. Ötzi the Iceman carried this fungus.",
-        "image_path": "/images/fomitopsis_betulina.jpg"
+        "image_path": "https://imgur.com/HMzkCSi.jpg"
     },
     {
         "scientific_name": "Fomitopsis pinicola",
@@ -347,7 +347,7 @@
         "habitat": "Grows primarily on coniferous trees (pine, spruce, fir, hemlock), but occasionally on hardwoods. Causes a brown rot. Common and widespread.",
         "edibility": "Inedible",
         "notes": "Very tough and woody. The reddish band near the margin is a key identifying feature, though it can be less prominent on older specimens. Important in forest ecosystems for wood decay.",
-        "image_path": "/images/fomitopsis_pinicola.jpg"
+        "image_path": "https://imgur.com/9Oksk7N.jpg"
     },
     {
         "scientific_name": "Ganoderma applanatum",
@@ -357,7 +357,7 @@
         "habitat": "Grows on dead or living hardwood trees, and occasionally conifers. Causes a white rot. Very common and widespread.",
         "edibility": "Inedible (medicinal uses)",
         "notes": "Famous for the ability to draw on its fresh white pore surface. Used in traditional Chinese medicine. Very tough and woody.",
-        "image_path": "/images/ganoderma_applanatum.jpg"
+        "image_path": "https://imgur.com/xCIClSa.jpg"
     },
     {
         "scientific_name": "Graphis scripta",
@@ -367,7 +367,7 @@
         "habitat": "Commonly found on the smooth bark of deciduous trees, especially in shaded, humid locations.",
         "edibility": "Inedible",
         "notes": "This is a lichen. The 'script' markings are its apothecia (fruiting structures). The appearance can vary considerably, but the hieroglyphic pattern is characteristic.",
-        "image_path": "/images/graphis_scripta.jpg"
+        "image_path": "https://imgur.com/f9acj2m.jpg"
     },
     {
         "scientific_name": "Gyromitra esculenta",
@@ -377,7 +377,7 @@
         "habitat": "Found in sandy soils in coniferous forests, often near pine trees, in spring and early summer. Also associated with disturbed ground.",
         "edibility": "Deadly Poisonous (unless properly processed)",
         "notes": "Contains gyromitrin, which is hydrolyzed to monomethylhydrazine (MMH), a volatile and highly toxic compound (also a rocket fuel component). MMH is carcinogenic. While consumed in some regions after specific parboiling and drying procedures to reduce toxin levels, it is responsible for poisonings and fatalities. Its sale is prohibited in many countries. Best considered deadly poisonous.",
-        "image_path": "/images/gyromitra_esculenta.jpg"
+        "image_path": "https://imgur.com/IMon7eA.jpg"
     },
     {
         "scientific_name": "Gyromitra gigas",
@@ -387,7 +387,7 @@
         "habitat": "Grows in spring, often in montane coniferous forests, near melting snowbanks, or in rich soil with hardwoods.",
         "edibility": "Poisonous (potentially less toxic than G. esculenta, but still risky)",
         "notes": "Also contains gyromitrin, though often reported in lower concentrations than G. esculenta. Due to the risks and similarity to G. esculenta, it should be avoided or treated with extreme caution (i.e., proper detoxification methods, which are not always reliable).",
-        "image_path": "/images/gyromitra_gigas.jpg"
+        "image_path": "https://imgur.com/uBSMnkb.jpg"
     },
     {
         "scientific_name": "Gyromitra infula",
@@ -397,7 +397,7 @@
         "habitat": "Grows on decaying coniferous wood or woody debris, sometimes on soil rich in wood. Appears in late summer and autumn, unlike most other Gyromitra species which are spring fungi.",
         "edibility": "Poisonous",
         "notes": "Contains gyromitrin and should be considered poisonous. Its autumn fruiting and saddle-shaped cap help distinguish it.",
-        "image_path": "/images/gyromitra_infula.jpg"
+        "image_path": "https://imgur.com/22dAngn.jpg"
     },
     {
         "scientific_name": "Hericium coralloides",
@@ -407,7 +407,7 @@
         "habitat": "Grows on dead hardwood logs and stumps, especially beech and maple. Fruits in late summer and autumn.",
         "edibility": "Choice Edible",
         "notes": "Valued for its delicate flavor and unique texture. Should be cooked. Other Hericium species are also edible and similar in appearance (e.g., H. erinaceus - Lion's Mane, H. americanum - Bear's Head Tooth).",
-        "image_path": "/images/hericium_coralloides.jpg"
+        "image_path": "https://imgur.com/ghyct7Q.jpg"
     },
     {
         "scientific_name": "Hygrophoropsis aurantiaca",
@@ -417,7 +417,7 @@
         "habitat": "Grows on well-rotted wood, sawdust, woodchips, or peat, especially in coniferous forests. Common in summer and autumn.",
         "edibility": "Edible (but not choice) / Some sources say inedible or causes mild upset",
         "notes": "Often confused with true chanterelles (Cantharellus cibarius). While not dangerously poisonous, it is considered inferior in taste and texture, and some individuals report mild gastrointestinal distress. The key difference is the true, forked gills vs. blunt ridges.",
-        "image_path": "/images/hygrophoropsis_aurantiaca.jpg"
+        "image_path": "https://imgur.com/oKxhcy3.jpg"
     },
     {
         "scientific_name": "Hypholoma fasciculare",
@@ -427,7 +427,7 @@
         "habitat": "Very common on dead wood of both conifers and hardwoods, such as stumps and logs. Fruits year-round but is most abundant in autumn.",
         "edibility": "Poisonous",
         "notes": "One of the most common woodland mushrooms. Poisonous, causing gastrointestinal upset. The bitter taste and greenish gills are key identifiers. Can be confused with edible Hypholoma capnoides (Conifer Tuft), which has greyish gills and lacks the bitter taste, or the edible Kuehneromyces mutabilis, which has a scaly stem and a distinct ring.",
-        "image_path": "/images/hypholoma_fasciculare.jpg"
+        "image_path": "https://imgur.com/SOnRFzR.jpg"
     },
     {
         "scientific_name": "Hypholoma lateritium",
@@ -437,7 +437,7 @@
         "habitat": "Common on stumps and logs of deciduous trees, especially oak. Fruits in autumn and early winter.",
         "edibility": "Edible (with caution by some) / Inedible by others",
         "notes": "Edibility is debated. Some consider it edible and good, particularly in North America, while European sources often list it as inedible or mildly poisonous due to bitterness or potential for upset. If considered, only young specimens should be tried, and thorough cooking is essential. Distinguished from Sulphur Tuft by its reddish cap and lack of greenish tones in the gills.",
-        "image_path": "/images/hypholoma_lateritium.jpg"
+        "image_path": "https://imgur.com/1wtMjw5.jpg"
     },
     {
         "scientific_name": "Hypogymnia physodes",
@@ -447,7 +447,7 @@
         "habitat": "Very common on tree bark (both coniferous and deciduous), twigs, rocks, and fence posts in a wide range of habitats. Tolerant of some air pollution.",
         "edibility": "Inedible",
         "notes": "This is a lichen. The hollow, inflated lobes and black undersurface are key characteristics. One of the most common lichens in many temperate regions.",
-        "image_path": "/images/hypogymnia_physodes.jpg"
+        "image_path": "https://imgur.com/hlFuAzp.jpg"
     },
     {
         "scientific_name": "Imleria badia",
@@ -457,7 +457,7 @@
         "habitat": "Forms mycorrhizal relationships with coniferous trees (especially pine and spruce) and sometimes deciduous trees, on acidic soils. Common in summer and autumn.",
         "edibility": "Choice Edible",
         "notes": "A popular edible bolete. The blue-bruising pores and lack of reticulation on the stem are key features. Care should be taken to distinguish from other boletes.",
-        "image_path": "/images/imleria_badia.jpg"
+        "image_path": "https://imgur.com/Na1FlyU.jpg"
     },
     {
         "scientific_name": "Inonotus obliquus",
@@ -467,7 +467,7 @@
         "habitat": "Parasitic on birch trees, causing a white heart rot. The black conk can take many years to develop. Found in cool, northern climates.",
         "edibility": "Inedible (as a mushroom, but used as a medicinal tea)",
         "notes": "The black, clinker-like sterile conk is harvested for medicinal purposes, traditionally used to make a tea with various claimed health benefits (antioxidant, anti-inflammatory). The fungus itself (fruiting body) is not what is typically referred to as 'Chaga'.",
-        "image_path": "/images/inonotus_obliquus.jpg"
+        "image_path": "https://imgur.com/YtdhdTL.jpg"
     },
     {
         "scientific_name": "Kuehneromyces mutabilis",
@@ -477,7 +477,7 @@
         "habitat": "Common on stumps and logs of deciduous trees (especially beech, birch) and occasionally conifers. Fruits from spring to autumn.",
         "edibility": "Edible (good)",
         "notes": "A good edible mushroom, but careful identification is crucial due to its resemblance to the deadly poisonous Galerina marginata (Funeral Bell), which also grows on wood, has a ring, and brown spores. Key differences: K. mutabilis has scales on the stem below the ring, a hygrophanous cap, and a pleasant smell; G. marginata has a non-scaly (often silky) stem below the ring, a non-hygrophanous (or less distinctly so) cap, and often smells mealy. **Extreme caution is advised.**",
-        "image_path": "/images/kuehneromyces_mutabilis.jpg"
+        "image_path": "https://imgur.com/C2l3pdm.jpg"
     },
     {
         "scientific_name": "Lactarius deliciosus",
@@ -487,7 +487,7 @@
         "habitat": "Forms mycorrhizal relationships with pine trees (Pinus species) on acidic soils. Common in autumn.",
         "edibility": "Choice Edible",
         "notes": "Highly prized edible. The orange latex that doesn't turn purple or violet is a key feature. There are several similar-looking orange-latex Lactarius species associated with conifers, many of which are also edible (e.g., L. deterrimus, L. salmonicolor). Green staining is natural and does not affect edibility.",
-        "image_path": "/images/lactarius_deliciosus.jpg"
+        "image_path": "https://imgur.com/1GYGPYv.jpg"
     },
     {
         "scientific_name": "Lactarius torminosus",
@@ -497,7 +497,7 @@
         "habitat": "Mycorrhizal with birch trees (Betula species) in woodlands and heathlands. Common in late summer and autumn.",
         "edibility": "Poisonous (unless specially prepared)",
         "notes": "Acutely poisonous if eaten raw or improperly prepared, causing severe gastrointestinal distress. In some Eastern European countries, it is consumed after prolonged boiling or pickling, which reportedly removes the toxins. However, it's best avoided by most foragers. The woolly cap margin is very distinctive.",
-        "image_path": "/images/lactarius_torminosus.jpg"
+        "image_path": "https://imgur.com/nIZ3Xak.jpg"
     },
     {
         "scientific_name": "Lactarius turpis",
@@ -507,7 +507,7 @@
         "habitat": "Mycorrhizal with birch (Betula) and sometimes conifers, in damp woodland and heathland. Common in late summer and autumn.",
         "edibility": "Poisonous / Suspected Carcinogen",
         "notes": "Considered poisonous. Contains mutagenic compounds (e.g., necatorin) and is suspected to be carcinogenic. Should not be eaten. Its dark, often slimy appearance and association with birch are key features.",
-        "image_path": "/images/lactarius_turpis.jpg"
+        "image_path": "https://imgur.com/B2GT2h3.jpg"
     },
     {
         "scientific_name": "Laetiporus sulphureus",
@@ -517,7 +517,7 @@
         "habitat": "Grows on living or dead hardwood trees (especially oak, cherry, willow) and sometimes on conifers (though some believe conifer-growing variants may cause more digestive upset). Causes a brown rot. Fruits from late spring to autumn.",
         "edibility": "Choice Edible (when young)",
         "notes": "Highly prized for its chicken-like texture and flavor when young and tender. Only the soft, outer edges of mature brackets are usually palatable. Must be cooked thoroughly. Some people experience mild allergic reactions or gastrointestinal upset, especially if it's growing on certain trees (e.g., eucalyptus, conifers) or is undercooked. Harvest only young, moist specimens.",
-        "image_path": "/images/laetiporus_sulphureus.jpg"
+        "image_path": "https://imgur.com/MhFe7UC.jpg"
     },
     {
         "scientific_name": "Leccinum albostipitatum",
@@ -527,7 +527,7 @@
         "habitat": "Mycorrhizal with oak (Quercus) and possibly other deciduous trees. Fruits in summer and autumn.",
         "edibility": "Edible",
         "notes": "One of several orange-capped Leccinum species associated with deciduous trees. Leccinum identification can be tricky. Requires thorough cooking. The non-darkening (or only slightly darkening) scabers on the stem are a key feature for this species compared to some others.",
-        "image_path": "/images/leccinum_albostipitatum.jpg"
+        "image_path": "https://imgur.com/Rm6TnQo.jpg"
     },
     {
         "scientific_name": "Leccinum aurantiacum",
@@ -537,7 +537,7 @@
         "habitat": "Mycorrhizal primarily with aspen (Populus tremula) but also other poplars and sometimes birch. Fruits in summer and autumn.",
         "edibility": "Edible (good)",
         "notes": "A good edible mushroom, but must be cooked thoroughly (some recommend at least 15-20 minutes) as undercooked Leccinums can cause gastrointestinal upset. The darkening scabers and host tree are important for identification. The name L. aurantiacum has been applied to several related species.",
-        "image_path": "/images/leccinum_aurantiacum.jpg"
+        "image_path": "https://imgur.com/jnkcTRe.jpg"
     },
     {
         "scientific_name": "Leccinum scabrum",
@@ -547,7 +547,7 @@
         "habitat": "Mycorrhizal exclusively with birch trees (Betula species). Very common in summer and autumn.",
         "edibility": "Edible",
         "notes": "Considered a good edible, though perhaps not as highly rated as some other boletes. Must be cooked thoroughly. The association with birch and the dark scabers on a non-staining (or weakly staining) flesh are key characteristics.",
-        "image_path": "/images/leccinum_scabrum.jpg"
+        "image_path": "https://imgur.com/9OBLNqG.jpg"
     },
     {
         "scientific_name": "Leccinum versipelle",
@@ -557,7 +557,7 @@
         "habitat": "Mycorrhizal with birch (Betula species), often in damp or peaty areas. Fruits in summer and autumn.",
         "edibility": "Edible (good)",
         "notes": "Good edible, but like all Leccinums, requires thorough cooking. The orange cap with an overhanging margin, black scabers, and association with birch are key features. The flesh staining is also distinctive.",
-        "image_path": "/images/leccinum_versipelle.jpg"
+        "image_path": "https://imgur.com/s0nyHfO.jpg"
     },
     {
         "scientific_name": "Lepista nuda",
@@ -567,7 +567,7 @@
         "habitat": "Grows in deciduous and coniferous woodland litter, compost piles, and gardens. Common in autumn and can persist into mild winters.",
         "edibility": "Choice Edible",
         "notes": "Highly prized edible, but must be cooked thoroughly as it can cause mild digestive upset in some if eaten raw. There are poisonous purple Cortinarius species that could be confused; Blewits have a pale pinkish-buff spore print, while Cortinarius have a rusty brown spore print. Always confirm spore print if in doubt.",
-        "image_path": "/images/lepista_nuda.jpg"
+        "image_path": "https://imgur.com/3NG2lbX.jpg"
     },
     {
         "scientific_name": "Lobaria pulmonaria",
@@ -577,7 +577,7 @@
         "habitat": "Grows on the bark of mature deciduous trees (and occasionally conifers or rocks) in old-growth forests with clean air and high humidity.",
         "edibility": "Inedible (used medicinally and for dyeing)",
         "notes": "This is a lichen. It is an indicator species for ancient woodlands and clean air. Traditionally used for medicinal purposes (treating lung ailments due to its appearance - doctrine of signatures) and for dyeing wool.",
-        "image_path": "/images/lobaria_pulmonaria.jpg"
+        "image_path": "https://imgur.com/jCj2poU.jpg"
     },
     {
         "scientific_name": "Lycoperdon perlatum",
@@ -587,7 +587,7 @@
         "habitat": "Very common in woodlands, grassy areas, and on disturbed ground. Fruits from summer to autumn.",
         "edibility": "Edible (when young)",
         "notes": "Edible and good when the internal flesh is pure white and firm throughout. Discard if the flesh has started to turn yellowish or brownish. The easily detachable spines are a good identifier.",
-        "image_path": "/images/lycoperdon_perlatum.jpg"
+        "image_path": "https://imgur.com/ll4r6uJ.jpg"
     },
     {
         "scientific_name": "Macrolepiota procera",
@@ -597,7 +597,7 @@
         "habitat": "Found in grassy fields, pastures, open woodlands, and roadsides. Common in late summer and autumn.",
         "edibility": "Choice Edible (cap only)",
         "notes": "Highly prized edible, only the cap is usually eaten as the stem is fibrous. The movable ring, shaggy scales on the cap, and snakeskin pattern on the stem are key features. Must be distinguished from poisonous look-alikes, especially Chlorophyllum molybdites (Green-spored Parasol), which has greenish gills when mature and causes severe gastrointestinal poisoning. C. molybdites is more common in warmer climates. Always check spore print if unsure (M. procera is white/cream; C. molybdites is green).",
-        "image_path": "/images/macrolepiota_procera.jpg"
+        "image_path": "https://imgur.com/FnApjuI.jpg"
     },
     {
         "scientific_name": "Merulius tremellosus",
@@ -607,7 +607,7 @@
         "habitat": "Grows on dead and decaying hardwood, sometimes conifers, causing a white rot. Common year-round but more noticeable in moist conditions.",
         "edibility": "Inedible",
         "notes": "The gelatinous, wrinkled, orange-pink pore surface is distinctive. Not considered for eating due to its texture and insubstantial nature.",
-        "image_path": "/images/merulius_tremellosus.jpg"
+        "image_path": "https://imgur.com/DFRJsiF.jpg"
     },
     {
         "scientific_name": "Mutinus ravenelii",
@@ -617,7 +617,7 @@
         "habitat": "Grows in rich soil, mulch, gardens, and woodlands. Fruits in summer and autumn.",
         "edibility": "Inedible (eggs are reportedly edible by some, but not recommended)",
         "notes": "The pinkish stalk and more localized gleba distinguish it from Mutinus caninus (Dog Stinkhorn), which typically has an orange-red tip with gleba below it. The smell attracts insects which disperse the spores. Eggs are considered edible by some adventurous individuals but generally avoided.",
-        "image_path": "/images/mutinus_ravenelii.jpg"
+        "image_path": "https://imgur.com/2TaX2VO.jpg"
     },
     {
         "scientific_name": "Nectria cinnabarina",
@@ -627,7 +627,7 @@
         "habitat": "Very common on dead or dying branches and twigs of deciduous trees and shrubs, particularly hardwoods like sycamore, beech, and lime. It's a weak parasite or saprobe.",
         "edibility": "Inedible",
         "notes": "The bright pink-orange 'coral spots' are a common sight on deadwood. Not a culinary mushroom.",
-        "image_path": "/images/nectria_cinnabarina.jpg"
+        "image_path": "https://imgur.com/P5QTE8a.jpg"
     },
     {
         "scientific_name": "Panellus stipticus",
@@ -637,7 +637,7 @@
         "habitat": "Grows in shelf-like clusters on dead hardwood logs and branches (e.g., oak, birch, beech). Common year-round.",
         "edibility": "Inedible (due to bitterness and texture)",
         "notes": "Known for its intense bitterness. North American strains, particularly from the eastern regions, are often bioluminescent (glow in the dark), while European strains typically are not. This bioluminescence is faint and best seen in complete darkness after the eyes have adapted.",
-        "image_path": "/images/panellus_stipticus.jpg"
+        "image_path": "https://imgur.com/79EfvkH.jpg"
     },
     {
         "scientific_name": "Parmelia sulcata",
@@ -647,7 +647,7 @@
         "habitat": "Very common on tree bark (both deciduous and coniferous), rocks, and occasionally on old wooden structures. Tolerant of some air pollution.",
         "edibility": "Inedible",
         "notes": "This is a lichen. The reticulate pattern of cracks/ridges on the lobes is a key identifier. One of the most widespread lichens in temperate regions.",
-        "image_path": "/images/parmelia_sulcata.jpg"
+        "image_path": "https://imgur.com/OJ3qTe3.jpg"
     },
     {
         "scientific_name": "Paxillus involutus",
@@ -657,7 +657,7 @@
         "habitat": "Mycorrhizal with a wide range of trees, especially birch, alder, and poplar, in woodlands, heathlands, and disturbed ground. Very common from summer to autumn.",
         "edibility": "Deadly Poisonous",
         "notes": "Formerly considered edible in some areas, but now known to be dangerously poisonous. It can cause a severe autoimmune reaction (Paxillus syndrome) leading to hemolysis (destruction of red blood cells) and organ failure, which can be fatal, especially with repeated consumption over time. The strongly inrolled margin and bruising gills are key features. **Avoid consumption entirely.**",
-        "image_path": "/images/paxillus_involutus.jpg"
+        "image_path": "https://imgur.com/eVxDePL.jpg"
     },
     {
         "scientific_name": "Peltigera aphthosa",
@@ -667,7 +667,7 @@
         "habitat": "Grows on mossy ground, rocks, and tree bases in damp, shaded environments, often in coniferous or mixed woodlands.",
         "edibility": "Inedible",
         "notes": "This is a lichen. The prominent cephalodia on the upper surface are a key distinguishing feature. The 'aphtae' or studs give it its name. 'Dog lichen' is also used for P. canina, which lacks these surface cephalodia.",
-        "image_path": "/images/peltigera_aphthosa.jpg"
+        "image_path": "https://imgur.com/i5Fbszb.jpg"
     },
     {
         "scientific_name": "Peltigera praetextata",
@@ -677,7 +677,7 @@
         "habitat": "Grows on mossy soil, rocks, tree bases, and logs in shaded, moist woodlands.",
         "edibility": "Inedible",
         "notes": "This is a lichen. The presence of phyllidia, particularly along the lobe margins, is characteristic. The name 'praetextata' refers to a bordered toga, perhaps alluding to these marginal scales.",
-        "image_path": "/images/peltigera_praetextata.jpg"
+        "image_path": "https://imgur.com/CluaAWQ.jpg"
     },
     {
         "scientific_name": "Phaeophyscia orbicularis",
@@ -687,7 +687,7 @@
         "habitat": "Grows on bark (especially nutrient-enriched bark of roadside or urban trees), rock (especially calcareous or nutrient-rich), and man-made substrates like concrete and asbestos. Tolerant of nutrient enrichment.",
         "edibility": "Inedible",
         "notes": "This is a lichen. Its small size, often orbicular shape, and dark undersurface are typical. Common in urban and disturbed areas.",
-        "image_path": "/images/phaeophyscia_orbicularis.jpg"
+        "image_path": "https://imgur.com/ILgKHfF.jpg"
     },
     {
         "scientific_name": "Phallus impudicus",
@@ -697,7 +697,7 @@
         "habitat": "Common in woodlands, gardens, and parks, growing in rich soil and leaf litter or around decaying wood. Fruits from summer to late autumn.",
         "edibility": "Inedible (eggs reportedly edible by some, but smell is off-putting)",
         "notes": "The strong, carrion-like odor attracts flies and other insects, which feed on the gleba and disperse the spores. The 'eggs' are considered edible by some before the stalk elongates and the smell develops, but this is not a common practice. Its appearance is quite phallic.",
-        "image_path": "/images/phallus_impudicus.jpg"
+        "image_path": "https://imgur.com/tyAuves.jpg"
     },
     {
         "scientific_name": "Phellinus igniarius",
@@ -707,7 +707,7 @@
         "habitat": "Primarily parasitic on willow (Salix species), but also found on other hardwoods like alder and birch, causing a white heart rot. Fruitbodies are very long-lived and grow slowly.",
         "edibility": "Inedible",
         "notes": "Extremely tough and woody. Similar to Fomes fomentarius but typically found on willow and has a darker, often more cracked upper surface and brownish (not greyish) pores. The 'igniarius' refers to fire, as it might have been used as tinder, though Fomes fomentarius is more famous for this.",
-        "image_path": "/images/phellinus_igniarius.jpg"
+        "image_path": "https://imgur.com/m004QM0.jpg"
     },
     {
         "scientific_name": "Phellinus tremulae",
@@ -717,7 +717,7 @@
         "habitat": "Parasitic on living aspen (Populus tremula) and other poplar species, causing a distinctive heart rot often referred to as 'Phellinus rot' or 'Aspen trunk rot'. Common in boreal and temperate forests where aspen is present.",
         "edibility": "Inedible",
         "notes": "Similar to other Phellinus species but distinguished by its primary host (aspen/poplar). Economically significant as a cause of timber decay in aspen stands. Very hard and woody.",
-        "image_path": "/images/phellinus_tremulae.jpg"
+        "image_path": "https://imgur.com/8CBQQVU.jpg"
     },
     {
         "scientific_name": "Phlebia radiata",
@@ -727,7 +727,7 @@
         "habitat": "Grows on dead wood of both deciduous and coniferous trees, particularly on barkless logs and branches. Appears year-round but is more prominent in moist conditions.",
         "edibility": "Inedible",
         "notes": "The radiating, wrinkled, colourful surface is characteristic. Plays a role in wood decomposition.",
-        "image_path": "/images/phlebia_radiata.jpg"
+        "image_path": "https://imgur.com/OU1G5Xh.jpg"
     },
     {
         "scientific_name": "Pholiota aurivella",
@@ -737,7 +737,7 @@
         "habitat": "Grows on living or dead hardwood trees, especially beech, birch, and maple. Fruits in autumn.",
         "edibility": "Inedible / Edibility disputed",
         "notes": "While some older field guides list it as edible, many modern sources consider it inedible or of poor quality, and there are reports of it causing gastrointestinal upset in some. The slimy cap and prominent scales are distinctive. Similar to Pholiota squarrosa, but P. aurivella has a distinctly viscid cap.",
-        "image_path": "/images/pholiota_aurivella.jpg"
+        "image_path": "https://imgur.com/eK7tF7R.jpg"
     },
     {
         "scientific_name": "Pholiota squarrosa",
@@ -747,7 +747,7 @@
         "habitat": "Grows on living or dead trees, both hardwoods and conifers, often at the base or on roots. Fruits in autumn.",
         "edibility": "Edible with caution / Inedible by some",
         "notes": "Edibility is debated; some consider it edible when young and well-cooked, while others find it indigestible or mildly toxic, potentially causing gastrointestinal upset. Can cause a reaction if consumed with alcohol by some individuals. The dry, very scaly cap and stem are key identifiers. Distinguished from P. aurivella by its dry cap.",
-        "image_path": "/images/pholiota_squarrosa.jpg"
+        "image_path": "https://imgur.com/6yvtbw4.jpg"
     },
     {
         "scientific_name": "Physcia adscendens",
@@ -757,7 +757,7 @@
         "habitat": "Common on nutrient-enriched bark of trees (especially roadside and urban trees), twigs, and occasionally on rock or man-made substrates. Tolerant of some pollution and nutrient enrichment.",
         "edibility": "Inedible",
         "notes": "This is a lichen. The distinctive 'hoods' at the lobe tips containing soredia are diagnostic. Often found with other Physcia species.",
-        "image_path": "/images/physcia_adscendens.jpg"
+        "image_path": "https://imgur.com/EyGPNWw.jpg"
     },
     {
         "scientific_name": "Platismatia glauca",
@@ -767,7 +767,7 @@
         "habitat": "Grows on tree bark (conifers and hardwoods) and occasionally on rocks in humid, temperate, and boreal regions.",
         "edibility": "Inedible",
         "notes": "This is a lichen. Highly variable in appearance, hence 'variable ragbag'. The ragged, often isidiate or sorediate margins and the two-toned undersurface are helpful features.",
-        "image_path": "/images/platismatia_glauca.jpg"
+        "image_path": "https://imgur.com/1QpVsyY.jpg"
     },
     {
         "scientific_name": "Pleurotus ostreatus",
@@ -777,7 +777,7 @@
         "habitat": "Grows on dead or dying hardwood trees (e.g., beech, oak, aspen, poplar), and is also widely cultivated. Fruits in cooler weather, typically autumn and spring, but can appear in winter.",
         "edibility": "Choice Edible",
         "notes": "A popular and widely cultivated edible mushroom. Known for its delicate flavor and velvety texture. Wild oyster mushrooms should be checked for small beetles that sometimes inhabit the gills. The decurrent gills and clustered, shelf-like growth on wood are characteristic.",
-        "image_path": "/images/pleurotus_ostreatus.jpg"
+        "image_path": "https://imgur.com/P8rrRh8.jpg"
     },
     {
         "scientific_name": "Pleurotus pulmonarius",
@@ -787,7 +787,7 @@
         "habitat": "Grows on dead or dying hardwood trees. Also cultivated. Tends to fruit in summer and warmer periods of spring and autumn.",
         "edibility": "Choice Edible",
         "notes": "Also a choice edible, very similar to P. ostreatus in taste and texture. Often considered a warm-weather counterpart. Distinguishing between them can sometimes be difficult without observing fruiting temperature preferences or subtle morphological differences.",
-        "image_path": "/images/pleurotus_pulmonarius.jpg"
+        "image_path": "https://imgur.com/IpOHd0q.jpg"
     },
     {
         "scientific_name": "Pseudevernia furfuracea",
@@ -797,7 +797,7 @@
         "habitat": "Grows primarily on the bark and twigs of coniferous trees, but also on deciduous trees and occasionally rocks, in montane and boreal regions with clean air.",
         "edibility": "Inedible",
         "notes": "This is a lichen, not a moss. The 'tree moss' name is often used in floral arrangements. The two-toned, channeled undersurface and the presence of isidia are key features. Two main chemotypes/morphotypes exist: var. furfuracea (with isidia) and var. ceratea (lobes more swollen, fewer isidia, different chemistry).",
-        "image_path": "/images/pseudevernia_furfuracea.jpg"
+        "image_path": "https://imgur.com/huW2qFz.jpg"
     },
     {
         "scientific_name": "Rhytisma acerinum",
@@ -807,7 +807,7 @@
         "habitat": "Specifically on living leaves of maple trees (Acer spp.). The black spots develop during summer and autumn.",
         "edibility": "Inedible (it's a leaf disease)",
         "notes": "While very noticeable, this is a disease of maple leaves and not a mushroom in the typical sense for foraging. It generally doesn't cause severe harm to healthy trees.",
-        "image_path": "/images/rhytisma_acerinum.jpg"
+        "image_path": "https://imgur.com/3EYRm3E.jpg"
     },
     {
         "scientific_name": "Sarcomyxa serotina",
@@ -817,7 +817,7 @@
         "habitat": "Grows on dead hardwood logs and stumps, and occasionally on conifers. Fruits late in the season, from autumn into early winter.",
         "edibility": "Edible (but often considered poor or bitter)",
         "notes": "Edibility is debated; some find it acceptable, especially after parboiling to remove bitterness, while others consider it unpalatable or slightly bitter. The olive-tinged cap, yellowish gills, and fuzzy yellow stem base are characteristic. Formerly known as Panellus serotinus.",
-        "image_path": "/images/sarcomyxa_serotina.jpg"
+        "image_path": "https://imgur.com/MX2F89s.jpg"
     },
     {
         "scientific_name": "Sarcoscypha austriaca",
@@ -827,7 +827,7 @@
         "habitat": "Grows on decaying hardwood twigs and branches, often partially buried in leaf litter or moss, in damp woodlands. Appears in late winter and early spring, sometimes in autumn.",
         "edibility": "Edible (but not highly regarded)",
         "notes": "Generally considered edible but insubstantial and not particularly flavorful; mainly used for its vibrant color as a garnish. There are several very similar red Sarcoscypha species (e.g., S. coccinea, S. dudleyi) that are difficult to distinguish without microscopy. They are all treated similarly for edibility.",
-        "image_path": "/images/sarcoscypha_austriaca.jpg"
+        "image_path": "https://imgur.com/g89oun3.jpg"
     },
     {
         "scientific_name": "Sarcosoma globosum",
@@ -837,7 +837,7 @@
         "habitat": "Grows on the ground in mature coniferous forests, particularly with spruce, often in mossy areas. Fruits in early spring, sometimes near melting snow.",
         "edibility": "Inedible",
         "notes": "A very distinctive and uncommon fungus, listed as threatened or endangered in some regions. The large size and internal jelly are unique. Not for consumption.",
-        "image_path": "/images/sarcosoma_globosum.jpg"
+        "image_path": "https://imgur.com/6AYZXVg.jpg"
     },
     {
         "scientific_name": "Schizophyllum commune",
@@ -847,7 +847,7 @@
         "habitat": "Extremely common worldwide, growing on dead wood of a vast range of trees and shrubs, and even on other organic materials. Appears year-round.",
         "edibility": "Inedible (traditionally) / Edible (in some cultures, medicinal)",
         "notes": "Very tough and leathery, generally considered inedible in Western cultures. However, it is consumed in some tropical countries and has a history of use in traditional medicine. It is also known to be a rare opportunistic human pathogen, capable of causing infections (mycoses) in immunocompromised individuals, though this is uncommon. The split 'gills' are unique.",
-        "image_path": "/images/schizophyllum_commune.jpg"
+        "image_path": "https://imgur.com/hGfEAhL.jpg"
     },
     {
         "scientific_name": "Stereum hirsutum",
@@ -857,7 +857,7 @@
         "habitat": "Very common on dead hardwood logs, branches, and stumps. Appears year-round.",
         "edibility": "Inedible",
         "notes": "Tough and leathery. Can be confused with Trametes versicolor (Turkey Tail), but Stereum hirsutum has a smooth, unpored underside and a more conspicuously hairy upper surface. The 'bleeding' reaction (if present) is also a good indicator.",
-        "image_path": "/images/stereum_hirsutum.jpg"
+        "image_path": "https://imgur.com/tLmNvaK.jpg"
     },
     {
         "scientific_name": "Stropharia aeruginosa",
@@ -867,7 +867,7 @@
         "habitat": "Grows in grassy areas, woodlands (especially coniferous), woodchip mulch, and disturbed ground. Common in autumn.",
         "edibility": "Inedible / Some sources say edible but not recommended",
         "notes": "While some older literature might list it as edible, it's generally not recommended for consumption due to its sliminess, potential confusion with other species, and some reports of mild toxicity or indigestibility. The vibrant blue-green color (when fresh) is very distinctive.",
-        "image_path": "/images/stropharia_aeruginosa.jpg"
+        "image_path": "https://imgur.com/SyEAuHz.jpg"
     },
     {
         "scientific_name": "Suillus granulatus",
@@ -877,7 +877,7 @@
         "habitat": "Mycorrhizal with pine trees, particularly two- and three-needle pines. Common in summer and autumn, often in sandy soil.",
         "edibility": "Edible (but peel cap cuticle)",
         "notes": "Considered edible, but the slimy cap cuticle is often removed before cooking as it can cause digestive upset or have a laxative effect in some people. The glandular dots on the stem and association with pines are key features. Similar to Suillus luteus, but S. granulatus lacks a ring.",
-        "image_path": "/images/suillus_granulatus.jpg"
+        "image_path": "https://imgur.com/DAq4hf5.jpg"
     },
     {
         "scientific_name": "Suillus grevillei",
@@ -887,7 +887,7 @@
         "habitat": "Mycorrhizal exclusively with Larch trees (Larix species). Common in summer and autumn, wherever larch is present.",
         "edibility": "Edible (but peel cap cuticle)",
         "notes": "Edible, but like other Suillus species, the slimy cap cuticle is usually removed. The association with Larch and the presence of a ring are key identifiers. Color can be quite variable.",
-        "image_path": "/images/suillus_grevillei.jpg"
+        "image_path": "https://imgur.com/puF4rtr.jpg"
     },
     {
         "scientific_name": "Suillus luteus",
@@ -897,7 +897,7 @@
         "habitat": "Mycorrhizal with various species of pine trees (Pinus), especially two- and three-needle pines. Very common in autumn.",
         "edibility": "Edible (but peel cap cuticle)",
         "notes": "Widely consumed, but the slimy cap cuticle must be removed before cooking as it can cause gastrointestinal upset or have a laxative effect. The prominent ring and association with pines are key. Can occur in large troops.",
-        "image_path": "/images/suillus_luteus.jpg"
+        "image_path": "https://imgur.com/qPG7OBz.jpg"
     },
     {
         "scientific_name": "Trametes hirsuta",
@@ -907,7 +907,7 @@
         "habitat": "Very common on dead hardwood logs and branches, and occasionally on conifer wood. Appears year-round.",
         "edibility": "Inedible",
         "notes": "Tough and woody. Distinguished from Trametes versicolor by its more uniformly greyish and hairier upper surface and larger, more angular pores. The 'hirsuta' refers to its hairy nature.",
-        "image_path": "/images/trametes_hirsuta.jpg"
+        "image_path": "https://imgur.com/KDCPm0x.jpg"
     },
     {
         "scientific_name": "Trametes ochracea",
@@ -917,7 +917,7 @@
         "habitat": "Grows on dead hardwood, less commonly on conifers. Common year-round.",
         "edibility": "Inedible",
         "notes": "Can be confused with Trametes versicolor, but T. ochracea is typically thicker, more rigid, and its color zones are more consistently in the ochre/brown range without the blues or greens often seen in T. versicolor. Pores might be slightly larger on average than T. versicolor.",
-        "image_path": "/images/trametes_ochracea.jpg"
+        "image_path": "https://imgur.com/BurXo8P.jpg"
     },
     {
         "scientific_name": "Trametes versicolor",
@@ -927,7 +927,7 @@
         "habitat": "Extremely common on dead hardwood logs, stumps, and branches worldwide. Occasionally on conifer wood. Fruits year-round.",
         "edibility": "Inedible (as a mushroom, but used medicinally)",
         "notes": "One of the most recognizable fungi. Not eaten due to its leathery texture, but it is widely used for its medicinal properties, particularly in traditional Chinese medicine and as a source of polysaccharide-K (PSK) and polysaccharide-peptide (PSP), which have immunomodulatory effects. Must be distinguished from Stereum species (which have a smooth, non-pored underside) and other Trametes species.",
-        "image_path": "/images/trametes_versicolor.jpg"
+        "image_path": "https://imgur.com/oPUIn5e.jpg"
     },
     {
         "scientific_name": "Tremella mesenterica",
@@ -937,7 +937,7 @@
         "habitat": "Grows on dead, attached or fallen branches of deciduous trees (especially hardwoods with bark), often parasitizing other wood-decay fungi (usually Peniophora species). Common year-round, especially during wet weather.",
         "edibility": "Edible (but tasteless)",
         "notes": "While edible, it is mostly water and has little flavor or texture, so it's not highly regarded as food. Its bright color and gelatinous form make it easy to spot. Similar to Tremella aurantia which is more opaque and often associated with Stereum hirsutum.",
-        "image_path": "/images/tremella_mesenterica.jpg"
+        "image_path": "https://imgur.com/Q7zZ5aF.jpg"
     },
     {
         "scientific_name": "Trichaptum biforme",
@@ -947,7 +947,7 @@
         "habitat": "Very common on dead hardwood, especially oak, beech, and birch. Less common on conifers. Appears year-round.",
         "edibility": "Inedible",
         "notes": "The violet pore surface is key, though it fades. It's often one of the first fungi to colonize fallen branches. Tough and leathery.",
-        "image_path": "/images/trichaptum_biforme.jpg"
+        "image_path": "https://imgur.com/dizOipu.jpg"
     },
     {
         "scientific_name": "Tricholomopsis rutilans",
@@ -957,7 +957,7 @@
         "habitat": "Grows on well-rotted coniferous wood, such as stumps, logs, or sawdust piles (especially pine). Fruits in summer and autumn.",
         "edibility": "Edible (but not choice) / Inedible by some",
         "notes": "Edibility is debated; some find it edible but of poor quality or slightly bitter, while others consider it inedible. Its vibrant colors and habitat on conifer wood are distinctive. Not a Tricholoma, despite the name similarity.",
-        "image_path": "/images/tricholomopsis_rutilans.jpg"
+        "image_path": "https://imgur.com/IEjpx1W.jpg"
     },
     {
         "scientific_name": "Urnula craterium",
@@ -967,7 +967,7 @@
         "habitat": "Grows on dead hardwood branches and sticks, often partially buried, in deciduous forests. Appears in early spring.",
         "edibility": "Inedible",
         "notes": "One of the early spring fungi. Its dark color and urn shape are characteristic. Often associated with a specific plant pathogenic state (anamorph) on oak branches.",
-        "image_path": "/images/urnula_craterium.jpg"
+        "image_path": "https://imgur.com/oJK60zU.jpg"
     },
     {
         "scientific_name": "Verpa bohemica",
@@ -977,7 +977,7 @@
         "habitat": "Found in early spring, often in damp woodlands, near rivers, and particularly associated with cottonwood/poplar and aspen trees.",
         "edibility": "Edible with extreme caution / Potentially toxic",
         "notes": "Contains small amounts of gyromitrin-like compounds or other toxins that can cause gastrointestinal upset or more severe reactions in sensitive individuals or if consumed in large quantities. Thorough cooking (parboiling and discarding water is sometimes recommended, though this may not remove all toxins) is essential. Many foragers avoid it due to the risks and similarity to toxic Gyromitra species. True morels (Morchella spp.) have caps that are fully attached to the stem or attached along a significant portion of the rim, not hanging free.",
-        "image_path": "/images/verpa_bohemica.jpg"
+        "image_path": "https://imgur.com/SEwBHVi.jpg"
     },
     {
         "scientific_name": "Vulpicida pinastri",
@@ -987,7 +987,7 @@
         "habitat": "Grows primarily on the bark and twigs of coniferous trees (especially pine and spruce), but also on birch and old wooden structures in boreal and montane regions. Often found in well-lit situations.",
         "edibility": "Inedible (Toxic)",
         "notes": "This is a lichen. Its brilliant yellow color is due to vulpinic acid, which is toxic. The 'pinastri' part of its name refers to its common occurrence on pine. The abundant powdery soredia are a key feature.",
-        "image_path": "/images/vulpicida_pinastri.jpg"
+        "image_path": "https://imgur.com/PNT53H8.jpg"
     },
     {
         "scientific_name": "Xanthoria parietina",
@@ -997,6 +997,6 @@
         "habitat": "Very common on nutrient-rich bark of trees (especially elder, ash, sycamore, and fruit trees), rocks (especially bird perches or nutrient-enriched), walls, and roofs. Tolerant of nitrogen pollution and often found in coastal areas or agricultural regions.",
         "edibility": "Inedible",
         "notes": "This is a lichen. Its bright orange color and numerous apothecia make it very conspicuous. The intensity of the orange color can depend on sun exposure (brighter in sun).",
-        "image_path": "/images/xanthoria_parietina.jpg"
+        "image_path": "https://imgur.com/x6jLiAE.jpg"
     }
 ]

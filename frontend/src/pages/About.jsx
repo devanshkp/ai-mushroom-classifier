@@ -1,12 +1,10 @@
 import AmbientBackground from "../components/AmbientBackground";
-import Navbar from "../components/Navbar";
 import { ShieldAlert, Sparkles, ExternalLink, ArrowRight } from "lucide-react";
 
 export default function AboutPage() {
   return (
     <main className="relative min-h-screen flex flex-col bg-[hsl(0_0_2)] text-white">
       <AmbientBackground variant="about" opacity={0.3} />
-      <Navbar />
 
       <section className="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 lg:px-8">
         {/* Header – compact, cleaner */}
@@ -49,10 +47,7 @@ export default function AboutPage() {
           </Card>
 
           <Card className="lg:col-span-5" title="Tech stack" glow="cyan">
-            <SectionRow
-              label="Frontend"
-              value="React, Tailwind, Framer, Lucide"
-            />
+            <SectionRow label="Frontend" value="React, Tailwind, Framer" />
             <SectionRow label="Backend" value="Flask (Python)" />
             <SectionRow
               label="Model"
@@ -135,12 +130,12 @@ export default function AboutPage() {
 
 function Card({ title, children, className = "", glow }) {
   const glowColors = {
-    emerald: "bg-gradient-to-br from-emerald-500/6 to-transparent",
-    cyan: "bg-gradient-to-br from-cyan-500/6 to-transparent",
-    purple: "bg-gradient-to-br from-purple-500/6 to-transparent",
-    amber: "bg-gradient-to-br from-amber-500/6 to-transparent",
-    pink: "bg-gradient-to-br from-pink-500/6 to-transparent",
-    indigo: "bg-gradient-to-br from-indigo-500/6 to-transparent",
+    emerald: "bg-gradient-to-br from-emerald-500/4 to-transparent",
+    cyan: "bg-gradient-to-br from-cyan-500/4 to-transparent",
+    purple: "bg-gradient-to-br from-purple-500/4 to-transparent",
+    amber: "bg-gradient-to-br from-amber-500/4 to-transparent",
+    pink: "bg-gradient-to-br from-pink-500/4 to-transparent",
+    indigo: "bg-gradient-to-br from-indigo-500/4 to-transparent",
   };
 
   return (
