@@ -386,8 +386,7 @@ export default function Home() {
                   variants={stagger}
                   initial="hidden"
                   animate="show"
-                  className="grid grid-cols-1 gap-3 h-full content-between pr-1 sm:gap-4"
-                  style={{ maxHeight: 420 }}
+                  className="grid grid-cols-1 gap-3 content-between sm:gap-4"
                 >
                   {predictions.map((p, i) => (
                     <motion.div
