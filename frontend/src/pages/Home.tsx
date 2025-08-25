@@ -221,7 +221,7 @@ export default function Home() {
             variants={cardIn}
             initial="hidden"
             animate="show"
-            className="flex md:min-h-[520px] flex-col rounded-3xl border border-white/10 bg-[rgb(20_20_20/0.8)] p-4"
+            className="flex md:min-h-[520px] flex-col rounded-3xl border border-white/10 bg-[rgb(24_24_24/0.6)] backdrop-blur-2xl p-4"
           >
             {/* Drop zone grows to fill */}
             <div
@@ -315,7 +315,7 @@ export default function Home() {
               transition={{ type: "spring", stiffness: 500, damping: 30 }}
               onClick={isSameImageClassified ? pickAnother : classify}
               disabled={!file || loading}
-              className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-base text-white ring-1 ring-inset ring-white/10 transition-colors hover:bg-white/7 focus:outline-none focus:ring-emerald-500/40 disabled:cursor-not-allowed disabled:opacity-50"
+              className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-white/5 px-5 py-3 text-base text-white ring-1 ring-inset ring-white/10 transition-colors hover:bg-white/7 focus:outline-none focus:ring-emerald-500/40 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {loading ? (
                 <>
@@ -326,9 +326,7 @@ export default function Home() {
                   <ImagePlus className="h-4 w-4" /> Pick another image
                 </>
               ) : (
-                <>
-                  <CheckCircle2 className="h-4 w-4" /> Classify image
-                </>
+                <> Classify image</>
               )}
             </motion.button>
 
@@ -352,7 +350,7 @@ export default function Home() {
             initial="hidden"
             animate="show"
             transition={{ delay: 0.04 }}
-            className="min-w-0 rounded-3xl border border-white/10 bg-[rgb(20_20_20/0.8)] p-4 sm:p-6 lg:p-7"
+            className="min-w-0 rounded-3xl border border-white/10 bg-[rgb(24_24_24/0.6)] backdrop-blur-2xl p-4 sm:p-6 lg:p-7"
           >
             {predictions?.length ? (
               <div className="flex h-full flex-col gap-2">

@@ -102,7 +102,7 @@ export default function Navbar() {
                           stiffness: 300,
                           damping: 30,
                         }}
-                        className="absolute inset-0 -z-10 rounded-full bg-white/10 ring-1 ring-inset ring-white/20"
+                        className="absolute inset-0 -z-10 rounded-full bg-white/8 ring-1 ring-inset ring-white/15"
                       />
                     )}
                     <item.icon className="h-4 w-4 opacity-80 group-hover:opacity-100" />
