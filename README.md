@@ -1,8 +1,6 @@
-# AI Mushroom Classifier 🍄
+# AI Mushroom Classifier — Make Mushroom Identification Easy
 
-An intelligent web app that identifies mushroom species from uploaded images using a custom-trained deep learning model. Users receive real-time predictions with confidence scores, aiding in the preliminary identification of mushrooms.
-
-<img src="./screenshots/Prediction.png" alt="Prediction" width="750">
+An intelligent web application that helps users identify mushroom species simply by uploading an image. Behind the scenes, it uses a custom-trained deep learning model to analyze the photo and provide real-time predictions, along with confidence scores that indicate how reliable the results are. This makes it a handy tool for anyone interested in mushrooms—whether for learning, research, or preliminary identification in the field.
 
 ## Table of Contents
 
